@@ -1,6 +1,8 @@
 /** @type {import('vite').UserConfig} */
 
 import * as path from 'path';
+import manifestSRI from 'vite-plugin-manifest-sri';
+import { viteStaticCopy } from 'vite-plugin-static-copy';
 import { defineConfig, loadEnv } from 'vite';
 
 export default defineConfig(({ command, mode }) => ({
@@ -34,4 +36,13 @@ export default defineConfig(({ command, mode }) => ({
         ]
     }
   },
+  plugins: [
+    manifestSRI(),
+    viteStaticCopy({
+        targets: [{
+            src: path.resolve(__dirname, "./../../static/manifest.json"),
+            dest: path.resolve(__dirname, 'data')
+        }]
+    })
+  ],
 }));

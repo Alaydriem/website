@@ -35,6 +35,8 @@
     "scss": "^0.2.4",
     "terser": "^5.14.2",
     "vite": "^3.0.4",
+    "vite-plugin-manifest-sri": "^0.1.0",
+    "vite-plugin-static-copy": "^0.7.0",
     "whatwg-fetch": "^3.0.0"
   }
 }

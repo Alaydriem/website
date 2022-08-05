@@ -7,7 +7,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link rel="stylesheet" href="/assets/css/main.css"    nonce="__CSP_NONCE__" />
+<link rel="stylesheet" href="/{{ (index .Site.Data.manifest "js/main.css").file | safeCSS }}" intregrity="{{ (index .Site.Data.manifest "js/main.css").integrity | safeCSS }}"   nonce="__CSP_NONCE__" />
 
 <link rel="manifest" href="/manifest.json">
 <link href="https://www.google-analytics.com" rel=’preconnect’ crossorigin>
