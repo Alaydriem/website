@@ -1,0 +1,38 @@
+<meta charset="utf-8">
+<title>{{ .Site.Title }} - {{ .Title }}</title>
+
+<meta name="author" content="Alaydriem">
+<meta name="keywords" content="Alaydriem{{ .Params.keywords }}">
+<meta name="description" content="{{ .Params.description }}">
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="/assets/css/main.css"    nonce="__CSP_NONCE__" />
+
+<link rel="manifest" href="/manifest.json">
+<link href="https://www.google-analytics.com" rel=’preconnect’ crossorigin>
+<link href="https://stats.g.doubleclick.net" rel=’preconnect’ crossorigin>
+<link href="https://fonts.gstatic.com" rel=’preconnect’ crossorigin>
+
+<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+
+{{ if eq (getenv "HUGO_ENV") "production" }}
+    <script nonce="__CSP_NONCE__">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', '{{ .Site.Params.googleAnalytics }}', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script nonce="__CSP_NONCE__" async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.googleAnalytics4PropertyID }}"></script>
+    <script nonce="__CSP_NONCE__">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '{{ .Site.Params.googleAnalytics4PropertyID }}');
+    </script>
+{{ end }}

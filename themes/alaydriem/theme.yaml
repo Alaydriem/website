@@ -1,0 +1,12 @@
+---
+name: "alaydriem"
+license: "BSD 3-Clause"
+licenselink: "https://github.com/alaydriem/website/blob/master/LICENSE.md"
+description: "theme for www.alaydriem.com"
+homepage: "https://github.com/alaydriem/website"
+tags:
+features:
+min_version: "0.26"
+author:
+  name: "Alaydriem"
+  homepage: "https://www.alaydriem.com" 

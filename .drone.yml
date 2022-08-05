@@ -1,0 +1,109 @@
+---
+kind: pipeline
+type: docker
+name: default
+
+steps:
+  - name: vite
+    image: node:16-alpine
+    commands:
+      - apk add --no-cache xxd perl-utils
+      - cd themes/erianna
+      - yarn install
+      - yarn run build
+  - name: hugo
+    image: jojomi/hugo
+    commands:
+      - HUGO_ENV="production" hugo
+    depends_on:
+      - vite
+  - name: cron-promote
+    image: drone/cli:1.3-alpine
+    environment:
+      DRONE_SERVER: https://www.erianna.com
+      DRONE_TOKEN:
+        from_secret: DRONE_MACHINE_TOKEN
+    depends_on:
+      - vite
+      - hugo
+    commands:
+      - drone build promote ${DRONE_REPO} ${DRONE_BUILD_NUMBER} prod
+    when:
+      event:
+        - cron
+      cron:
+        - daily-site-refresh
+  - name: deploy
+    image: plugins/s3-sync
+    when:
+      event:
+        - promote
+      target:
+        - prod
+    depends_on:
+      - vite
+      - hugo
+    settings:
+      bucket:
+        from_secret: AWS_BUCKET
+      endpoint:
+        from_secret: AWS_HOST
+      access_key:
+        from_secret: AWS_ACCESS_KEY_ID
+      secret_key:
+        from_secret: AWS_SECRET_ACCESS_KEY
+      source: public
+      path_style: true
+      target: /
+      delete: true
+      acl:
+        "*": public-read
+  - name: nginx
+    depends_on:
+      - deploy
+    when:
+      event:
+        - promote
+      target:
+        - prod
+    image: appleboy/drone-ssh
+    settings:
+      host:
+        from_secret: SSH_HOST
+      username:
+        from_secret: SSH_USERNAME
+      key:
+        from_secret: SSH_KEY
+      port: 22
+      script:
+        - sudo /bin/systemctl restart nginx
+  - name: matrix_notify
+    image: plugins/matrix
+    depends_on:
+      - hugo
+    settings:
+      homeserver: https://matrix.erianna.com
+      roomid:
+        from_secret: MATRIX_ROOM_ID
+      username:
+        from_secret: MATRIX_USER
+      password:
+        from_secret: MATRIX_PASSWORD
+  - name: matrix_notify_deploy
+    image: plugins/matrix
+    depends_on:
+      - nginx
+    when:
+      event:
+        - promote
+      target:
+        - prod
+    settings:
+      homeserver: https://matrix.erianna.com
+      roomid:
+        from_secret: MATRIX_ROOM_ID
+      username:
+        from_secret: MATRIX_USER
+      password:
+        from_secret: MATRIX_PASSWORD
+      template: "https://www.alaydriem.com has been deployed"

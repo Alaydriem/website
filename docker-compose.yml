@@ -1,0 +1,30 @@
+version: '3.3'
+services:
+  vite:
+    image: node:16-alpine
+    volumes:
+      - ${PWD-.}:/var/www
+      - nodejs:/var/www/themes/alaydriem/node_modules
+      - /var/www/themes/alaydriem/.yarnrc.yml
+    ports:
+      - "5173:5173"
+      - "8080:8080"
+    command: |
+      sh -c "yarn set version berry; yarn install; yarn run dev"
+    working_dir: /var/www/themes/alaydriem
+    environment:
+      DEBUG: 1
+
+  hugo:
+    image: jojomi/hugo
+    ports:
+      - "1313:1313"
+    volumes:
+      - ${PWD-.}:/var/www
+      - nodejs:/var/www/themes/alaydriem/node_modules
+    working_dir: /var/www
+    command: |
+      hugo server -t alaydriem --bind 0.0.0.0 --enableGitInfo --noHTTPCache --log --renderToDisk
+
+volumes:
+  nodejs:

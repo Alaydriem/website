@@ -1,0 +1,26 @@
+---
+baseURL: "https://www.alaydriem.com"
+enableGitInfo: true
+enableRobotsTXT: true
+languageCode: en-us
+noChmod: true
+noTimes: true
+permalinks:
+  post: "/:year/:month/:title/"
+sitemap:
+  changefreq: daily
+  filename: sitemap.xml
+  priority: 0.5
+theme: alaydriem
+title: "Alaydriem"
+Paginate: 10
+PaginatePath: "blog"
+uglyurls: false
+canonifyURLs: false
+relativeURLs: false
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+staticDir:
+  - static

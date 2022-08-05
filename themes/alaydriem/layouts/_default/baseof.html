@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{ partial "head" .}}
+  </head>
+  <body>
+    {{ partial "header.html" . }}
+    {{ partial "menu.html" . }}
+
+    <div id="wrapper">
+        {{ block "main" . }} {{ end }}
+    </div>
+    </body>
+    {{ partial "scripts.html" . }}
+</html>
