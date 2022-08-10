@@ -7,6 +7,7 @@ steps:
   - name: "Youtube API"
     image: mikefarah/yq
     commands:
+      - apk add --no-cache jq curl
       - for playlist in $(yq  '.params.playlists[]' < ./themes/alaydriem/theme.yaml); do curl https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails,status,snippet,id&order=date&maxResults=50&prettyPrint=true&channelId=$CHANNEL_ID&key=$YOUTUBE_API_KEY&order=date&playlistId=$playlist -o ./themes/alaydriem/data/$playlist.json; done
       - curl https://www.googleapis.com/youtube/v3/search?part=snippet,id&order=date&maxResults=5&prettyPrint=true&channelId=$CHANNEL_ID&key=$YOUTUBE_API_KEY&order=date > ./themes/alaydriem/data/latest.json
     environment:
@@ -18,7 +19,7 @@ steps:
     image: node:16-alpine
     commands:
       - apk add --no-cache xxd perl-utils
-      - cd themes/erianna
+      - cd themes/alaydriem
       - yarn install
       - yarn run build
   - name: hugo
