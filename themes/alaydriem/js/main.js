@@ -9,7 +9,6 @@ class Alaydriem {
     }
 
     domReady() {
-        console.log("Website loaded");        
     }
 }
 

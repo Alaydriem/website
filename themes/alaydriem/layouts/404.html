@@ -1,7 +1,10 @@
-{{ define "main"}}
-<main id="main">
-  <div>
-   <h1 id="title"><a href="{{ "/" | relURL }}">Go Home</a></h1>
+{{ define "main" }}
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title is-1">404</h1>
+      <p class="subtitle is-1">What you were searching for couldn't be found. Here's my latest video! I think you'll like it!</p>
+
+      <iframe width="1440" height="810" src="https://www.youtube-nocookie.com/embed/{{ (index (.Site.Data.latest.items) 0).id.videoId }}?version=3&rel=0&vq=hd720p60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
   </div>
-</main>
 {{ end }}

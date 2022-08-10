@@ -30,6 +30,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
     "@fortawesome/free-regular-svg-icons": "^5.13.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "bulma": "^0.9.4",
     "normalize.css": "^8.0.1",
     "sass": "^1.54.3",
     "scss": "^0.2.4",

@@ -1,3 +1,18 @@
 {{ define "main" }}
-Hello, World
+<section class="hero is-info is-halfheight is-75vh">
+    {{ partial "header.html" . }}
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+        <img id="profile" src="/assets/images/profile_picture.jpeg" />
+      <p id="logo" class="title" alt="Alaydriem">
+        <img src="/assets/images/nav_logo.svg" />
+      </p>
+      <p class="subtitle">Youtube Content Creator for Minecraft Bedrock & Java</p>
+    </div>
+  </div>
+</section>
+<section id="videos">
+    videos go Here
+</section>
 {{ end }}

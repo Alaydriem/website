@@ -42,6 +42,10 @@ export default defineConfig(({ command, mode }) => ({
         targets: [{
             src: path.resolve(__dirname, "./../../static/manifest.json"),
             dest: path.resolve(__dirname, 'data')
+        },
+        {
+            src: path.resolve(__dirname, "./assets/images/**"),
+            dest: path.resolve(__dirname, "./../../static/assets/images/")        
         }]
     })
   ],

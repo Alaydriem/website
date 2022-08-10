@@ -3,13 +3,6 @@
   <head>
     {{ partial "head" .}}
   </head>
-  <body>
-    {{ partial "header.html" . }}
-    {{ partial "menu.html" . }}
-
-    <div id="wrapper">
-        {{ block "main" . }} {{ end }}
-    </div>
-    </body>
+  <body>{{ block "main" . }} {{ end }}</body>
     {{ partial "scripts.html" . }}
 </html>

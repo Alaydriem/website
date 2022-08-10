@@ -1,2 +1,4 @@
 public
 static
+themes/alaydriem/data
+!themes/alaydriem/data/.gitignore

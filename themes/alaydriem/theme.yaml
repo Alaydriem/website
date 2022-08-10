@@ -10,3 +10,10 @@ min_version: "0.26"
 author:
   name: "Alaydriem"
   homepage: "https://www.alaydriem.com" 
+params:
+  channelId: UCXgqRZv7bHsKzwYBrtA9DFA
+  playlists:
+    - PL_3ZZiHxRObQIL-25FDr6NvCkeWMi1xJT
+    - PL_3ZZiHxRObRsjffs9VmwCK9oWxL9hWrf
+    - PL_3ZZiHxRObTF4tFPNQu1UsNUp3EuJ2ZA
+    - PL_3ZZiHxRObSkZ3DUb8556LN_kIa9TIi0
