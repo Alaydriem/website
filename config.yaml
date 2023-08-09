@@ -24,3 +24,6 @@ markup:
       unsafe: true
 staticDir:
   - static
+params:
+  channel_id: UCXgqRZv7bHsKzwYBrtA9DFA
+  api_key: AIzaSyA4PvKJu-kajtWNOylo2zUjpidiaABYSLo

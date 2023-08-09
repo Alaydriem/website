@@ -6,7 +6,7 @@ import { viteStaticCopy } from 'vite-plugin-static-copy';
 import { defineConfig, loadEnv } from 'vite';
 
 export default defineConfig(({ command, mode }) => ({
-  base: command === 'build' ? '/etc.clientlibs/<project>/clientlibs/' : '/',
+  base: command === 'build' ? '/' : '/',
   publicDir: command === 'build' ? false : 'assets',
 
   build: {
@@ -30,23 +30,23 @@ export default defineConfig(({ command, mode }) => ({
   server: {
     host: "0.0.0.0",
     watch: {
-        include: [
-            path.resolve(__dirname, "/js/**"),
-            path.resolve(__dirname, "/scss/**")
-        ]
+      include: [
+        path.resolve(__dirname, "/js/**"),
+        path.resolve(__dirname, "/scss/**")
+      ]
     }
   },
   plugins: [
     manifestSRI(),
     viteStaticCopy({
-        targets: [{
-            src: path.resolve(__dirname, "./../../static/manifest.json"),
-            dest: path.resolve(__dirname, 'data')
-        },
-        {
-            src: path.resolve(__dirname, "./assets/images/**"),
-            dest: path.resolve(__dirname, "./../../static/assets/images/")        
-        }]
+      targets: [{
+        src: path.resolve(__dirname, "./../../static/manifest.json"),
+        dest: path.resolve(__dirname, 'data')
+      },
+      {
+        src: path.resolve(__dirname, "./assets/images/**"),
+        dest: path.resolve(__dirname, "./../../static/assets/images/")
+      }]
     })
   ],
 }));

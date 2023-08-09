@@ -1,0 +1,67 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.footer {
+	padding-top: pxToRem(70);
+	background-image: linear-gradient(to right,
+			rgba($color-black, 0.5),
+			rgba($color-black, 0.5));
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	overflow: auto;
+
+	@media (min-resolution: 192dpi) {
+		background-image: linear-gradient(to right,
+				rgba($color-black, 0.5),
+				rgba($color-black, 0.5));
+	}
+
+	// Above 640px
+	@media only screen and (min-width: 40em) {
+		background-image: linear-gradient(to right,
+				rgba($color-black, 0.5),
+				rgba($color-black, 0.5));
+	}
+
+	// Above 1920px
+	@media only screen and (min-width: 120em) {
+		background-image: linear-gradient(to right,
+				rgba($color-black, 0.5),
+				rgba($color-black, 0.5));
+	}
+
+	&__social-heading {
+		text-transform: uppercase;
+		color: $color-text-white;
+	}
+
+	&__nav {
+		padding: pxToRem(10) 0;
+		border-top: 1px solid $color-grey-dark-4;
+
+		a.nav-link {
+			padding: pxToRem(10) pxToRem(16);
+			border-bottom: 1px solid transparent;
+			color: $color-text-white;
+			text-transform: uppercase;
+
+			&.active {
+				color: $color-text-white;
+			}
+		}
+	}
+
+	&__credits {
+		border-top: 1px solid $color-grey-dark-4;
+
+		a {
+			color: $color-text-white;
+			border-bottom: 1px solid $color-text-white;
+		}
+
+		margin: 0;
+		padding: pxToRem(14) 0;
+		color: $color-text-white;
+	}
+}

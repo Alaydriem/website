@@ -3,6 +3,10 @@
   <head>
     {{ partial "head" .}}
   </head>
-  <body>{{ block "main" . }} {{ end }}</body>
+  <body>
+
+    {{ block "main" . }} {{ end }}
+
+    </body>
     {{ partial "scripts.html" . }}
 </html>

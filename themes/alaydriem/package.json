@@ -8,7 +8,8 @@
   "scripts": {
     "dev": "vite build --watch",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "get-videos": "node js/get_videos.js"
   },
   "author": "Charles R. Portwood II <charlesportwoodii@erianna.com>",
   "devDependencies": {
@@ -30,6 +31,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
     "@fortawesome/free-regular-svg-icons": "^5.13.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "bootstrap": "^4.5.2",
     "bulma": "^0.9.4",
     "normalize.css": "^8.0.1",
     "sass": "^1.54.3",
@@ -39,5 +41,12 @@
     "vite-plugin-manifest-sri": "^0.1.0",
     "vite-plugin-static-copy": "^0.7.0",
     "whatwg-fetch": "^3.0.0"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "json2toml": "^5.0.0",
+    "node-fetch": "^3.3.2",
+    "toml": "^3.0.0",
+    "yaml": "^2.3.1"
   }
 }

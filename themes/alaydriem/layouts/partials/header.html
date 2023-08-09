@@ -1,24 +1,44 @@
-  <div class="hero-head">
-    <nav class="navbar">
-      <div class="container">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="/" id="nav-bar-logo" alt="Alaydriem logo, homepage navigation"> </a>
-          <span class="navbar-burger" data-target="navbarMenuHeroA">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
+<header class="header" id="header">
+    {{ partial "nav.html" }}
+
+    <!-- Centered content -->
+    <div class="header__content">
+        <div class="header__img-box">
+            <img src="/assets/images/profile_picture.jpeg" alt="Alaydriem" class="header__img">
         </div>
-        <div id="navbarMenuHeroA" class="navbar-menu">
-          <div class="navbar-end">
-            <a class="navbar-item is-active" href="#home">
-              Home
+        <h1 class="heading-primary">
+            <span class="heading-primary--main">Alaydriem</span>
+            <span class="heading-primary--sub">Youtube Content Creator</span>
+        </h1>
+        <div class="header__cta-box">
+            <a href="https://www.youtube.com/@Alaydriem" target="_blank" class="btn btn--full bg-danger">
+                Start Watching
+                &nbsp;
+                <svg class="icon social-icons__icon" style="position: relative; top: -2px;">
+                    <use xlink:href="/assets/images/SVG/symbol-defs.svg#icon-youtube-play"></use>
+                </svg>
             </a>
-            <a class="navbar-item" href="#videos">
-              Videos
-            </a>
-          </div>
         </div>
-      </div>
-    </nav>
-  </div>
+    </div>
+
+    <!-- Absolute positioned social icons -->
+    <div class="header__social-icons social-icons">
+        <a href="https://www.youtube.com/@Alaydriem" target="_blank" class="social-icons__link">
+            <svg class="icon social-icons__icon">
+                <use xlink:href="/assets/images/SVG/symbol-defs.svg#icon-youtube-play"></use>
+            </svg>
+        </a>
+        <a href="https://www.github.com/Alaydriem" target="_blank" class="social-icons__link">
+            <svg class="icon social-icons__icon">
+                <use xlink:href="/assets/images/SVG/symbol-defs.svg#icon-github"></use>
+            </svg>
+        </a>
+        <a href="https://discordapp.com/users/507326861680836628" target="_blank" class="social-icons__link">
+            <svg class="icon social-icons__icon">
+                <use xlink:href="/assets/images/SVG/symbol-defs.svg#icon-discord"></use>
+            </svg>
+        </a>
+
+    </div>
+
+</header>

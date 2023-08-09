@@ -1,38 +1,13 @@
-@charset "utf-8";
-@import "normalize.css/normalize";
-@import "node_modules/bulma/bulma.sass";
+@charset "UTF-8";
 
-section {
-    &.hero.is-75vh {
-            min-height: 75vh;
-        }
-}
+@import 'abstracts/variables', 'abstracts/functions', 'abstracts/mixins';
 
-.navbar-brand {
-    min-width: 180px;
-    margin-top: 10px;
-    padding: 5px 0;
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'vendors-extensions/bootstrap';
 
-    a#nav-bar-logo {
-            background-image: url("../../assets/images/nav_logo.svg");
-            background-repeat: no-repeat;
-            background-size: contain;
-            width: 100%;
-    }
-}
+@import 'base/base', 'base/fonts', 'base/typography', 'base/helpers';
 
-.hero-body {
-    img#profile {
-        border-radius: 50%;
-        height: 9.375rem;
-        width: 9.375rem;
-        box-shadow: 0 0 1rem rgba(0,0,0,0.3);
-        margin-bottom: 1em;
-      }
+@import 'layout/header', 'layout/navbar', 'layout/footer';
 
-    p#logo {
-        img {
-            width: 15%;
-        }
-    }
-}
+@import 'components/button', 'components/list', 'components/icon', 'components/project', 'components/blog', 'components/social-icons';
+@import 'pages/home';
