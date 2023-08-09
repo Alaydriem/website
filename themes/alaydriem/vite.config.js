@@ -21,9 +21,9 @@ export default defineConfig(({ command, mode }) => ({
         'main': path.resolve(__dirname, 'js/main.js')
       },
       output: {
-        assetFileNames: 'assets/[ext]/[name][extname]',
+        assetFileNames: 'assets/[name].[hash][extname]',
         chunkFileNames: 'js/chunk/[name].[hash].js',
-        entryFileNames: 'js/[name].js',
+        entryFileNames: 'js/[name].[hash].js',
       },
     },
   },
@@ -32,7 +32,8 @@ export default defineConfig(({ command, mode }) => ({
     watch: {
       include: [
         path.resolve(__dirname, "/js/**"),
-        path.resolve(__dirname, "/scss/**")
+        path.resolve(__dirname, "/scss/**"),
+        path.resolve(__dirname, "/assets/**")
       ]
     }
   },
