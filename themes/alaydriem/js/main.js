@@ -1,7 +1,7 @@
 'use strict';
 
 import 'vite/modulepreload-polyfill';
-import "../scss/main.scss";
+import "../scss/home/main.scss";
 
 class Alaydriem {
     constructor() {

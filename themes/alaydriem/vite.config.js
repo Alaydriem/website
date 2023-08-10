@@ -18,7 +18,8 @@ export default defineConfig(({ command, mode }) => ({
     sourcemap: command === 'serve' ? 'inline' : false,
     rollupOptions: {
       input: {
-        'main': path.resolve(__dirname, 'js/main.js')
+        'main': path.resolve(__dirname, 'js/main.js'),
+        'videos': path.resolve(__dirname, 'js/videos.js'),
       },
       output: {
         assetFileNames: 'assets/[name].[hash][extname]',

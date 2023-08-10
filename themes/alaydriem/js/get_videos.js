@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 import yaml from 'js-yaml';
-import json2toml from 'json2toml';
+import json2yaml from 'json2yaml';
 import fs from 'fs';
 
 // Read the main configuration file for Hugo to get the channel ID + API Key
@@ -62,10 +62,11 @@ for (const v of video_chunks) {
 all_videos.forEach((v) => {
     v.title = v.snippet.title;
     v.date = v.snippet.publishedAt;
-    v.description = v.snippet.title;
+    v.Summary = v.snippet.description;
     v.slug = v.id;
     v.keywords = v.snippet.tags;
-    let result = json2toml(v);
+    let result = json2yaml.stringify(v);
     fs.writeFileSync(process.cwd() + '/../../content/videos/' + v.id + '.md', result);
     fs.appendFileSync(process.cwd() + '/../../content/videos/' + v.id + '.md', '---');
+    fs.appendFileSync(process.cwd() + '/../../content/videos/' + v.id + '.md', "\n" + v.snippet.description);
 });

@@ -45,6 +45,7 @@
   "dependencies": {
     "js-yaml": "^4.1.0",
     "json2toml": "^5.0.0",
+    "json2yaml": "^1.1.0",
     "node-fetch": "^3.3.2",
     "toml": "^3.0.0",
     "yaml": "^2.3.1"

@@ -20,11 +20,7 @@
     </div>
   </div>
 </section>
-{{ $channelURL := printf "%s%s%s%s"
-"https://youtube.googleapis.com/youtube/v3/channels?part=statistics&id="
-$.Site.Params.channel_id
-"&key="
-$.Site.Params.api_key }}
+{{ $channelURL := printf "%s%s%s%s" "https://youtube.googleapis.com/youtube/v3/channels?part=statistics&id=" $.Site.Params.channel_id "&key=" $.Site.Params.api_key }}
 
 {{ $channel := getJSON $channelURL }}
 <section class="counter">

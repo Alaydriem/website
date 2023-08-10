@@ -1,0 +1,20 @@
+{{ define "main" }}
+    <header class="header header-no-bg" id="header">
+        {{ partial "nav.html" }}
+    </header>
+
+    <section class="video-content">
+        <article class="content">
+            <h1 class="title">{{ .Page.Title }}</h1>
+
+            <section class="responsive-iframe">
+                {{ replace .Page.Params.player.embedHtml "height=\"270\"" "" | safeHTML }}
+            </section>
+            <section class="description">
+                <p>{{ .Page.Params.snippet.description | markdownify }}</p>
+            </section>    
+        </article>
+    </section>
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700" rel="stylesheet" type="text/css">
+{{ end }}

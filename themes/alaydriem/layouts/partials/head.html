@@ -1,15 +1,19 @@
 <meta charset="utf-8">
-<title>{{ .Site.Title }} - {{ .Title }}</title>
+<title>{{ .Site.Title }} {{ if .IsHome }} {{ else }} - {{ .Title }}{{end }}</title>
 
 <meta name="author" content="Alaydriem">
 <meta name="keywords" content="Alaydriem{{ .Params.keywords }}">
-<meta name="description" content="{{ .Params.description }}">
+<meta name="description" content="{{ .Title }}">
 
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link rel="stylesheet" href='/{{ (index .Site.Data.manifest "js/main.css").file | safeCSS }}'
   intregrity='{{ (index .Site.Data.manifest "js/main.css").integrity | safeCSS }}' nonce="__CSP_NONCE__" />
 
+{{ if eq .Page.Section "videos" }}
+<link rel="stylesheet" href='/{{ (index .Site.Data.manifest "js/videos.css").file | safeCSS }}'
+intregrity='{{ (index .Site.Data.manifest "js/videos.css").integrity | safeCSS }}' nonce="__CSP_NONCE__" />
+{{ end }}
 <link rel="manifest" href="/manifest.json">
 <link href="https://www.google-analytics.com" rel=’preconnect’ crossorigin>
 <link href="https://stats.g.doubleclick.net" rel=’preconnect’ crossorigin>
@@ -18,6 +22,11 @@
 {{ printf `
 <link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/site.webmanifest">
 
 {{ if eq (getenv "HUGO_ENV") "production" }}
 <script nonce="__CSP_NONCE__">
