@@ -4,8 +4,6 @@ services:
     image: node:16-alpine
     volumes:
       - ${PWD-.}:/var/www
-      - ${PWD-.}/themes/alaydriem/node_modules:/var/www/themes/alaydriem/node_modules
-      - /var/www/themes/alaydriem/.yarnrc.yml
     ports:
       - "5173:5173"
       - "8080:8080"
@@ -21,7 +19,6 @@ services:
       - "1313:1313"
     volumes:
       - ${PWD-.}:/var/www
-      - ${PWD-.}/themes/alaydriem/node_modules:/var/www/themes/alaydriem/node_modules
     working_dir: /var/www
     command: |
       hugo server -t alaydriem --bind 0.0.0.0 --enableGitInfo --noHTTPCache --log --renderToDisk
