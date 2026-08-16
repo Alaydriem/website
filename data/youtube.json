@@ -206,7 +206,7 @@
       "description": "Proximity voice chat is finally here for Minecraft Bedrock Edition and today I'm inviting you to try it out! What to learn more? Check out the full video!\n\nBedrock Voice Chat brings real-time spatial audio to Bedrock Dedicated Servers - free and available now for Windows, Android, and iOS.\n\nWhat is Bedrock Voice Chat?\n\nThe first true proximity voice chat solution for Minecraft Bedrock Edition. No more Discord workarounds. No more typing on controllers or phone screens. Experience voice chat the way Java Edition players have enjoyed for years - with positional audio, push-to-talk, and individual volume controls.\nKey Features:\n\n✅ Proximity Chat with 3D Positional Audio\n✅ Native apps for Windows 10, Android & iOS\n✅ Individual player volume controls\n✅ Client-side muting and deafening\n✅ Noise suppression & audio amplification\n✅ End-to-end encryption\n✅ Audio recording for content creators\n✅ Works on Bedrock Dedicated Servers\n✅ Cross-platform: Console, Mobile, Windows 10\n\nAnd a whole lot more!\n\nPerfect for Minecraft Bedrock servers and for players onconsole (Xbox, PlayStation, Nintendo Switch), mobile (Android, iOS), and Windows 10. Works with Bedrock Dedicated Server (BDS) and supports cross-platform gameplay.\n\n📥 DOWNLOAD & LINKS\nGet Bedrock Voice Chat:\n🔗 GitHub (Free & Source Available): https://github.com/Alaydriem/bedrock-voice-chat/releases\n\nSupport Development & Get Early Access, and help unlock more features!\n\n💎 Patreon: https://www.patreon.com/posts/i-made-proximity-147533371?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link\n🎥 YouTube Membership: https://www.youtube.com/channel/UCXgqRZv7bHsKzwYBrtA9DFA/join\n\nBeta Testing:\n\nIf you wish to join the Android or iOS open betas, head over to patreon and join the free tier today to get access to the Google Play Store listing when it becomes available! https://patreon.com/alaydriem\n\nCommunity & Support:\n💬 Discord: discord.com/invite/WJPShXnbga\n📖 Documentation: https://github.com/alaydriem/bedrock-voice-chat/wiki\n\n🎮 ABOUT THIS PROJECT\nBedrock Voice Chat is inspired by Simple Voice Chat for Java Edition, rebuilt from the ground up in Rust for maximum performance on Minecraft Bedrock Dedicated Servers. The project consists of three components:\n\nServer software (Rust) - High-performance voice routing\nBehavior Pack (BDS) - Position data relay\nNative Client Apps (Windows/Android/iOS) - Audio interface\n\nUnlike Discord or other third-party solutions, Bedrock Voice Chat integrates directly with your Minecraft server, providing true proximity-based communication that works for ALL Bedrock platforms - not just PC players.\n\n🔍 SEARCH TERMS\nMinecraft Bedrock voice chat, proximity voice chat Bedrock Edition, Bedrock Dedicated Server voice mod, voice communication for Bedrock, Minecraft console voice chat, Minecraft mobile voice chat, cross-platform Minecraft voice, Simple Voice Chat alternative Bedrock, Discord alternative for Minecraft Bedrock, positional audio Minecraft, spatial audio Bedrock, Minecraft voice mod 2025\n\n📢 SUPPORT THE PROJECT\nThis is an source-available, community-driven project. Early supporters on Patreon and YouTube Membership get:\n\nEarly access to Beta 2+ features\nPriority bug fixes and feature requests\nBehind-the-scenes development updates\nDirect contribution to iOS App Store release\n\nAndroid beta testers are critical to unlocking the Google Play Store listing - your testing literally makes the app available to millions of players.\n\n#MinecraftBedrock #ProximityVoiceChat #BedrockVoiceChat #MinecraftMods #BedrockEdition\n\n----\n\nIf you like this content, please consider subscribing to @Alaydriem  .\nJoin me live on Twitch every Thursday and Friday at  7 PT / 9 CT / 10 ET PM at https://www.twitch.tv/Alaydriem where we explore farms, build amazing builds, and hang out together in a relaxing and family friendly chill stream\n\n\nAnd make sure you join my new discord to chat about episodes and farms over at https://discord.com/invite/WJPShXnbga!\n\n---",
       "publishedAt": "2026-01-12T17:09:50Z",
       "duration": "PT35S",
-      "viewCount": 35000,
+      "viewCount": 35100,
       "thumbnail": "https://i.ytimg.com/vi/FIW00XnrBPY/maxresdefault.jpg",
       "tags": [
         "minecraft bedrock",
@@ -501,7 +501,7 @@
       "description": "Hello there beautiful pixels, and welcome back to another Minecraft Bedrock Farm Tutorial with your favorite cardigan wearing minecraft character, @Alaydriem!\n\nIn this Minecraft Bedrock tutorial, I show you how to build a simpler copper golem item sorter that will replace every item sorter you've ever made before. This item sorter is super simple, requires ZERO redstone, and can be built in minutes!\n\n------\n\nIf you like this content, please consider subscribing to @Alaydriem  .\nJoin me live on Twitch every Thursday and Friday at  6:30 PT / 8:30 CT / 9:30 ET PM at https://www.twitch.tv/Alaydriem where we explore farms, build amazing builds, and hang out together in a relaxing and family friendly chill stream\n\nWant to see more content? Twitch Replays? Checkout my second channel at @Adreamily  !\n\nAnd make sure you join my new discord to chat about episodes and farms over at https://discord.com/invite/WJPShXnbga!\n\n#Minecraft #WitchFarm, #CopperGolem #javatutorial #bedrocktutorial",
       "publishedAt": "2025-10-16T18:00:49Z",
       "duration": "PT6M31S",
-      "viewCount": 6440,
+      "viewCount": 6450,
       "thumbnail": "https://i.ytimg.com/vi/oOWbhJbBTIM/maxresdefault.jpg",
       "tags": [
         "minecraft",
@@ -1260,7 +1260,7 @@
       "description": "",
       "publishedAt": "2025-03-17T12:30:47Z",
       "duration": "PT20S",
-      "viewCount": 8860,
+      "viewCount": 8870,
       "thumbnail": "https://i.ytimg.com/vi/lDWMp8sYRys/maxresdefault.jpg",
       "tags": [
         "minecraft shorts",
@@ -1497,7 +1497,7 @@
       "description": "Hello there beautiful pixels, and welcome back to another Minecraft Bedrock Farm Tutorial with your favorite cardigan wearing minecraft character, @Alaydriem!\n\nIn this Minecraft Bedrock Tutorial I'll show you had to build this INCREDIBLY powerful shroomlight farm for Minecraft Bedrock 1.21.\n\nThis farm produces 1300+ shroomslights per hour, and 1600+ warped stem blocks per hour. On top of this, you'll also get back a portion of the bonemeal input from your farm from the warped wart blocks generated. You'll generated nearly a whole shulkerbox of shroomlights from this farm every hour!\n\nFor this farm you'll need a steady supply of redstone and gunpowder to make TNT, which you can get from my Witch Farm: https://www.youtube.com/watch?v=A0bUww1m904\n\nThis farm will consume 13 stacks of TNT per hour, so make sure you have plenty stocked up!\n\nAnd a steady stream of bonemeal which can be provided by other my Mini Bonemeal Farm https://www.youtube.com/watch?v=QbSoXjBRcGs or this super powerful bonemeal farm here: https://www.youtube.com/watch?v=7yeqDcfxQOs\n\nYou'll also want to generate a bunch of warped fungus using this farm here: https://www.youtube.com/watch?v=MCDHsegMSU8\n\nMake sure you drop by @oldrusty8157 channel and give him a subscription and a like for discovering the mechanics of using world height to optimize the outputs. My farm variant is built upon his at his, and distributed here with his referral.\n\n------------------------\nWant to make this farm _fully_ AFKable and avoid the issue with Crimson Fungus blocks growing? make sure you checkout the companion video that explains the necessary steps to update the farm : https://youtu.be/SEDvsUAa9OI\n\nMaterials List: 22w x 26d x 23h\n------------------------\n\n    Obsidian: 285\n    Water: 62\n    Button: 1\n    Target Block: 25\n    Barrel: 2\n    Smooth Quartz Slab: 10\n    Observer: 4\n    Lever: 3\n    Warped Wart Block: 322\n    Chest: 60\n    Hopper: 73\n    Redstone Torch: 14\n    Comparator: 14\n    Composter: 1\n    Warped Stem: 33\n    Scaffolding: 1\n    Warped Nylium: 2\n    Trapdoor (any): 19\n    Dispenser: 4\n    Sign (any): 6\n    Piston: 58\n    Redstone Block: 2\n    Shroomlight: 22\n    Repeater: 47\n    Glass: 308\n    Waxed Copper Bulb: 2\n    Blue Ice: 54\n    Redstone Lamp: 2\n    Sticky Piston: 54\n    Smooth Quartz: 390\n    Purple Wool: 45\n    Redstone Wire: 212\n     Water: Infinite source\n     TNT: 9 stocks/hours\n     Bonemeal: Infinite source\n\n------\n\nIf you like this content, please consider subscribing to @Alaydriem .\nJoin @MerelyAdequate and I live on Twitch every Monday at  6:30 PT / 8:30 CT / 9:30 ET PM at https://www.twitch.tv/Alaydriem!\nWant to see more content? Twitch Replays? Checkout my second channel at @Alaevren !\nAnd make sure you join my new discord to chat about episodes and farms over at https://discord.com/invite/WJPShXnbga!\n\n#Minecraft #ShroomlightFarm #NetherFarm #NyliumFarm #WoodFarm #bedrocktutorial\n\n------------------------\n00:00 Introduction\n01:52 Tutorial Start",
       "publishedAt": "2024-10-28T14:00:06Z",
       "duration": "PT33M53S",
-      "viewCount": 9570,
+      "viewCount": 9580,
       "thumbnail": "https://i.ytimg.com/vi/6q81bl0-AtY/maxresdefault.jpg",
       "tags": [
         "Minecraft",
@@ -2106,7 +2106,7 @@
       "description": "Tired of rain and thunder in your Minecraft Bedrock world? Hate dealing with Youtube Compression Artifacts when uploading a video with weather? Wish you could have fire spread enabled without dealing with lightning burning your builds down?\n\nThen check out this awesome little Bedrock Addon Pack! https://github.com/Alaydriem/never-a-rainy-day/releases/tag/24.4.14\n\nWith this pack you can control the weather at whim, let your players turn the rain on or off, disable thunder, or disable rain altogether using a few simple chat commands!\n\n!weather clear will clear the weather\n!weather no-rain will disable rain completely\n!weather no-thunder will prevent thunderstorms, but still permit rain.",
       "publishedAt": "2024-04-16T19:30:08Z",
       "duration": "PT2M44S",
-      "viewCount": 305,
+      "viewCount": 306,
       "thumbnail": "https://i.ytimg.com/vi/xeK1RtlDc5s/maxresdefault.jpg",
       "tags": [
         "minecraft bedrock",
@@ -2844,7 +2844,7 @@
       "description": "Prepare to revolutionize your #minecraftbedrock experience like never before with Custom Commands!\n\nThis incredible GitHub repository is a game-changer, empowering you to take command customization to a mind-blowing new level. Say farewell to mundane commands and unlock a world of limitless possibilities as you create, customize, and automate actions to elevate your server to the next level of awesomeness by empowering you to write YOUR OWN custom commands and make them available in-game, all in vanilla survival.\n\nWhether you're a minecraft enthusiast, a server admin, or a content creator, Custom Commands is the secret weapon you've been waiting for to transform your server or world into a thriving hub of excitement, interactivity, and personalized engagement!\n\nDownload the Addon at: https://github.com/Alaydriem/custom-commands/releases/tag/0.0.2, and be sure the read the README for more information on how to use and modify the pack to your settings.\n\nhttps://github.com/Alaydriem/custom-commands/tree/0.0.2\n\n00:00 Introduction\n01:04 Showcase\n03:15 How to define CUSTOM commands\n05:44 Outro",
       "publishedAt": "2023-12-19T17:00:08Z",
       "duration": "PT6M21S",
-      "viewCount": 5090,
+      "viewCount": 5100,
       "thumbnail": "https://i.ytimg.com/vi/AHn7Nrq6_s4/maxresdefault.jpg",
       "tags": [
         "alaydriem",
@@ -5080,7 +5080,7 @@
       "description": "Boolean Logic Circuits! In this Minecraft Bedrock Redstone tutorial, Alaydrim discusses and showcases boolean logic circuits and their implementation in Minecraft!\n\n00:00 Introduction\n01:40 AND Logic Gate\n02:48 NOT Logic Gate\n03:23 NAND (NOT AND) Logic Gate\n05:14 OR Logic Gate\n07:27 NOR (NOT OR) Logic Gate\n08:34 XOR Logic Gate\n11:26 XNOR Logic Gate\n12:15 Outro\n\nBe sure to follow me on Twitter to get updates when I post a new video! https://www.twitter.com/alaydriem",
       "publishedAt": "2022-08-09T19:30:02Z",
       "duration": "PT13M5S",
-      "viewCount": 772,
+      "viewCount": 773,
       "thumbnail": "https://i.ytimg.com/vi/EL0E_s9kLDk/maxresdefault.jpg",
       "tags": [
         "Minecraft",
@@ -5346,7 +5346,7 @@
       "description": "In this Minecraft Bedrock 1.18+ tutorial, Alaydriem shows how to build a stone & cobblestone generator to cover all your stone and cobblestone needs in your Bedrock survival world, server, or realm!\n\nWorld Download: https://www.alaydriem.com/world-downloads/Stone-Farm.mcworld\nSHA256: 12a84df25287719f03001ad7bb47fc1ca23ddd742f64f13d9518ae17b7ca0736\n\n00:00 Introduction\n00:26 Farm Mechanics\n01:18 Tutorial\n08:10 Outro",
       "publishedAt": "2022-04-05T20:30:04Z",
       "duration": "PT8M58S",
-      "viewCount": 171,
+      "viewCount": 172,
       "thumbnail": "https://i.ytimg.com/vi/_4RvKKtkVZ0/maxresdefault.jpg",
       "tags": [
         "Minecraft",
