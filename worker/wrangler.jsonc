@@ -1,0 +1,33 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "alaydriem-live",
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-01",
+
+  // The route sits on the site's own domain, ahead of GitHub Pages, so the
+  // page reads live status same-origin. www.alaydriem.com must stay proxied
+  // through Cloudflare (orange cloud) for this to match.
+  "routes": [
+    { "pattern": "www.alaydriem.com/api/live*", "zone_name": "alaydriem.com" }
+  ],
+
+  // No workers.dev subdomain. Left on, Wrangler also publishes this at
+  // alaydriem-live.<account>.workers.dev, which is a second public origin that
+  // accepts the same POSTs and defeats the point of being same-origin.
+  "workers_dev": false,
+
+  "durable_objects": {
+    "bindings": [{ "name": "LIVE_STATE", "class_name": "LiveState" }]
+  },
+
+  // The free plan provides the SQLite-backed Durable Object storage, so the
+  // migration has to declare new_sqlite_classes rather than new_classes.
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["LiveState"] }
+  ],
+
+  "observability": { "enabled": true }
+
+  // LIVE_TOKEN is a secret, not a var. Set it with:
+  //   npx wrangler secret put LIVE_TOKEN
+}

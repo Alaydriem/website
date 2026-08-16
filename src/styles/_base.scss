@@ -1,0 +1,162 @@
+/* Reset and page ground. Every colour comes from _tokens.scss. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--void);
+  color: var(--tx);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Display type: light weight, tight tracking, with one bold line inside.
+   That pairing is the Bedrock Voice Chat hero pattern and it carries over. */
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 300;
+  line-height: var(--lh-display);
+  letter-spacing: var(--tracking-display);
+}
+
+h1 { font-size: var(--fs-display); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+
+.hi {
+  font-weight: 700;
+}
+
+p {
+  margin: 0;
+}
+
+.lead {
+  max-width: var(--maxw-prose);
+  color: var(--dim);
+  font-size: var(--fs-lead);
+}
+
+.label {
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--pad-page);
+}
+
+.section {
+  padding-block: var(--pad-section);
+}
+
+/* A visible focus ring everywhere. The tab control is keyboard-operable and
+   invisible focus would make it unusable. */
+:focus-visible {
+  outline: 2px solid var(--brand-lift);
+  outline-offset: 2px;
+  border-radius: var(--r-sm);
+}
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  z-index: 10;
+  padding: 10px 16px;
+  background: var(--panel);
+  border-radius: var(--r-md);
+}
+
+.skip:focus {
+  left: var(--pad-page);
+  top: 10px;
+}
+
+/* ---- buttons ------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 22px;
+  border-radius: var(--r-md);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  transition: transform 0.18s var(--ease), background-color 0.18s var(--ease);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn--primary {
+  background: var(--tx);
+  color: var(--void);
+}
+
+.btn--ghost {
+  border: 1px solid var(--line-2);
+  color: var(--tx);
+}
+
+.btn--ghost:hover {
+  background: var(--void-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .btn:hover {
+    transform: none;
+  }
+}

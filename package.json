@@ -1,0 +1,32 @@
+{
+  "name": "alaydriem-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "www.alaydriem.com",
+  "author": "Charles R. Portwood II <charlesportwoodii@erianna.com>",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "fetch:youtube": "node scripts/fetch-youtube.mjs"
+  },
+  "dependencies": {
+    "astro": "^7.2.2"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.62.1",
+    "sass": "^1.102.0",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.10"
+  }
+}

@@ -1,0 +1,59 @@
+/* The Bedrock Voice Chat band.
+ *
+ * Pulled up over the hero's bottom edge so it interrupts the scroll rather than
+ * waiting below it. This is one of the two actions the whole site exists to
+ * drive, so it gets full width rather than a card in a grid.
+ *
+ * THIS IS THE ONLY VIOLET ON THE PAGE. Violet marks the product and nothing
+ * else. Text inside uses --tx directly rather than --accent-readable, because
+ * it sits on the violet rather than beside it. */
+.band {
+  position: relative;
+  z-index: 2;
+  margin-top: -46px;
+  background: var(--sp-violet);
+  border-block: 1px solid var(--brand-lift);
+}
+
+.band__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 26px;
+  padding-block: clamp(28px, 4vw, 44px);
+}
+
+.band__copy {
+  max-width: 62ch;
+}
+
+/* Full-strength ink, no opacity. At 0.72 this blended to #d9c3f4 on the violet
+   and measured 3.7:1, which fails AA for a 12px label. The letter-spacing is
+   what makes it read as an eyebrow; dimming it was never doing that work. */
+.band__eyebrow {
+  color: var(--tx);
+}
+
+.band__title {
+  margin-top: 10px;
+  font-size: var(--fs-h3);
+  color: var(--tx);
+}
+
+.band__text {
+  margin-top: 10px;
+  color: var(--tx);
+  opacity: 0.86;
+}
+
+.band__cta {
+  background: var(--tx);
+  color: var(--brand);
+  white-space: nowrap;
+}
+
+.band__cta:hover {
+  background: var(--void);
+  color: var(--tx);
+}

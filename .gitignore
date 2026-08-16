@@ -1,5 +1,13 @@
-public
-static
-content/videos
-themes/alaydriem/data
-!themes/alaydriem/data/.gitignore
+# Astro build output. public/ is now SOURCE — Astro's static directory — and is
+# tracked. Under Hugo it was the opposite way round.
+dist
+.astro
+
+.superpowers
+.env
+node_modules
+test-results
+playwright-report
+.dryrun
+.wrangler
+docs/

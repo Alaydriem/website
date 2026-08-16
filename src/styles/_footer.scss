@@ -1,0 +1,30 @@
+.foot {
+  border-top: 1px solid var(--line);
+  padding-block: 46px;
+  background: var(--void-2);
+}
+
+.foot__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.foot__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(14px, 2.4vw, 28px);
+  font-size: var(--fs-small);
+  color: var(--dim);
+}
+
+.foot__links a:hover {
+  color: var(--tx);
+}
+
+.foot__note {
+  color: var(--faint);
+  font-size: var(--fs-small);
+}

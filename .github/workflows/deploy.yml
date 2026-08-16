@@ -1,0 +1,79 @@
+name: Deploy
+
+# Three triggers:
+#   push              — ordinary content and code changes
+#   workflow_call     — refresh-content.yml calls this directly. A commit pushed
+#                       with the default GITHUB_TOKEN does not trigger
+#                       workflows, so the push trigger alone would never fire
+#                       for a refresh.
+#   workflow_dispatch — manual redeploy
+on:
+  push:
+    branches: [master]
+  workflow_call:
+  workflow_dispatch:
+
+concurrency:
+  group: gh-pages-publish
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Unit tests
+        run: npm run test
+
+      - name: Build
+        run: npm run build
+
+      # GitHub Pages serves this branch at a custom domain only if CNAME is at
+      # the root of the published output. It is written here rather than
+      # committed, because dist/ is build output and is not tracked.
+      - name: Write CNAME
+        run: echo 'www.alaydriem.com' > dist/CNAME
+
+      - name: Install browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: End-to-end tests and accessibility audit
+        run: npm run test:e2e
+
+      # External URLs are skipped deliberately. Checking them makes the build
+      # fail whenever somebody else's site is down.
+      #
+      # The skip pattern excludes localhost explicitly. linkinator serves
+      # --server-root over http://localhost, so a bare '^https?://' skips the
+      # site itself and reports success having scanned nothing.
+      - name: Link check
+        run: >
+          npx --yes linkinator --server-root dist --recurse
+          --skip '^https?://(?!localhost|127\.0\.0\.1)' /
+
+      - name: Size budgets
+        run: node scripts/check-budgets.mjs
+
+      # keep_files is false. Nothing else publishes to this repository's
+      # gh-pages branch, so there is nothing to preserve and stale files should
+      # be removed. The S3 bucket this replaces had accumulated files from
+      # several past layouts precisely because its sync never deleted.
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          keep_files: false
+          cname: www.alaydriem.com
+          commit_message: 'deploy: ${{ github.sha }}'

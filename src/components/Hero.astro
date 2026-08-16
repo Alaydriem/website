@@ -1,0 +1,69 @@
+---
+import Nav from './Nav.astro';
+import VideoCard from './VideoCard.astro';
+import site from '../lib/site.json';
+import youtube from '../../data/youtube.json';
+import { watchUrl } from '../lib/format.js';
+
+const { channel, videos } = youtube;
+
+// Spec section 12 makes this the only hard failure in the build. A homepage
+// whose primary action points at a video that is not in the data would publish
+// a broken button, so the build stops instead.
+const pinned = videos.find((v) => v.id === site.pinnedVideo);
+if (!pinned) {
+  throw new Error(
+    `src/lib/site.json pins video "${site.pinnedVideo}", which is not present in `
+    + 'data/youtube.json. The homepage\'s primary action would be broken, so the build is stopped.',
+  );
+}
+
+const short = pinned.title.length > 46 ? `${pinned.title.slice(0, 46)}…` : pinned.title;
+const number = (n: number) => n.toLocaleString('en-US');
+---
+
+<header class="hero" data-hero data-live="false">
+  <div class="hero__bg" style="--hero-image: url('/assets/images/bg/header-bg-lg.jpg')"></div>
+
+  <Nav />
+
+  <div class="wrap hero__inner">
+    <div class="hero__copy">
+      <p class="hero__badge" data-live-badge>
+        <span class="hero__badge-dot" aria-hidden="true"></span>
+        <span data-live-badge-text>START HERE</span>
+      </p>
+      <span class="hero__viewers" data-live-viewers></span>
+
+      <h1 class="hero__title" data-live-title>
+        Minecraft<br />
+        <span class="hi">but better</span>
+      </h1>
+
+      <p class="lead hero__lead" data-live-lead>
+        Farms & Redstone Tutorials, Tools & Utilities, and Amazing Builds for Minecraft Bedrock Edition
+      </p>
+
+      {/* Built as one string. Split across lines with expressions between, JSX
+          collapses the whitespace and the separators end up jammed against the
+          next number. */}
+      <p class="hero__stats">
+        {`${number(channel.videoCount)} videos · ${number(channel.subscriberCount)} subscribers · ${number(channel.viewCount)} views`}
+      </p>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" data-live-cta href={watchUrl(pinned.id)} rel="noopener">
+          Watch: {short}
+        </a>
+        <a class="btn btn--ghost" href="#watch">Browse everything</a>
+      </div>
+    </div>
+
+    {/* Three newest uploads. Not rendered below 1100px; they are already in the
+        Watch panel and a second copy would be noise. */}
+    <aside class="hero__rail" aria-label="Latest uploads">
+      <p class="hero__rail-title">Latest</p>
+      {videos.slice(0, 3).map((video) => <VideoCard video={video} size="compact" />)}
+    </aside>
+  </div>
+</header>

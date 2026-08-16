@@ -1,0 +1,14 @@
+{
+  "name": "alaydriem-live-worker",
+  "private": true,
+  "type": "module",
+  "description": "Live status endpoint for www.alaydriem.com",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^4"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "id": "vid001",
+      "snippet": {
+        "title": "The 400/hr iron farm",
+        "description": "A farm that should not work.",
+        "publishedAt": "2026-08-12T15:00:00Z",
+        "tags": ["minecraft", "bedrock"],
+        "thumbnails": {
+          "medium": { "url": "https://i.ytimg.com/vi/vid001/mqdefault.jpg" },
+          "maxres": { "url": "https://i.ytimg.com/vi/vid001/maxresdefault.jpg" }
+        }
+      },
+      "contentDetails": { "duration": "PT18M2S" },
+      "statistics": { "viewCount": "82000" }
+    },
+    {
+      "id": "vid002",
+      "snippet": {
+        "title": "Rebuilding spawn overnight",
+        "description": "One night, one build.",
+        "publishedAt": "2026-08-05T15:00:00Z",
+        "thumbnails": {
+          "medium": { "url": "https://i.ytimg.com/vi/vid002/mqdefault.jpg" }
+        }
+      },
+      "contentDetails": { "duration": "PT9M30S" },
+      "statistics": { "viewCount": "41000" }
+    }
+  ]
+}

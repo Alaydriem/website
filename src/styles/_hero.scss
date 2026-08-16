@@ -1,0 +1,151 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  min-height: min(86vh, 760px);
+  display: flex;
+  flex-direction: column;
+  /* Room for the band, which is pulled up over this edge. */
+  padding-bottom: 92px;
+}
+
+/* The scrim is what makes the text legible over a photograph. Two stacked
+   gradients: one horizontal so the left column always has ground under it, one
+   vertical so the bottom meets the band cleanly instead of cutting the image.
+   Measured against this image with axe, not assumed. */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(100deg, var(--void) 12%, rgb(15 10 28 / 0.82) 46%, rgb(15 10 28 / 0.35) 78%),
+    linear-gradient(to bottom, rgb(15 10 28 / 0) 40%, var(--void) 97%),
+    var(--hero-image);
+  background-size: cover;
+  background-position: center 38%;
+}
+
+.hero__inner {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 40px;
+  padding-top: clamp(36px, 6vw, 76px);
+}
+
+.hero__copy {
+  max-width: 41rem;
+}
+
+/* ---- badge --------------------------------------------------------- *
+ * Pinned is deliberately quiet. If it were loud, going live would be one
+ * red badge swapping for another rather than a visible change.          */
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 7px 14px;
+  border-radius: var(--r-pill);
+  background: var(--void-2);
+  border: 1px solid var(--line);
+  color: var(--dim);
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.hero__badge-dot {
+  display: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--tx);
+}
+
+/* Live state. Only colour and text change; the box is identical, so the
+   upgrade cannot move layout. */
+/* Deepened crimson, not the raw stop. Ink on raw --sp-crimson measures 3.76:1
+   and fails AA for a 12px label, while --void on it measures 4.97:1 and is
+   uncomfortable to read. Mixing the stop toward the ground gives 7.2:1 and
+   still reads as red; the border and the dot keep the raw stop, which is what
+   raw stops are for. */
+.hero[data-live='true'] .hero__badge {
+  background: color-mix(in srgb, var(--sp-crimson) 62%, var(--void));
+  border-color: var(--sp-crimson);
+  color: var(--tx);
+}
+
+.hero[data-live='true'] .hero__badge-dot {
+  display: block;
+  animation: hero-pulse 2s var(--ease) infinite;
+}
+
+@keyframes hero-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+.hero__viewers {
+  display: none;
+  margin-left: 12px;
+  color: var(--dim);
+  font-size: var(--fs-small);
+}
+
+.hero[data-live='true'] .hero__viewers {
+  display: inline;
+}
+
+.hero__title {
+  margin-top: 20px;
+  text-wrap: balance;
+}
+
+.hero__lead {
+  margin-top: 18px;
+}
+
+.hero__stats {
+  margin-top: 16px;
+  color: var(--faint);
+  font-size: var(--fs-small);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+/* ---- desktop rail -------------------------------------------------- *
+ * Below 1100px this is not rendered at all: those videos are already in the
+ * Watch panel and a second copy would be noise.                          */
+.hero__rail {
+  display: none;
+}
+
+@media (min-width: 1100px) {
+  .hero__inner {
+    grid-template-columns: minmax(0, 1fr) 366px;
+  }
+
+  .hero__rail {
+    display: grid;
+    gap: 10px;
+    padding: 14px;
+    border-radius: var(--r-lg);
+    border: 1px solid var(--line);
+    background: rgb(36 23 56 / 0.62);
+    backdrop-filter: blur(14px);
+  }
+
+  .hero__rail-title {
+    color: var(--faint);
+    font-size: var(--fs-label);
+    font-weight: 600;
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+  }
+}

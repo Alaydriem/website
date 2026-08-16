@@ -1,0 +1,29 @@
+# The video the pinned hero points at. Changing this is a one-line edit.
+# The build FAILS if this id is not present in data/youtube.json, because a
+# homepage with a broken primary action must not publish.
+#
+# The default is the Bedrock Voice Chat announcement: it is the most watched
+# video on the channel by a factor of three, and it is the one video that drives
+# both of the site's two goals at once.
+pinnedVideo: VON56xnHfnQ
+
+# Live status, spec section 8. Empty disables the runtime check entirely and the
+# hero stays pinned, which is the safe default until the gist and the
+# streamer.bot action exist.
+#
+# Phase 0 measured the options. The raw gist URL propagates in 304 seconds,
+# which a 60 second heartbeat cannot use. The same URL read with a cache-busting
+# query lands at 63 seconds. Use the second form:
+#
+#   https://gist.githubusercontent.com/<user>/<gist-id>/raw/live.json
+#
+# The client appends the cache-busting parameter itself.
+liveStatusUrl: ""
+
+links:
+  youtube: https://www.youtube.com/@Alaydriem
+  twitch: https://www.twitch.tv/alaydriem
+  bluesky: https://bsky.app/profile/alaydriem.com
+  github: https://www.github.com/Alaydriem
+  discord: https://discordapp.com/users/507326861680836628
+  bvc: https://www.bedrockvoicechat.com

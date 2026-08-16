@@ -1,0 +1,65 @@
+name: CI
+
+# Validates a pull request without deploying anything.
+#
+# deploy.yml runs the same checks again before publishing. That duplication is
+# deliberate: this job proves a branch is sound, and deploy.yml proves the
+# merged result is, which are not the same commit.
+on:
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  # One run per branch. Pushing again supersedes the previous run.
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+# Read-only, and no secrets are read anywhere in this file. That is what makes
+# it safe to run on pull requests from forks.
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Unit tests
+        run: npm run test
+
+      - name: Type check
+        run: npm run check
+
+      - name: Build
+        run: npm run build
+
+      - name: Install browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: End-to-end tests and accessibility audit
+        run: npm run test:e2e
+
+      - name: Link check
+        run: >
+          npx --yes linkinator --server-root dist --recurse
+          --skip '^https?://(?!localhost|127\.0\.0\.1)' /
+
+      - name: Size budgets
+        run: node scripts/check-budgets.mjs
+
+      - name: Worker unit tests and config
+        working-directory: worker
+        run: |
+          npm ci
+          # --dry-run needs no credentials and catches a broken wrangler.jsonc,
+          # a bad Durable Object migration, or a script that does not compile.
+          npx wrangler deploy --dry-run --outdir=.dryrun

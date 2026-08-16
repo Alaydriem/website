@@ -1,0 +1,26 @@
+---
+import { formatAge, formatViews, watchUrl } from '../lib/format.js';
+
+interface Props {
+  video: {
+    id: string;
+    title: string;
+    thumbnail: string;
+    viewCount: number;
+    publishedAt: string;
+  };
+  size?: 'wide' | 'compact';
+}
+
+const { video, size = 'wide' } = Astro.props;
+---
+
+<a class={`card card--${size}`} href={watchUrl(video.id)} rel="noopener">
+  <span class="card__shot">
+    <img src={video.thumbnail} alt={video.title} loading="lazy" decoding="async" width="480" height="270" />
+  </span>
+  <span class="card__body">
+    <span class="card__title">{video.title}</span>
+    <span class="card__meta">{formatViews(video.viewCount)} &middot; {formatAge(video.publishedAt)}</span>
+  </span>
+</a>
