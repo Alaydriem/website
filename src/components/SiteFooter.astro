@@ -1,0 +1,18 @@
+---
+import site from '../lib/site.json';
+const { links } = site;
+const year = new Date().getFullYear();
+---
+
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <div class="foot__links">
+      <a href={links.youtube} rel="noopener">YouTube</a>
+      <a href={links.twitch} rel="noopener">Twitch</a>
+      <a href={links.bluesky} rel="noopener">Bluesky</a>
+      <a href={links.github} rel="noopener">GitHub</a>
+      <a href={links.discord} rel="noopener">Discord</a>
+    </div>
+    <p class="foot__note">&copy; {year} Alaydriem</p>
+  </div>
+</footer>

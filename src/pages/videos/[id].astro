@@ -1,0 +1,31 @@
+---
+import Redirect from '../../components/Redirect.astro';
+import youtube from '../../../data/youtube.json';
+import { watchUrl } from '../../lib/format.js';
+
+/**
+ * Canonical redirect stubs for the video pages the Hugo site used to publish.
+ *
+ * The site exists to send people to YouTube, so an on-site copy of a video
+ * competes with the thing it is meant to promote. These URLs are indexed
+ * though, so they keep working and hand their equity on.
+ */
+export function getStaticPaths() {
+  return youtube.videos.map((video) => ({
+    // Hugo lowercased the URL segment while YouTube ids are case-sensitive, so
+    // the published path and the watch URL are derived separately. Conflating
+    // them sends every redirect to a video that does not exist.
+    params: { id: video.id.toLowerCase() },
+    props: { video },
+  }));
+}
+
+const { video } = Astro.props;
+---
+
+<Redirect
+  to={watchUrl(video.id)}
+  title={video.title}
+  label={`Watch “${video.title}” on YouTube`}
+  description={`Watch “${video.title}” on YouTube.`}
+/>

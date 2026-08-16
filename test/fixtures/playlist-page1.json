@@ -1,0 +1,7 @@
+{
+  "nextPageToken": "PAGE2",
+  "items": [
+    { "contentDetails": { "videoId": "vid001" } },
+    { "contentDetails": { "videoId": "vid002" } }
+  ]
+}

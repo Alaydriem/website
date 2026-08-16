@@ -1,0 +1,19 @@
+---
+import site from '../lib/site.json';
+const { links } = site;
+---
+
+<nav class="nav" aria-label="Primary">
+  <div class="wrap nav__inner">
+    <a class="nav__mark" href="/">
+      <span class="nav__dot" aria-hidden="true"></span>
+      Alaydriem
+    </a>
+    <div class="nav__links">
+      <a href={links.youtube} rel="noopener">YouTube</a>
+      <a href={links.twitch} rel="noopener">Twitch</a>
+      <a href={links.github} rel="noopener">GitHub</a>
+      <a class="nav__cta" href={links.bvc} rel="noopener">Bedrock Voice Chat</a>
+    </div>
+  </div>
+</nav>

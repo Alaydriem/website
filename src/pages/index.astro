@@ -1,0 +1,40 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import Band from '../components/Band.astro';
+import Segments from '../components/Segments.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+---
+
+<Base
+  title="Alaydriem · Minecraft Bedrock builds, farms and tools"
+  description="Youtube Partner & Twitch Affiliate; Creating Amazing Minecraft builds, farms, tutorials, and tools for Minecraft Bedrock Edition"
+  image="https://www.alaydriem.com/assets/images/bg/header-bg-lg.jpg"
+  preloadHero
+>
+  <a class="skip" href="#watch">Skip to content</a>
+
+  <Hero />
+  <Band />
+
+  <main id="main">
+    <Segments />
+  </main>
+
+  <SiteFooter />
+</Base>
+
+<script>
+  import { initSegments } from '../scripts/segments.js';
+  import { initLiveStatus } from '../scripts/live-status.js';
+
+  /* The live client reads its URL from a meta tag and does nothing when that is
+     empty, which is the shipped default. Exposing the initialiser lets the
+     end-to-end suite point it at a mocked response and assert the one
+     constraint the two-state hero rests on: that upgrading never moves layout.
+     It changes no behaviour on a normal page load. */
+  window.__initLiveStatus = initLiveStatus;
+
+  initSegments();
+  initLiveStatus();
+</script>

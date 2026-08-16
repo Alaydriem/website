@@ -1,0 +1,65 @@
+name: Refresh content
+
+# No pull_request trigger. Fork pull requests cannot read secrets, so this
+# would fail confusingly on the first outside contribution.
+#
+# GitHub's schedule trigger is best-effort and is regularly 5 to 20 minutes
+# late on public repositories. That is acceptable for a three-hourly refresh.
+# It is the reason live status is pushed rather than baked into a build.
+on:
+  schedule:
+    - cron: '17 */3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      # A failure here produces no commit, so the site keeps serving the last
+      # good data/youtube.json.
+      - name: Fetch YouTube
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: npm run fetch:youtube
+
+      # data/youtube.json carries no fetch timestamp, and view counts are
+      # stored at display precision, so a quiet channel produces a
+      # byte-identical file and no commit. An active one commits and deploys,
+      # which is the job doing its work rather than churning.
+      - name: Commit if the data changed
+        id: commit
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- data/; then
+            echo 'No change'
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/
+          git commit -m 'chore: refresh youtube data'
+          git push
+          echo 'changed=true' >> "$GITHUB_OUTPUT"
+
+  # Called directly rather than relying on the push above. Commits made with the
+  # default GITHUB_TOKEN do not trigger workflows.
+  deploy:
+    needs: refresh
+    if: needs.refresh.outputs.changed == 'true'
+    uses: ./.github/workflows/deploy.yml

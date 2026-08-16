@@ -1,0 +1,16 @@
+{
+  "channelId": "UCXgqRZv7bHsKzwYBrtA9DFA",
+
+  "pinnedVideo": "VON56xnHfnQ",
+
+  "liveStatusUrl": "/api/live",
+
+  "links": {
+    "youtube": "https://www.youtube.com/@Alaydriem",
+    "twitch": "https://www.twitch.tv/alaydriem",
+    "bluesky": "https://bsky.app/profile/alaydriem.com",
+    "github": "https://www.github.com/Alaydriem",
+    "discord": "https://discordapp.com/users/507326861680836628",
+    "bvc": "https://www.bedrockvoicechat.com"
+  }
+}

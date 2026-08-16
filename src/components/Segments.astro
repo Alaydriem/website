@@ -1,0 +1,65 @@
+---
+import VideoCard from './VideoCard.astro';
+import site from '../lib/site.json';
+import youtube from '../../data/youtube.json';
+import { getCollection } from 'astro:content';
+
+const { channel, videos } = youtube;
+const tools = (await getCollection('tools')).sort((a, b) => a.data.weight - b.data.weight);
+---
+
+{/* Every panel is rendered at build time. The control only changes which one is
+    visible, so switching costs no network request.
+
+    Builds and Posts arrive in Phase 3. Their tabs are deliberately not rendered
+    until they have content: a tab that opens an empty panel is worse than no
+    tab at all. */}
+<div class="segs section" id="watch" data-segments>
+  <div class="wrap">
+    <div class="segs__bar" role="tablist" aria-label="Sections">
+      <button class="seg" type="button" role="tab" data-tab="watch"
+              id="tab-watch" aria-controls="panel-watch" aria-selected="true"
+              style="--accent: var(--ac-watch)">Watch</button>
+      <button class="seg" type="button" role="tab" data-tab="tools"
+              id="tab-tools" aria-controls="panel-tools" aria-selected="false"
+              style="--accent: var(--ac-tools)">Tools</button>
+    </div>
+
+    <section class="panel" role="tabpanel" data-panel="watch"
+             id="panel-watch" aria-labelledby="tab-watch"
+             style="--accent: var(--ac-watch)">
+      <h2 class="panel__heading">Watch</h2>
+      <div class="grid">
+        {videos.slice(0, 8).map((video) => <VideoCard video={video} size="wide" />)}
+      </div>
+      <p class="panel__more">
+        <a class="btn btn--ghost" href={site.links.youtube} rel="noopener">
+          All {channel.videoCount.toLocaleString('en-US')} videos on YouTube
+        </a>
+      </p>
+    </section>
+
+    <section class="panel" role="tabpanel" data-panel="tools"
+             id="panel-tools" aria-labelledby="tab-tools"
+             style="--accent: var(--ac-tools)">
+      <h2 class="panel__heading">Tools</h2>
+      <ul class="tools">
+        {tools.map((tool) => (
+          <li class="tool" style={`--accent: var(--${tool.data.accent})`}>
+            <div class="tool__head">
+              <h3 class="tool__name">{tool.data.title}</h3>
+              <div class="tool__links">
+                {tool.data.href && <a class="tool__link" href={tool.data.href} rel="noopener">Site</a>}
+                {tool.data.repo && <a class="tool__link" href={tool.data.repo} rel="noopener">Source</a>}
+              </div>
+            </div>
+            <p class="tool__summary">{tool.data.summary}</p>
+            <ul class="chips">
+              {tool.data.platforms.map((platform) => <li class="chip">{platform}</li>)}
+            </ul>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </div>
+</div>

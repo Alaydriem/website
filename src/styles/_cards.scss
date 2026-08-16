@@ -1,0 +1,141 @@
+/* ---- video cards --------------------------------------------------- */
+
+.card {
+  display: block;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  transition: border-color 0.18s var(--ease), transform 0.18s var(--ease);
+}
+
+.card:hover {
+  border-color: var(--accent, var(--line-2));
+  transform: translateY(-2px);
+}
+
+.card__shot {
+  display: block;
+  aspect-ratio: 16 / 9;
+  background: var(--void-2);
+}
+
+.card__shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__body {
+  display: block;
+  padding: 13px 15px 16px;
+}
+
+.card__title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  line-height: 1.38;
+}
+
+.card__meta {
+  display: block;
+  margin-top: 7px;
+  color: var(--faint);
+  font-size: var(--fs-micro);
+}
+
+/* The rail sits over the hero image, so it needs a flatter, tighter form. */
+.card--compact {
+  display: grid;
+  grid-template-columns: 118px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  border-radius: var(--r-md);
+  background: rgb(24 15 43 / 0.72);
+}
+
+.card--compact .card__shot {
+  border-radius: var(--r-sm);
+  overflow: hidden;
+}
+
+.card--compact .card__body {
+  padding: 0 6px 0 0;
+}
+
+.card--compact .card__title {
+  font-size: var(--fs-micro);
+}
+
+/* ---- tool rows ----------------------------------------------------- */
+
+.tools {
+  display: grid;
+  gap: 14px;
+}
+
+.tool {
+  padding: 22px;
+  border-radius: var(--r-lg);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+}
+
+.tool__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.tool__name {
+  font-size: var(--fs-h4);
+  font-weight: 600;
+  letter-spacing: normal;
+}
+
+.tool__links {
+  display: flex;
+  gap: 16px;
+  font-size: var(--fs-small);
+}
+
+/* Accent-coloured TEXT always resolves through --accent-readable. The raw
+   stops are chosen for the mark, not for type: --sp-violet on this ground
+   measures 2.73:1 and fails even the large-text threshold. */
+.tool__link {
+  color: var(--accent-readable);
+  font-weight: 600;
+}
+
+.tool__link:hover {
+  text-decoration: underline;
+}
+
+.tool__summary {
+  margin-top: 8px;
+  color: var(--dim);
+  max-width: var(--maxw-prose);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 14px;
+}
+
+.chip {
+  padding: 4px 10px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--line-2);
+  color: var(--faint);
+  font-size: var(--fs-micro);
+}

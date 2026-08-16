@@ -1,0 +1,67 @@
+---
+import site from '../lib/site.json';
+import '../styles/main.scss';
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  /** Redirect stubs ask not to be indexed while still passing their link on. */
+  noindex?: boolean;
+  ogType?: string;
+  preloadHero?: boolean;
+}
+
+const {
+  title,
+  description,
+  image,
+  noindex = false,
+  ogType = 'website',
+  preloadHero = false,
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+
+    <meta name="author" content="Alaydriem" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+
+    <meta name="theme-color" content="#0F0A1C" />
+
+    {/* The live client reads this rather than holding a build-time constant.
+        An empty value turns the feature off and the page makes no request. */}
+    <meta name="live-status-url" content={site.liveStatusUrl} />
+
+    {preloadHero && (
+      <link rel="preload" as="image" href="/assets/images/bg/header-bg-lg.jpg" fetchpriority="high" />
+    )}
+
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content="Alaydriem" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    {image && <meta property="og:image" content={image} />}
+    <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
+
+    <slot name="head" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

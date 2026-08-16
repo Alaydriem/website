@@ -1,0 +1,88 @@
+.segs {
+  background: var(--void);
+}
+
+/* ---- default state: NO JAVASCRIPT ---------------------------------- *
+ * Every panel is visible, stacked, each under its own heading, and the
+ * control is hidden. This is the default rather than the exception: if the
+ * default were "one panel visible", the page would be unreadable without
+ * scripting, which the design forbids. The script opts in to tabs. */
+.segs__bar {
+  display: none;
+}
+
+.panel + .panel {
+  margin-top: var(--gap-section);
+}
+
+[data-tabs='on'] .segs__bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 34px;
+  padding: 6px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  background: var(--void-2);
+  width: fit-content;
+}
+
+[data-tabs='on'] .panel__heading {
+  /* The tab already names the panel. */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+[data-tabs='on'] .panel + .panel {
+  margin-top: 0;
+}
+
+.seg {
+  padding: 10px 20px;
+  border-radius: var(--r-pill);
+  color: var(--faint);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  transition: color 0.18s var(--ease), background-color 0.18s var(--ease);
+}
+
+.seg:hover {
+  color: var(--tx);
+}
+
+/* A solid accent fill with --void text measured 4.97:1 on crimson: compliant,
+   but dark type on saturated red is uncomfortable long before it fails. The
+   raw stop stays as a border, which is what raw stops are for, and the label
+   goes through --accent-readable like every other accent-coloured text. */
+.seg[aria-selected='true'] {
+  background: color-mix(in srgb, var(--accent) 26%, var(--void-2));
+  box-shadow: inset 0 0 0 1px var(--accent);
+  color: var(--accent-readable);
+}
+
+.panel__heading {
+  margin-bottom: 24px;
+  font-size: var(--fs-h2);
+}
+
+.panel__more {
+  margin-top: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+}
+
+@media (min-width: 560px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 900px) {
+  .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}

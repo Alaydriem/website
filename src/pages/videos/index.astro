@@ -1,0 +1,14 @@
+---
+import Redirect from '../../components/Redirect.astro';
+import site from '../../lib/site.json';
+
+/* The old site published an empty /videos/ listing. It returns 200 today, so
+   it keeps working and now sends people to the channel. */
+---
+
+<Redirect
+  to={site.links.youtube}
+  title="Videos · Alaydriem"
+  label="See every video on YouTube"
+  description="Every Alaydriem video, on YouTube."
+/>
