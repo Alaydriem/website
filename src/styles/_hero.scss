@@ -63,22 +63,96 @@
   background: var(--tx);
 }
 
-/* Live state. Only colour and text change; the box is identical, so the
-   upgrade cannot move layout. */
-/* Deepened crimson, not the raw stop. Ink on raw --sp-crimson measures 3.76:1
-   and fails AA for a 12px label, while --void on it measures 4.97:1 and is
-   uncomfortable to read. Mixing the stop toward the ground gives 7.2:1 and
-   still reads as red; the border and the dot keep the raw stop, which is what
-   raw stops are for. */
-.hero[data-live='true'] .hero__badge {
+/* ---- live takeover -------------------------------------------------- *
+ * Going live swaps the whole block rather than editing the pinned one in
+ * place. An earlier version changed only text and colour, which meant the
+ * page never shifted but a live stream looked indistinguishable from a badly
+ * written hero. Offline nothing here displays, so nothing moves in the case
+ * that is true almost all of the time.
+ *
+ * Deepened crimson, not the raw stop. Ink on raw --sp-crimson measures 3.76:1
+ * and fails AA for a 12px label, while --void on it measures 4.97:1 and is
+ * uncomfortable to read. Mixing the stop toward the ground gives 7.2:1 and
+ * still reads as red; the border and the dot keep the raw stop, which is what
+ * raw stops are for. */
+.hero__badge--live {
   background: color-mix(in srgb, var(--sp-crimson) 62%, var(--void));
   border-color: var(--sp-crimson);
   color: var(--tx);
 }
 
-.hero[data-live='true'] .hero__badge-dot {
+.hero__badge--live .hero__badge-dot {
   display: block;
   animation: hero-pulse 2s var(--ease) infinite;
+}
+
+.hero__live {
+  display: grid;
+  gap: clamp(22px, 4vw, 44px);
+  align-items: center;
+  padding-block: clamp(26px, 5vw, 56px);
+}
+
+/* [hidden] loses to the display declarations above without this. */
+.hero__live[hidden],
+.hero__inner[hidden] {
+  display: none;
+}
+
+.hero__live-title {
+  margin-top: 16px;
+  font-size: var(--fs-h2);
+  text-wrap: balance;
+}
+
+.hero__player {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  border: 1px solid var(--line-2);
+  background: var(--void-2);
+  /* The one place the page raises its voice, and it is only ever on screen
+     when something is genuinely happening. */
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--sp-crimson) 40%, transparent),
+              0 24px 60px -20px color-mix(in srgb, var(--sp-crimson) 55%, transparent);
+}
+
+.hero__player iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.hero__player iframe[hidden] { display: none; }
+
+/* Only shown when the platform has no embed we are willing to frame. */
+.hero__player-fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  color: var(--tx);
+}
+
+.hero__player-fallback[hidden] { display: none; }
+
+.btn--live {
+  background: var(--sp-crimson);
+  color: var(--tx);
+  font-size: var(--fs-body);
+  padding: 16px 28px;
+}
+
+.btn--live:hover {
+  background: color-mix(in srgb, var(--sp-crimson) 78%, var(--tx));
+}
+
+@media (min-width: 900px) {
+  .hero__live {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  }
 }
 
 @keyframes hero-pulse {

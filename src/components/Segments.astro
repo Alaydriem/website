@@ -4,7 +4,7 @@ import site from '../lib/site.json';
 import youtube from '../../data/youtube.json';
 import { getCollection } from 'astro:content';
 
-const { channel, videos } = youtube;
+const { channel, videos, playlists } = youtube;
 const tools = (await getCollection('tools')).sort((a, b) => a.data.weight - b.data.weight);
 ---
 
@@ -33,6 +33,9 @@ const tools = (await getCollection('tools')).sort((a, b) => a.data.weight - b.da
         {videos.slice(0, 8).map((video) => <VideoCard video={video} size="wide" />)}
       </div>
       <p class="panel__more">
+        <a class="btn btn--ghost" href="/playlists/">
+          Browse {playlists.length} playlists
+        </a>
         <a class="btn btn--ghost" href={site.links.youtube} rel="noopener">
           All {channel.videoCount.toLocaleString('en-US')} videos on YouTube
         </a>

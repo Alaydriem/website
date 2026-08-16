@@ -35,6 +35,13 @@ test.beforeEach(async ({ page }) => {
       contentType: 'application/json',
       body: JSON.stringify({ live: false }),
     }));
+
+  // The live takeover frames a real player. Stubbed so the audit never depends
+  // on reaching Twitch or YouTube.
+  for (const host of ['**://player.twitch.tv/**', '**://*.youtube-nocookie.com/**']) {
+    await page.route(host, (route) =>
+      route.fulfill({ status: 200, contentType: 'text/html', body: '<!doctype html><title>player</title>' }));
+  }
 });
 
 /** Flattens violations to one readable line per offending node. */
@@ -87,6 +94,13 @@ test('the hero has no violations in its live state', async ({ page }) => {
   await expect(page.locator('[data-hero]')).toHaveAttribute('data-live', 'true');
 
   const { violations } = await audit(page);
+  expect(report(violations)).toEqual([]);
+});
+
+test('the playlists page has no accessibility violations', async ({ page }) => {
+  await page.goto('/playlists/');
+  const { violations } = await audit(page);
+
   expect(report(violations)).toEqual([]);
 });
 

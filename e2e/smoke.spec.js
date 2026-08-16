@@ -47,7 +47,22 @@ test.beforeEach(async ({ page }) => {
       contentType: 'application/json',
       body: JSON.stringify({ live: false }),
     }));
+
+  await stubPlayers(page);
 });
+
+/*
+ * The live takeover frames a real Twitch or YouTube player. Left alone the
+ * suite would reach out to those hosts on every run, which is slow, offline-
+ * hostile, and a flake waiting to happen. The tests care that the right src is
+ * set, never what the player renders.
+ */
+export async function stubPlayers(page) {
+  for (const host of ['**://player.twitch.tv/**', '**://*.youtube-nocookie.com/**']) {
+    await page.route(host, (route) =>
+      route.fulfill({ status: 200, contentType: 'text/html', body: '<!doctype html><title>player</title>' }));
+  }
+}
 
 test.describe('the page itself', () => {
   test('renders with styles and no console errors', async ({ page }) => {
@@ -118,11 +133,17 @@ test.describe('the hero', () => {
 
     const hero = page.locator('[data-hero]');
     await expect(hero).toHaveAttribute('data-live', 'false');
-    await expect(page.locator('[data-live-badge-text]')).toHaveText(/start here/i);
+
+    await expect(page.locator('[data-pinned-block]')).toBeVisible();
+    await expect(page.locator('[data-live-block]')).toBeHidden();
+    await expect(page.locator('[data-pinned-block] .hero__badge')).toHaveText(/start here/i);
 
     // The primary action must point at a real watch URL.
-    await expect(page.locator('[data-live-cta]'))
+    await expect(page.locator('[data-pinned-block] .btn--primary'))
       .toHaveAttribute('href', /youtube\.com\/watch\?v=.+/);
+
+    // The player must not load anything while offline.
+    await expect(page.locator('[data-live-player]')).not.toHaveAttribute('src', /./);
   });
 
   test('shows the product band, and it is the only violet on the page', async ({ page }) => {
@@ -144,6 +165,87 @@ test.describe('the hero', () => {
         .map((el) => el.className.toString() || el.tagName));
 
     expect(stray).toEqual([]);
+  });
+});
+
+test.describe('the playlists page', () => {
+  test('lists every playlist, with videos and a link to its own page', async ({ page }) => {
+    const missing = [];
+    page.on('response', (r) => r.status() >= 400 && missing.push(`${r.status()} ${r.url()}`));
+
+    await page.goto('/playlists/', { waitUntil: 'networkidle' });
+
+    const sections = page.locator('.plist');
+    expect(await sections.count()).toBeGreaterThan(3);
+
+    const first = sections.first();
+    await expect(first.locator('.plist__title')).not.toBeEmpty();
+    expect(await first.locator('.card').count()).toBeGreaterThan(0);
+    await expect(first.locator('a.btn')).toHaveAttribute('href', /^\/playlists\/[a-z0-9-]+\/$/);
+
+    expect(missing).toEqual([]);
+  });
+
+  // The order is configured in src/lib/site.json because YouTube exposes none.
+  // If it silently stopped being applied the page would still look fine, just
+  // with the wrong things at the top.
+  test('honours the configured order', async ({ page }) => {
+    await page.goto('/playlists/');
+    const titles = await page.locator('.plist__title').allInnerTexts();
+
+    // Read the same configuration the build read, rather than restating it.
+    const { playlists } = JSON.parse(readFileSync('src/lib/site.json', 'utf8'));
+    const configured = playlists.order.filter(
+      (entry) => titles.some((t) => t.trim() === entry),
+    );
+
+    expect(configured.length).toBeGreaterThan(1);
+    expect(titles.slice(0, configured.length).map((t) => t.trim())).toEqual(configured);
+  });
+
+  test('gives each playlist its own page', async ({ page }) => {
+    await page.goto('/playlists/');
+
+    const href = await page.locator('.plist a.btn').first().getAttribute('href');
+    const expected = await page.locator('.plist').first().locator('.plist__count').innerText();
+
+    await page.goto(href, { waitUntil: 'networkidle' });
+
+    await expect(page.locator('h1')).not.toBeEmpty();
+    await expect(page.locator('.plist__crumb a')).toHaveAttribute('href', '/playlists/');
+    await expect(page.locator('a.btn--primary')).toHaveAttribute(
+      'href', /youtube\.com\/playlist\?list=/);
+
+    // The detail page shows the whole playlist, not the four-card preview.
+    const shown = await page.locator('.card').count();
+    expect(shown).toBe(Number(expected.split(' ')[0]));
+  });
+
+  // A playlist with nothing renderable would be a heading over an empty row.
+  // JSX collapses whitespace between expressions, which silently glues a
+  // number to the word before it ("grouped into22 playlists"). It renders,
+  // it builds, and only a human reading the page catches it.
+  test('has no digits jammed against words', async ({ page }) => {
+    await page.goto('/playlists/');
+    const text = await page.locator('main, .page-head').allInnerTexts();
+
+    expect(text.join(' ')).not.toMatch(/[a-z]\d/);
+  });
+
+  test('shows no empty playlist', async ({ page }) => {
+    await page.goto('/playlists/');
+
+    const counts = await page.locator('.plist').evaluateAll(
+      (sections) => sections.map((s) => s.querySelectorAll('.card').length));
+
+    expect(counts.length).toBeGreaterThan(0);
+    expect(counts.every((n) => n > 0)).toBe(true);
+  });
+
+  test('is reachable from the homepage', async ({ page }) => {
+    await page.goto('/');
+    await page.locator('[data-panel=watch] a[href="/playlists/"]').first().click();
+    await expect(page.locator('h1')).toHaveText('Playlists');
   });
 });
 
@@ -222,7 +324,8 @@ test.describe('the live upgrade', () => {
       expect(statuses.every((s) => s >= 400)).toBe(true);
 
       await expect(page.locator('[data-hero]')).toHaveAttribute('data-live', 'false');
-      await expect(page.locator('[data-live-badge-text]')).toHaveText(/start here/i);
+      await expect(page.locator('[data-pinned-block]')).toBeVisible();
+      await expect(page.locator('[data-live-block]')).toBeHidden();
       expect(errors).toEqual([]);
     });
 
@@ -254,23 +357,45 @@ test.describe('the live upgrade', () => {
     expect(requests).toEqual([]);
   });
 
-  // This is the assertion the whole two-state design rests on. Both states
-  // occupy identical boxes; only text and colour change.
-  test('upgrades the hero without moving layout', async ({ page }) => {
+  // Going live takes the hero over rather than editing it in place. An earlier
+  // version asserted the box never moved, which was true and produced a live
+  // state indistinguishable from a badly written hero.
+  test('takes the hero over, with the stream embedded', async ({ page }) => {
     await mockLive(page, { ...LIVE_PAYLOAD, heartbeatAt: new Date().toISOString() });
     await page.goto('/');
+
+    await runLiveCheck(page);
+
+    await expect(page.locator('[data-hero]')).toHaveAttribute('data-live', 'true');
+
+    // The pinned hero is gone, not merely recoloured.
+    await expect(page.locator('[data-pinned-block]')).toBeHidden();
+    await expect(page.locator('[data-live-block]')).toBeVisible();
+
+    await expect(page.locator('[data-live-title]')).toHaveText('Cathedral roof, night four');
+    await expect(page.locator('[data-live-cta]'))
+      .toHaveAttribute('href', 'https://twitch.tv/alaydriem');
+    await expect(page.locator('[data-live-viewers]')).toContainText('1,204');
+
+    // The player is framed from an allowlisted host with the page's own
+    // hostname as parent, which Twitch requires or it refuses to play.
+    const src = await page.locator('[data-live-player]').getAttribute('src');
+    expect(src).toMatch(/^https:\/\/player\.twitch\.tv\/\?channel=alaydriem&/);
+    expect(src).toContain(`parent=${new URL(page.url()).hostname}`);
+  });
+
+  // Offline is the case that is true almost all of the time, and it is the one
+  // that must never move: the takeover is only ever swapped in after a real
+  // response says a stream is running.
+  test('does not move the pinned hero when the answer is offline', async ({ page }) => {
+    await mockLive(page, { live: false });
+    await page.goto('/', { waitUntil: 'networkidle' });
 
     const hero = page.locator('[data-hero]');
     const before = await hero.boundingBox();
 
     await runLiveCheck(page);
-
-    await expect(hero).toHaveAttribute('data-live', 'true');
-    await expect(page.locator('[data-live-badge-text]')).toHaveText(/live now/i);
-    await expect(page.locator('[data-live-title]')).toHaveText('Cathedral roof, night four');
-    await expect(page.locator('[data-live-cta]'))
-      .toHaveAttribute('href', 'https://twitch.tv/alaydriem');
-    await expect(page.locator('[data-live-viewers]')).toContainText('1,204');
+    await page.waitForTimeout(300);
 
     const after = await hero.boundingBox();
     expect(after.height).toBe(before.height);
@@ -285,7 +410,9 @@ test.describe('the live upgrade', () => {
     await runLiveCheck(page);
 
     await expect(page.locator('[data-hero]')).toHaveAttribute('data-live', 'false');
-    await expect(page.locator('[data-live-badge-text]')).toHaveText(/start here/i);
+    await expect(page.locator('[data-pinned-block]')).toBeVisible();
+    await expect(page.locator('[data-live-block]')).toBeHidden();
+    await expect(page.locator('[data-live-player]')).not.toHaveAttribute('src', /./);
   });
 
   test('stays pinned when the payload is rubbish', async ({ page }) => {

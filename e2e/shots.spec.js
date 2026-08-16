@@ -21,6 +21,12 @@ test('desktop, tools panel', async ({ page }) => {
   await page.locator('.segs').screenshot({ path: `${OUT}/desktop-tools.png` });
 });
 
+test('desktop, playlists', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 1150 });
+  await page.goto('/playlists/', { waitUntil: 'networkidle' });
+  await page.screenshot({ path: `${OUT}/desktop-playlists.png` });
+});
+
 test('mobile', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/', { waitUntil: 'networkidle' });

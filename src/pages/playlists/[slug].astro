@@ -1,0 +1,63 @@
+---
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import VideoCard from '../../components/VideoCard.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import site from '../../lib/site.json';
+import youtube from '../../../data/youtube.json';
+import { arrangePlaylists } from '../../lib/playlists.js';
+
+export function getStaticPaths() {
+  const byId = new Map(youtube.videos.map((video) => [video.id, video]));
+
+  // Built from the same arrangement as the index, so a hidden playlist has no
+  // page either — otherwise hiding one would only remove the link to it.
+  return arrangePlaylists(youtube.playlists, site.playlists).map((playlist) => ({
+    params: { slug: playlist.slug },
+    props: {
+      playlist,
+      videos: playlist.videoIds.flatMap((id) => {
+        const video = byId.get(id);
+        return video ? [video] : [];
+      }),
+    },
+  }));
+}
+
+const { playlist, videos } = Astro.props;
+const youtubeUrl = `https://www.youtube.com/playlist?list=${playlist.id}`;
+---
+
+<Base
+  title={`${playlist.title} · Alaydriem`}
+  description={playlist.description
+    || `${videos.length} videos in the ${playlist.title} playlist.`}
+  image={playlist.thumbnail || undefined}
+>
+  <a class="skip" href="#videos">Skip to content</a>
+
+  <div class="page-head">
+    <Nav />
+    <div class="wrap page-head__inner">
+      <p class="plist__crumb"><a href="/playlists/">Playlists</a></p>
+      <h1 class="page-head__title">{playlist.title}</h1>
+      {playlist.description && <p class="lead">{playlist.description}</p>}
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" href={youtubeUrl} rel="noopener">
+          {`Play all ${videos.length} on YouTube`}
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main class="section" id="videos">
+    <div class="wrap">
+      <div class="grid">
+        {videos.map((video) => <VideoCard video={video} size="wide" />)}
+      </div>
+    </div>
+  </main>
+
+  <SiteFooter />
+</Base>

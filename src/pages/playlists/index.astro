@@ -1,0 +1,76 @@
+---
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import VideoCard from '../../components/VideoCard.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import site from '../../lib/site.json';
+import youtube from '../../../data/youtube.json';
+import { arrangePlaylists } from '../../lib/playlists.js';
+
+const { playlists, videos, channel } = youtube;
+
+// One lookup rather than a find() per card: some playlists run to a hundred
+// videos and there are twenty-odd playlists.
+const byId = new Map(videos.map((video) => [video.id, video]));
+
+/** Shown per playlist before deferring to its own page. */
+const PREVIEW = 4;
+
+const sections = arrangePlaylists(playlists, site.playlists).map((playlist) => ({
+  ...playlist,
+  // flatMap rather than map().filter(Boolean): the latter does not narrow away
+  // the undefined from a Map miss, and a miss is possible — a playlist can
+  // name a video that is no longer public.
+  preview: playlist.videoIds.slice(0, PREVIEW).flatMap((id) => {
+    const video = byId.get(id);
+    return video ? [video] : [];
+  }),
+}));
+---
+
+<Base
+  title="Playlists · Alaydriem"
+  description="Every Alaydriem series, farm collection and past livestream, grouped by playlist."
+>
+  <a class="skip" href="#playlists">Skip to content</a>
+
+  <div class="page-head">
+    <Nav />
+    <div class="wrap page-head__inner">
+      <h1 class="page-head__title">Playlists</h1>
+      {/* Built as one string. Split across lines with an expression between,
+          JSX collapses the whitespace and the number runs into the word
+          before it. */}
+    </div>
+  </div>
+
+  <main class="section" id="playlists">
+    <div class="wrap">
+      {sections.map((playlist) => (
+        <section class="plist" style="--accent: var(--ac-watch)">
+          <div class="plist__head">
+            <div>
+              <h2 class="plist__title">
+                <a href={`/playlists/${playlist.slug}/`}>{playlist.title}</a>
+              </h2>
+              <p class="plist__count">
+                {`${playlist.videoIds.length} ${playlist.videoIds.length === 1 ? 'video' : 'videos'}`}
+              </p>
+            </div>
+            <a class="btn btn--ghost" href={`/playlists/${playlist.slug}/`}>
+              {`See all ${playlist.videoIds.length}`}
+            </a>
+          </div>
+
+          {playlist.description && <p class="plist__desc">{playlist.description}</p>}
+
+          <div class="grid">
+            {playlist.preview.map((video) => <VideoCard video={video} size="wide" />)}
+          </div>
+        </section>
+      ))}
+    </div>
+  </main>
+
+  <SiteFooter />
+</Base>

@@ -27,20 +27,75 @@ const number = (n: number) => n.toLocaleString('en-US');
 
   <Nav />
 
-  <div class="wrap hero__inner">
-    <div class="hero__copy">
-      <p class="hero__badge" data-live-badge>
+  {/*
+    The live takeover. Rendered but hidden, and swapped in wholesale when a
+    stream is running.
+
+    This deliberately departs from the original "only text and colour change"
+    rule. That rule protected the common case, and it still does — offline,
+    this block never displays and nothing moves. But applied to the live state
+    it produced a hero that looked broken rather than live, which is the one
+    moment the page has something urgent to say.
+
+    The iframe ships with no src, so nothing loads until it is set. That keeps
+    the DOM stable: going live sets an attribute, it does not insert elements.
+  */}
+  {/* The alternates are read by the client: the stream runs on both platforms
+      at once, so whichever one is embedded, the other gets a link. */}
+  <div
+    class="wrap hero__live"
+    data-live-block
+    data-alt-twitch={site.links.twitch}
+    data-alt-youtube={site.links.youtubeLive}
+    hidden
+  >
+    <div class="hero__live-copy">
+      <p class="hero__badge hero__badge--live">
         <span class="hero__badge-dot" aria-hidden="true"></span>
-        <span data-live-badge-text>START HERE</span>
+        Live now
       </p>
       <span class="hero__viewers" data-live-viewers></span>
 
-      <h1 class="hero__title" data-live-title>
+      <h2 class="hero__live-title" data-live-title>Live on stream</h2>
+
+      <div class="hero__actions">
+        <a class="btn btn--live" data-live-cta href="#" rel="noopener">
+          Watch the stream
+        </a>
+        <a class="btn btn--ghost" data-live-alt href="#" rel="noopener">
+          Also on YouTube
+        </a>
+      </div>
+    </div>
+
+    <div class="hero__player">
+      <iframe
+        data-live-player
+        title="Live stream"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+        loading="lazy"></iframe>
+      {/* Shown when the platform has no embed we are willing to frame. */}
+      <a class="hero__player-fallback" data-live-fallback href="#" rel="noopener">
+        Open the stream
+      </a>
+    </div>
+  </div>
+
+  <div class="wrap hero__inner" data-pinned-block>
+    <div class="hero__copy">
+      {/* The pinned block no longer mutates. Going live swaps this whole
+          block out for hero__live rather than rewriting it in place. */}
+      <p class="hero__badge">
+        START HERE
+      </p>
+
+      <h1 class="hero__title">
         Minecraft<br />
         <span class="hi">but better</span>
       </h1>
 
-      <p class="lead hero__lead" data-live-lead>
+      <p class="lead hero__lead">
         Farms & Redstone Tutorials, Tools & Utilities, and Amazing Builds for Minecraft Bedrock Edition
       </p>
 
@@ -52,7 +107,7 @@ const number = (n: number) => n.toLocaleString('en-US');
       </p>
 
       <div class="hero__actions">
-        <a class="btn btn--primary" data-live-cta href={watchUrl(pinned.id)} rel="noopener">
+        <a class="btn btn--primary" href={watchUrl(pinned.id)} rel="noopener">
           Watch: {short}
         </a>
         <a class="btn btn--ghost" href="#watch">Browse everything</a>

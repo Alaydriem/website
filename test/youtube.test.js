@@ -2,6 +2,7 @@ import { describe, expect, it, vi } from 'vitest';
 import {
   buildYouTubeData,
   chunk,
+  fetchPlaylists,
   fetchPlaylistVideoIds,
   fetchUploadsPlaylistId,
   fetchVideoDetails,
@@ -12,6 +13,7 @@ import channels from './fixtures/channels.json' with { type: 'json' };
 import page1 from './fixtures/playlist-page1.json' with { type: 'json' };
 import page2 from './fixtures/playlist-page2.json' with { type: 'json' };
 import videos from './fixtures/videos.json' with { type: 'json' };
+import playlists from './fixtures/playlists.json' with { type: 'json' };
 
 /** Returns a fetch stand-in that answers by matching a substring of the URL. */
 function fakeFetch(routes) {
@@ -171,16 +173,52 @@ describe('fetchVideoDetails', () => {
   });
 });
 
+describe('fetchPlaylists', () => {
+  it('reads title, description, item count and thumbnail', async () => {
+    const f = fakeFetch([['/playlists?', playlists]]);
+    const result = await fetchPlaylists(f, { channelId: 'UCX', apiKey: 'k' });
+
+    expect(result[0]).toEqual({
+      id: 'PLlivestreams',
+      title: 'Previous livestreams',
+      description: 'Every stream, after the fact.',
+      itemCount: 2,
+      thumbnail: 'https://i.ytimg.com/vi/vid001/maxresdefault.jpg',
+    });
+  });
+
+  it('costs one call per page, not one per playlist', async () => {
+    const f = fakeFetch([['/playlists?', playlists]]);
+    await fetchPlaylists(f, { channelId: 'UCX', apiKey: 'k' });
+    expect(f).toHaveBeenCalledTimes(1);
+  });
+});
+
 describe('buildYouTubeData', () => {
-  it('assembles the committed shape, newest first', async () => {
-    const f = vi.fn(async (url) => {
-      const body = url.includes('/channels?') ? channels
-        : url.includes('/playlistItems?') ? (url.includes('PAGE2') ? page2 : page1)
-        : videos;
+  /**
+   * Routes a whole build. `/playlists?` must be matched before
+   * `/playlistItems?`, and the uploads listing paginates while a named
+   * playlist does not.
+   */
+  function wholeChannel() {
+    return vi.fn(async (url) => {
+      let body;
+      if (url.includes('/channels?')) body = channels;
+      else if (url.includes('/playlists?')) body = playlists;
+      else if (url.includes('/playlistItems?')) {
+        if (url.includes('PLlivestreams')) body = { items: [{ contentDetails: { videoId: 'vid001' } }] };
+        else if (url.includes('PLforeign')) body = { items: [{ contentDetails: { videoId: 'notmine' } }] };
+        else if (url.includes('PLempty')) body = { items: [] };
+        // Anything else is the uploads playlist, which paginates.
+        else body = url.includes('PAGE2') ? page2 : page1;
+      } else body = videos;
+
       return { ok: true, status: 200, json: async () => body };
     });
+  }
 
-    const data = await buildYouTubeData(f, {
+  it('assembles the committed shape, newest first', async () => {
+    const data = await buildYouTubeData(wholeChannel(), {
       channelId: 'UCX',
       apiKey: 'k',
       now: () => new Date('2026-08-15T00:00:00Z'),
@@ -193,21 +231,33 @@ describe('buildYouTubeData', () => {
   // A timestamp in the committed file would change on every scheduled run and
   // force a deploy every three hours whether or not the channel changed.
   it('carries no wall-clock timestamp', async () => {
-    const f = vi.fn(async (url) => {
-      const body = url.includes('/channels?') ? channels
-        : url.includes('/playlistItems?') ? (url.includes('PAGE2') ? page2 : page1)
-        : videos;
-      return { ok: true, status: 200, json: async () => body };
-    });
-
-    const data = await buildYouTubeData(f, {
+    const data = await buildYouTubeData(wholeChannel(), {
       channelId: 'UCX',
       apiKey: 'k',
       now: () => new Date('2026-08-15T00:00:00Z'),
     });
 
     expect(data.fetchedAt).toBeUndefined();
-    expect(Object.keys(data).sort()).toEqual(['channel', 'videos']);
+    expect(Object.keys(data).sort()).toEqual(['channel', 'playlists', 'videos']);
+  });
+
+  it('keeps only playlist members it holds details for', async () => {
+    const data = await buildYouTubeData(wholeChannel(), {
+      channelId: 'UCX',
+      apiKey: 'k',
+      now: () => new Date('2026-08-15T00:00:00Z'),
+    });
+
+    const live = data.playlists.find((p) => p.id === 'PLlivestreams');
+    expect(live.title).toBe('Previous livestreams');
+    expect(live.videoIds).toEqual(['vid001']);
+
+    // A playlist of other people's videos has nothing renderable left, so it
+    // is dropped rather than rendered as a heading over an empty row.
+    expect(data.playlists.map((p) => p.id)).not.toContain('PLforeign');
+
+    // An empty playlist never had anything to drop.
+    expect(data.playlists.map((p) => p.id)).not.toContain('PLempty');
   });
 
   it('rejects on a non-ok response rather than writing partial data', async () => {

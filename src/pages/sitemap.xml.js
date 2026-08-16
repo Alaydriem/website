@@ -10,7 +10,16 @@
  * Listing them would ask search engines to index pages that tell them not to,
  * so only real pages appear here.
  */
-const PAGES = ['/'];
+import site from '../lib/site.json';
+import youtube from '../../data/youtube.json';
+import { arrangePlaylists } from '../lib/playlists.js';
+
+const PAGES = [
+  '/',
+  '/playlists/',
+  ...arrangePlaylists(youtube.playlists, site.playlists)
+    .map((playlist) => `/playlists/${playlist.slug}/`),
+];
 
 export function GET() {
   const urls = PAGES.map((path) => `  <url>

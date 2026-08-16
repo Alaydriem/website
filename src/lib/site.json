@@ -5,9 +5,25 @@
 
   "liveStatusUrl": "/api/live",
 
+  "//playlists": "YouTube returns no user-defined order (the channel-page arrangement lives in the separate channelSections API and only covers sections you have explicitly built), so the order is set here. Entries may be a playlist title or its id; ids survive a rename. Anything listed in `order` leads, in this order. Everything else follows, largest first, so a new playlist shows up without being configured — just not at the top.",
+  "playlists": {
+    "order": [
+      "The Best Survival Builds",
+      "Bedrock Voice Chat",
+      "Minecraft Farms!",
+      "Truly Bedrock Season 7",
+      "Previous Livestreams"
+    ],
+    "hidden": []
+  },
+
   "links": {
     "youtube": "https://www.youtube.com/@Alaydriem",
     "twitch": "https://www.twitch.tv/alaydriem",
+
+    "//youtubeLive": "Stable URL that resolves to the current live stream, or to the channel when there is none. Used as the secondary call to action while streaming, since both platforms run at once.",
+    "youtubeLive": "https://www.youtube.com/@Alaydriem/live",
+
     "bluesky": "https://bsky.app/profile/alaydriem.com",
     "github": "https://www.github.com/Alaydriem",
     "discord": "https://discordapp.com/users/507326861680836628",

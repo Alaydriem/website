@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "id": "PLlivestreams",
+      "snippet": {
+        "title": "Previous livestreams",
+        "description": "Every stream, after the fact.",
+        "thumbnails": {
+          "medium": { "url": "https://i.ytimg.com/vi/vid001/mqdefault.jpg" },
+          "maxres": { "url": "https://i.ytimg.com/vi/vid001/maxresdefault.jpg" }
+        }
+      },
+      "contentDetails": { "itemCount": 2 }
+    },
+    {
+      "id": "PLempty",
+      "snippet": {
+        "title": "Nothing here yet",
+        "thumbnails": {}
+      },
+      "contentDetails": { "itemCount": 0 }
+    },
+    {
+      "id": "PLforeign",
+      "snippet": {
+        "title": "Videos by other people",
+        "thumbnails": { "medium": { "url": "https://i.ytimg.com/vi/other/mqdefault.jpg" } }
+      },
+      "contentDetails": { "itemCount": 1 }
+    }
+  ]
+}

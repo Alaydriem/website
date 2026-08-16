@@ -1,0 +1,64 @@
+/* The header on pages that are not the homepage: no photograph, just the
+   navigation over the page ground so the content starts immediately. */
+.page-head {
+  background: var(--void-2);
+  border-bottom: 1px solid var(--line);
+}
+
+.page-head__inner {
+  padding-block: clamp(28px, 5vw, 56px);
+}
+
+.page-head__title {
+  font-size: var(--fs-display);
+  margin-bottom: 14px;
+}
+
+.plist + .plist {
+  margin-top: var(--gap-section);
+}
+
+.plist__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 14px;
+  padding-bottom: 14px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+}
+
+.plist__title {
+  font-size: var(--fs-h3);
+}
+
+.plist__title a:hover {
+  color: var(--accent-readable);
+}
+
+.plist__crumb {
+  margin-bottom: 12px;
+  color: var(--faint);
+  font-size: var(--fs-small);
+  font-weight: 600;
+}
+
+.plist__crumb a:hover {
+  color: var(--tx);
+}
+
+.plist__count {
+  margin-top: 6px;
+  color: var(--accent-readable);
+  font-size: var(--fs-small);
+  font-weight: 600;
+}
+
+.plist__desc {
+  max-width: var(--maxw-prose);
+  margin-top: -8px;
+  margin-bottom: 22px;
+  color: var(--dim);
+  font-size: var(--fs-small);
+}

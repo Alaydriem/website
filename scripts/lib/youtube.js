@@ -99,6 +99,37 @@ function pickThumbnail(thumbnails = {}) {
   return '';
 }
 
+/**
+ * Lists the channel's public playlists.
+ *
+ * One unit per page of 50, the same as the uploads listing, so grouping the
+ * channel by playlist costs about as much as listing it once.
+ */
+export async function fetchPlaylists(fetchFn, { channelId, apiKey }) {
+  const out = [];
+  let pageToken = '';
+
+  do {
+    const page = pageToken ? `&pageToken=${pageToken}` : '';
+    const url = `${API}/playlists?part=snippet,contentDetails&maxResults=${PAGE}`
+      + `&channelId=${channelId}&key=${apiKey}${page}`;
+    const body = await getJson(fetchFn, url);
+
+    for (const item of body.items ?? []) {
+      out.push({
+        id: item.id,
+        title: item.snippet.title,
+        description: item.snippet.description ?? '',
+        itemCount: Number(item.contentDetails?.itemCount ?? 0),
+        thumbnail: pickThumbnail(item.snippet.thumbnails),
+      });
+    }
+    pageToken = body.nextPageToken ?? '';
+  } while (pageToken);
+
+  return out;
+}
+
 export async function fetchVideoDetails(fetchFn, { ids, apiKey }) {
   const out = [];
 
@@ -141,5 +172,27 @@ export async function buildYouTubeData(fetchFn, { channelId, apiKey, now }) {
 
   videos.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
 
-  return { channel, videos };
+  const known = new Set(videos.map((v) => v.id));
+  const playlists = [];
+
+  for (const playlist of await fetchPlaylists(fetchFn, { channelId, apiKey })) {
+    const members = await fetchPlaylistVideoIds(fetchFn, {
+      playlistId: playlist.id,
+      apiKey,
+    });
+
+    // Only ids we hold details for. A playlist can contain someone else's
+    // video, or one since made private, and neither can be rendered as a card.
+    const videoIds = members.filter((id) => known.has(id));
+
+    // An empty playlist renders as a heading over nothing.
+    if (videoIds.length > 0) {
+      playlists.push({ ...playlist, videoIds });
+    }
+  }
+
+  // Largest first: the playlists someone actually maintains lead.
+  playlists.sort((a, b) => b.videoIds.length - a.videoIds.length);
+
+  return { channel, videos, playlists };
 }
