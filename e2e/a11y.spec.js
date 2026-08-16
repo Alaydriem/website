@@ -22,6 +22,21 @@ async function audit(page) {
     .analyze();
 }
 
+/*
+ * /api/live is a Cloudflare Worker route and does not exist in a static build.
+ * Stubbed to the shape the Worker serves when nothing is live, so these audits
+ * run against the same page production serves. Tests override it by routing
+ * again: Playwright matches the most recently registered route first.
+ */
+test.beforeEach(async ({ page }) => {
+  await page.route('**/api/live*', (route) =>
+    route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      body: JSON.stringify({ live: false }),
+    }));
+});
+
 /** Flattens violations to one readable line per offending node. */
 function report(violations) {
   return violations.flatMap((v) =>

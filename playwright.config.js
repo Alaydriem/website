@@ -9,6 +9,11 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 1 : 0,
+  // A test that fails and then passes on retry is reported as "flaky" and, by
+  // default, the run still succeeds. That is how a race hides: it passed on the
+  // pull request and failed on the merge, against identical code. In CI a flake
+  // is a failure.
+  failOnFlakyTests: !!process.env.CI,
   reporter: process.env.CI ? 'github' : 'list',
   use: {
     baseURL: 'http://127.0.0.1:8123',
