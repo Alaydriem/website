@@ -230,14 +230,26 @@ test.describe('the live upgrade', () => {
     const requests = [];
     page.on('request', (r) => r.url().includes('/api/live') && requests.push(r.url()));
 
-    // Emptying the meta is what src/lib/site.json does to switch the feature
-    // off, so this is the shipped "disabled" path.
-    await page.goto('/');
+    // networkidle, not the default load: the page's own startup check fires
+    // asynchronously, and clearing the array while that request is still in
+    // flight let it land afterwards and be blamed on the re-init below. That
+    // raced roughly one run in three.
+    await page.goto('/', { waitUntil: 'networkidle' });
+    expect(requests.length).toBeGreaterThan(0); // the startup check really ran
+
+    requests.length = 0;
+
+    // Emptying the meta is what an empty liveStatusUrl in src/lib/site.json
+    // produces, so this is the shipped "feature off" path.
     await page.evaluate(() => {
       document.querySelector('meta[name="live-status-url"]').content = '';
+      window.__initLiveStatus();
     });
-    requests.length = 0;
-    await page.evaluate(() => window.__initLiveStatus());
+
+    // Proving a negative needs a window. The client issues its fetch within a
+    // frame plus a zero-delay timeout, so anything it was going to send has
+    // been sent well inside this.
+    await page.waitForTimeout(500);
 
     expect(requests).toEqual([]);
   });
