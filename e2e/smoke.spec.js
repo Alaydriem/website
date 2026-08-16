@@ -27,13 +27,37 @@ async function mockLive(page, body) {
     route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(body) }));
 }
 
+/*
+ * In production /api/live is served by a Cloudflare Worker on a route ahead of
+ * the static host. A static build has no such route, so without this every test
+ * sees a 404 the real site never returns.
+ *
+ * That 404 arrives asynchronously, after first paint, which made the console
+ * assertion below a race: it passed on one CI run and failed on the next
+ * against identical code. Defaulting to the shape the Worker actually serves
+ * when nothing is live removes both the false failure and the flake.
+ *
+ * Playwright matches the most recently registered route first, so any test can
+ * override this by calling page.route again.
+ */
+test.beforeEach(async ({ page }) => {
+  await page.route('**/api/live*', (route) =>
+    route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      body: JSON.stringify({ live: false }),
+    }));
+});
+
 test.describe('the page itself', () => {
   test('renders with styles and no console errors', async ({ page }) => {
     const errors = [];
     page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
     page.on('pageerror', (e) => errors.push(e.message));
 
-    await page.goto('/');
+    // networkidle, not the default load: the live check fires after first
+    // paint, so anything it logs must be collected before asserting.
+    await page.goto('/', { waitUntil: 'networkidle' });
 
     // A blocked or missing stylesheet leaves the body on its default background.
     const background = await page.evaluate(
@@ -80,13 +104,7 @@ test.describe('the page itself', () => {
 
   test('every asset the page references resolves', async ({ page }) => {
     const missing = [];
-    page.on('response', (r) => {
-      // /api/live is served by a Cloudflare Worker on a route ahead of the
-      // static host, so it is absent from dist by design and 404s in any
-      // static preview. The next test covers what the page does about that.
-      if (r.url().includes('/api/live')) return;
-      if (r.status() >= 400) missing.push(`${r.status()} ${r.url()}`);
-    });
+    page.on('response', (r) => r.status() >= 400 && missing.push(`${r.status()} ${r.url()}`));
 
     await page.goto('/', { waitUntil: 'networkidle' });
 
@@ -179,9 +197,13 @@ test.describe('the live upgrade', () => {
     });
   }
 
-  // The endpoint is a Cloudflare Worker route, so it does not exist in a static
-  // build. Local dev, `astro preview` and CI all hit a 404 here, and the hero
+  // The endpoint is a Cloudflare Worker route, so it is absent from any static
+  // build: local dev, `astro preview`, and this suite's own server. The hero
   // must stay pinned rather than break — the same path as any network failure.
+  //
+  // Routed explicitly rather than relying on the file being missing, so the
+  // test states the condition it is testing instead of depending on the
+  // server's behaviour, and so it overrides the beforeEach stub.
   test('stays pinned when the endpoint is missing, as it is in any static build',
     async ({ page }) => {
       const errors = [];
@@ -189,6 +211,9 @@ test.describe('the live upgrade', () => {
 
       const statuses = [];
       page.on('response', (r) => r.url().includes('/api/live') && statuses.push(r.status()));
+
+      await page.route('**/api/live*', (route) =>
+        route.fulfill({ status: 404, contentType: 'text/plain', body: 'Not found' }));
 
       await page.goto('/', { waitUntil: 'networkidle' });
 

@@ -15,8 +15,10 @@ const tools = defineCollection({
   schema: z.object({
     title: z.string(),
     summary: z.string(),
-    repo: z.string().url().optional(),
-    href: z.string().url().optional(),
+    // z.url(), not z.string().url(): the latter is deprecated in the zod
+    // version Astro 7 ships.
+    repo: z.url().optional(),
+    href: z.url().optional(),
     platforms: z.array(z.string()).default([]),
     // A spectrum token name from src/styles/_tokens.scss. Violet is permitted
     // here only because Bedrock Voice Chat is the product violet belongs to.
