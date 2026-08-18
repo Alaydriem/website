@@ -13,7 +13,7 @@
       "description": "Minecraft has almost a thousand blocks… and you get 36 slots and NINE hotbar items. 😤\n\nBedrock Hotbar Shuffle fixes that. One keybind. Your entire inventory. No menus, no swapping, no dragging items around like a lunatic.\n\nIf you build on Bedrock, this is the addon you've been quietly rage-quitting about for years.\n\n⚡ WHAT IT DOES\nBedrock Hotbar Shuffle adds a keybindable macro that shifts your active hotbar through all 3 extra rows of your inventory — instantly. Tools stay put. Food stays put. Your gradient blocks stay exactly where you sorted them. You just… shuffle to them.\n\nNo more one-at-a-time block swaps. No more moving your pickaxe out of the way to grab a slab. No more inventory that looks like a carnival after it left town. 🎪\n\n🛠️ SETUP (takes ~30 seconds)\n\nInstall the addon to your world from CurseForge\nOpen Settings → Keyboard & Mouse → scroll to Macros\nAdd /shuffle:down and /shuffle:up to any two slots\nBind them to an ALT + key combo (ALT + Q / ALT + E works great — or any key or mouse button you like)\n\nThat's it. Your whole inventory, one button away.\n\n📥 DOWNLOAD — 100% FREE\nCurseForge: https://www.curseforge.com/minecraft-bedrock/addons/hotbar-shuffle\n\n💬 TELL ME WHAT TO BUILD NEXT\nIs ALT + Q/E enough, or do you want more? A full inventory swap? Hotkeys jumping straight to a specific row? Drop it in the comments — I genuinely want to know what would make building easier for you on Bedrock.\n\n🔔 SUBSCRIBE if this solved a problem you've been dealing with forever. This is exactly the kind of tool I want to keep making.\n\nThanks for watching — see you in the next one! 🧱\n\n#Minecraft #MinecraftBedrock #MinecraftAddons #BedrockEdition #MinecraftBuilding #MCPE #MinecraftMods #BedrockAddons #MinecraftBuilds #QualityOfLife",
       "publishedAt": "2026-08-12T13:00:36Z",
       "duration": "PT2M30S",
-      "viewCount": 238,
+      "viewCount": 245,
       "thumbnail": "https://i.ytimg.com/vi/dvtRmzAUMw8/maxresdefault.jpg",
       "tags": [
         "Minecraft Bedrock",
@@ -1260,7 +1260,7 @@
       "description": "",
       "publishedAt": "2025-03-17T12:30:47Z",
       "duration": "PT20S",
-      "viewCount": 9000,
+      "viewCount": 9010,
       "thumbnail": "https://i.ytimg.com/vi/lDWMp8sYRys/maxresdefault.jpg",
       "tags": [
         "minecraft shorts",
@@ -3639,7 +3639,7 @@
       "description": "This is THE BEST Bone meal farm for #Minecraft #Bedrock edition. It can make between 9100 and 11,000 pieces of bonemeal in PROFIT per hour!\n\nWanna see the full tutorial? Checkout 👉 https://youtu.be/7yeqDcfxQOs",
       "publishedAt": "2023-10-02T16:00:45Z",
       "duration": "PT18S",
-      "viewCount": 62400,
+      "viewCount": 62500,
       "thumbnail": "https://i.ytimg.com/vi/y2JUpCMrS-c/maxresdefault.jpg",
       "tags": [
         "Alaydriem",
@@ -4293,7 +4293,7 @@
       "description": "In this Minecraft Bedrock 1.20 tutorial, Alaydriem shows how to create a near universal (6 type), multi tree farm that can harvest not only the new 1.20 cherry wood tree, but also spruce, birch, azaela (flowering and non-flowering), jungle, and acaia. This is a universal tree farm!\n\nThis farm is fully AFK-able with an auto-clicker\nNeed a specialty wood? Checkout my other tree farms!\n\nNether Wood Farm: https://youtu.be/5e61n7PAcNk\n\nMangrove Tree Farm: https://youtu.be/tAPQ9T67FS8\n\nNeed more bonemeal? Checkout my 11K+ bonemeal farm! It's one of the fastest and most efficient bonemeal farms for Minecraft Bedrock!\nBonemeal Farm: https://youtu.be/7yeqDcfxQOs\n\n---\n\n0:00 Introduction\n2:43 Mechanics\n7:18 Tree Growth Detection Circuit\n16:51 Tree Type Selection Circuit\n21:53 Vertical Flying Machines\n25:27 Horizontal Flying Machines\n32:53 Rear Cubemaker\n39:40 Upper Cube Maker\n50:42 Outro\n\n----\n\nMake sure you give Old Rusty some love, his original design for mangrove trees is the gift that keeps giving! https://www.youtube.com/watch?v=a6ae5ZLIE94\n\n\n----\nRight Click Save Link As!\n\nWorld Download:\n90519b3876209bd51fcb1f2c01b62f86f6f6d3675ddb8ace3b06b7bb402e2755   https://www.alaydriem.com/world-downloads/Multi-Tree-Farm.mcworld\n\n----\n\nMake sure you like and subscribe to be notified when I release a new farm and redstone tutorial!\n\nBe sure to check out my Bedrock Let's Play Series \"Welcome to Bedrock!\" as well https://www.youtube.com/playlist?list=PL_3ZZiHxRObQIL-25FDr6NvCkeWMi1xJT!\n\nAlso checkout Lore and Legend Campaign #1! Our DnD in Minecraft Adventure Series! https://www.youtube.com/playlist?list=PL_3ZZiHxRObTact7KY5H9qoB3erU-SznB\n\nFor more news and info, follow me on Twitter https://www.twitter.com/alaydriem!\n\n----\n\nMaterials List!\n\nSandstone Slab: 34\nRedstone Lamp: 1\nObsidian: 51\nLever: 1\nObserver: 142\nRedstone Torch: 5\nSandstone/Any Stone: 248\nSticky Piston: 23\nButton (any): 12\nTrapdoor (any): 2\nPiston: 372\nGlazed Terracotta: 16\nRepeater: 55\nHoney Block: 36\nDispenser: 1\nComparatpr: 16\nRedstone Block: 2\nTarget Block: 2\nGlass: 127\nHopper: 6\nSlime: 36",
       "publishedAt": "2023-05-30T19:30:03Z",
       "duration": "PT51M22S",
-      "viewCount": 6520,
+      "viewCount": 6530,
       "thumbnail": "https://i.ytimg.com/vi/cwoyf-T_ktQ/maxresdefault.jpg",
       "tags": [
         "6 type tree farm",
@@ -5080,7 +5080,7 @@
       "description": "Boolean Logic Circuits! In this Minecraft Bedrock Redstone tutorial, Alaydrim discusses and showcases boolean logic circuits and their implementation in Minecraft!\n\n00:00 Introduction\n01:40 AND Logic Gate\n02:48 NOT Logic Gate\n03:23 NAND (NOT AND) Logic Gate\n05:14 OR Logic Gate\n07:27 NOR (NOT OR) Logic Gate\n08:34 XOR Logic Gate\n11:26 XNOR Logic Gate\n12:15 Outro\n\nBe sure to follow me on Twitter to get updates when I post a new video! https://www.twitter.com/alaydriem",
       "publishedAt": "2022-08-09T19:30:02Z",
       "duration": "PT13M5S",
-      "viewCount": 776,
+      "viewCount": 777,
       "thumbnail": "https://i.ytimg.com/vi/EL0E_s9kLDk/maxresdefault.jpg",
       "tags": [
         "Minecraft",
