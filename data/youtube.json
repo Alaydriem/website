@@ -8,6 +8,33 @@
   },
   "videos": [
     {
+      "id": "jRH5GxI0iNU",
+      "title": "Building an EPIC tree in Bedrock Hardcore Survival",
+      "description": "Hello there beautiful pixels and welcome back to Bedrock Legends, where tonight we're building an Epic tree in Hardcore Survival\n\nWant to see more content? Twitch Replays? Checkout my second channel at  @Alaevren  !\n\nAnd make sure you join my new discord to chat about episodes and farms over at https://discord.com/invite/WJPShXnbga!\n\nTruly Bedrock is a private invite only let's play Bedrock edition SMP server. Check out our website and join our Discord! \nTruly Bedrock Website: https://www.trulybedrock.com/\nTruly Bedrock Discord / http://discord.gg/Z7mAYQa  \n\n----",
+      "publishedAt": "2026-08-22T01:55:21Z",
+      "duration": "P0D",
+      "viewCount": 15,
+      "thumbnail": "https://i.ytimg.com/vi/jRH5GxI0iNU/maxresdefault_live.jpg",
+      "tags": [
+        "alaydriem",
+        "minecraft",
+        "minecraft bedrock",
+        "livestream",
+        "livestream replay",
+        "bedrock farms",
+        "bedrock tutorials",
+        "family friendly",
+        "relaxing stream",
+        "calm stream",
+        "truly bedrock season 7",
+        "bedrock voice chat",
+        "minecraft prox chat",
+        "minecraft proximity voice chat",
+        "bedrock prox chat",
+        "bedrock proximity chat"
+      ]
+    },
+    {
       "id": "dvtRmzAUMw8",
       "title": "New Minecraft Bedrock Addon Lets Solves Inventory Management!",
       "description": "Minecraft has almost a thousand blocks… and you get 36 slots and NINE hotbar items. 😤\n\nBedrock Hotbar Shuffle fixes that. One keybind. Your entire inventory. No menus, no swapping, no dragging items around like a lunatic.\n\nIf you build on Bedrock, this is the addon you've been quietly rage-quitting about for years.\n\n⚡ WHAT IT DOES\nBedrock Hotbar Shuffle adds a keybindable macro that shifts your active hotbar through all 3 extra rows of your inventory — instantly. Tools stay put. Food stays put. Your gradient blocks stay exactly where you sorted them. You just… shuffle to them.\n\nNo more one-at-a-time block swaps. No more moving your pickaxe out of the way to grab a slab. No more inventory that looks like a carnival after it left town. 🎪\n\n🛠️ SETUP (takes ~30 seconds)\n\nInstall the addon to your world from CurseForge\nOpen Settings → Keyboard & Mouse → scroll to Macros\nAdd /shuffle:down and /shuffle:up to any two slots\nBind them to an ALT + key combo (ALT + Q / ALT + E works great — or any key or mouse button you like)\n\nThat's it. Your whole inventory, one button away.\n\n📥 DOWNLOAD — 100% FREE\nCurseForge: https://www.curseforge.com/minecraft-bedrock/addons/hotbar-shuffle\n\n💬 TELL ME WHAT TO BUILD NEXT\nIs ALT + Q/E enough, or do you want more? A full inventory swap? Hotkeys jumping straight to a specific row? Drop it in the comments — I genuinely want to know what would make building easier for you on Bedrock.\n\n🔔 SUBSCRIBE if this solved a problem you've been dealing with forever. This is exactly the kind of tool I want to keep making.\n\nThanks for watching — see you in the next one! 🧱\n\n#Minecraft #MinecraftBedrock #MinecraftAddons #BedrockEdition #MinecraftBuilding #MCPE #MinecraftMods #BedrockAddons #MinecraftBuilds #QualityOfLife",
@@ -3424,7 +3451,7 @@
       "description": "In this #Minecraft #Bedrock #Tutorial, Alaydriem teaches you how to create a fully AFK Lava farm! This farm is great for smelter arrays, or larger projects such as lava casting or creating more obsidian!\n\nMaterials List: 15w x 6d x 6h\n------------------------\n\n    Comparator: 1\n    Lava: 26\n    Chest: 4\n    Repeater: 1\n    Block (any): 114\n    Hopper: 2\n    Dropper: 2\n    Redstone Wire: 13\n    Pointed Dripstone: 26\n    Cauldron: 24\n    Redstone Torch: 3\n    Piston: 1\n    Trapdoor: 1",
       "publishedAt": "2023-10-16T16:00:41Z",
       "duration": "PT6M25S",
-      "viewCount": 3850,
+      "viewCount": 3860,
       "thumbnail": "https://i.ytimg.com/vi/vj4IOg9tN8w/maxresdefault.jpg",
       "tags": [
         "afk lava farm",
