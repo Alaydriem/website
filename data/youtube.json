@@ -206,7 +206,7 @@
       "description": "Proximity voice chat is finally here for Minecraft Bedrock Edition and today I'm inviting you to try it out! What to learn more? Check out the full video!\n\nBedrock Voice Chat brings real-time spatial audio to Bedrock Dedicated Servers - free and available now for Windows, Android, and iOS.\n\nWhat is Bedrock Voice Chat?\n\nThe first true proximity voice chat solution for Minecraft Bedrock Edition. No more Discord workarounds. No more typing on controllers or phone screens. Experience voice chat the way Java Edition players have enjoyed for years - with positional audio, push-to-talk, and individual volume controls.\nKey Features:\n\n✅ Proximity Chat with 3D Positional Audio\n✅ Native apps for Windows 10, Android & iOS\n✅ Individual player volume controls\n✅ Client-side muting and deafening\n✅ Noise suppression & audio amplification\n✅ End-to-end encryption\n✅ Audio recording for content creators\n✅ Works on Bedrock Dedicated Servers\n✅ Cross-platform: Console, Mobile, Windows 10\n\nAnd a whole lot more!\n\nPerfect for Minecraft Bedrock servers and for players onconsole (Xbox, PlayStation, Nintendo Switch), mobile (Android, iOS), and Windows 10. Works with Bedrock Dedicated Server (BDS) and supports cross-platform gameplay.\n\n📥 DOWNLOAD & LINKS\nGet Bedrock Voice Chat:\n🔗 GitHub (Free & Source Available): https://github.com/Alaydriem/bedrock-voice-chat/releases\n\nSupport Development & Get Early Access, and help unlock more features!\n\n💎 Patreon: https://www.patreon.com/posts/i-made-proximity-147533371?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link\n🎥 YouTube Membership: https://www.youtube.com/channel/UCXgqRZv7bHsKzwYBrtA9DFA/join\n\nBeta Testing:\n\nIf you wish to join the Android or iOS open betas, head over to patreon and join the free tier today to get access to the Google Play Store listing when it becomes available! https://patreon.com/alaydriem\n\nCommunity & Support:\n💬 Discord: discord.com/invite/WJPShXnbga\n📖 Documentation: https://github.com/alaydriem/bedrock-voice-chat/wiki\n\n🎮 ABOUT THIS PROJECT\nBedrock Voice Chat is inspired by Simple Voice Chat for Java Edition, rebuilt from the ground up in Rust for maximum performance on Minecraft Bedrock Dedicated Servers. The project consists of three components:\n\nServer software (Rust) - High-performance voice routing\nBehavior Pack (BDS) - Position data relay\nNative Client Apps (Windows/Android/iOS) - Audio interface\n\nUnlike Discord or other third-party solutions, Bedrock Voice Chat integrates directly with your Minecraft server, providing true proximity-based communication that works for ALL Bedrock platforms - not just PC players.\n\n🔍 SEARCH TERMS\nMinecraft Bedrock voice chat, proximity voice chat Bedrock Edition, Bedrock Dedicated Server voice mod, voice communication for Bedrock, Minecraft console voice chat, Minecraft mobile voice chat, cross-platform Minecraft voice, Simple Voice Chat alternative Bedrock, Discord alternative for Minecraft Bedrock, positional audio Minecraft, spatial audio Bedrock, Minecraft voice mod 2025\n\n📢 SUPPORT THE PROJECT\nThis is an source-available, community-driven project. Early supporters on Patreon and YouTube Membership get:\n\nEarly access to Beta 2+ features\nPriority bug fixes and feature requests\nBehind-the-scenes development updates\nDirect contribution to iOS App Store release\n\nAndroid beta testers are critical to unlocking the Google Play Store listing - your testing literally makes the app available to millions of players.\n\n#MinecraftBedrock #ProximityVoiceChat #BedrockVoiceChat #MinecraftMods #BedrockEdition\n\n----\n\nIf you like this content, please consider subscribing to @Alaydriem  .\nJoin me live on Twitch every Thursday and Friday at  7 PT / 9 CT / 10 ET PM at https://www.twitch.tv/Alaydriem where we explore farms, build amazing builds, and hang out together in a relaxing and family friendly chill stream\n\n\nAnd make sure you join my new discord to chat about episodes and farms over at https://discord.com/invite/WJPShXnbga!\n\n---",
       "publishedAt": "2026-01-12T17:09:50Z",
       "duration": "PT35S",
-      "viewCount": 36600,
+      "viewCount": 36700,
       "thumbnail": "https://i.ytimg.com/vi/FIW00XnrBPY/maxresdefault.jpg",
       "tags": [
         "minecraft bedrock",
@@ -1260,7 +1260,7 @@
       "description": "",
       "publishedAt": "2025-03-17T12:30:47Z",
       "duration": "PT20S",
-      "viewCount": 9310,
+      "viewCount": 9320,
       "thumbnail": "https://i.ytimg.com/vi/lDWMp8sYRys/maxresdefault.jpg",
       "tags": [
         "minecraft shorts",
@@ -2409,7 +2409,7 @@
       "description": "In this Minecraft Bedrock 1.20 Redstone tutorial, Alaydriem shows how you can multiply your loop drops from your mob farms using a Trident and the Looting 3 enchantment!\n\nThis simple addon for you mob farms needs only 2 pistons and 2 observers to work, making it one of the simplest ways multiply your loot drops for you mob farms and mob grinders.\n\nOn Bedrock edition, the looting 3 effect is applied to all mob drops initiated by a player thrown Trident, meaning tons more loot from every mob this mechanism eliminates! You can easily add this to your built with just a few simple items!\n\n------------------------------------------------------\n\nMaterials List: 5w x 11d x 7h\n------------------------\n\n    Piston: 1\n    Hopper: 2\n    Observer: 2\n    Chest: 2\n    Sticky Piston: 1\n    Glass: 65\n    Water: 1\n    Lever: 1\n\n+ Trident w/  Impaling V\n+ Sword w/ Looting 3",
       "publishedAt": "2024-02-20T17:00:40Z",
       "duration": "PT4M22S",
-      "viewCount": 3160,
+      "viewCount": 3170,
       "thumbnail": "https://i.ytimg.com/vi/n-lN9GdnqlY/maxresdefault.jpg",
       "tags": [
         "alaydriem",
@@ -3747,7 +3747,7 @@
       "description": "Checkout this beautiful custom tree I made on the Lore and Legend Server!\n\nWanna see more? Checkout 👉 https://youtu.be/sO1pjujgKco",
       "publishedAt": "2023-09-22T16:00:33Z",
       "duration": "PT13S",
-      "viewCount": 325,
+      "viewCount": 326,
       "thumbnail": "https://i.ytimg.com/vi/WeLXYKxkCBs/maxresdefault.jpg",
       "tags": [
         "Minecraft",
@@ -5080,7 +5080,7 @@
       "description": "Boolean Logic Circuits! In this Minecraft Bedrock Redstone tutorial, Alaydrim discusses and showcases boolean logic circuits and their implementation in Minecraft!\n\n00:00 Introduction\n01:40 AND Logic Gate\n02:48 NOT Logic Gate\n03:23 NAND (NOT AND) Logic Gate\n05:14 OR Logic Gate\n07:27 NOR (NOT OR) Logic Gate\n08:34 XOR Logic Gate\n11:26 XNOR Logic Gate\n12:15 Outro\n\nBe sure to follow me on Twitter to get updates when I post a new video! https://www.twitter.com/alaydriem",
       "publishedAt": "2022-08-09T19:30:02Z",
       "duration": "PT13M5S",
-      "viewCount": 784,
+      "viewCount": 785,
       "thumbnail": "https://i.ytimg.com/vi/EL0E_s9kLDk/maxresdefault.jpg",
       "tags": [
         "Minecraft",
