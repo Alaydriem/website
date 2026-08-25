@@ -2,7 +2,7 @@
   "channel": {
     "id": "UCXgqRZv7bHsKzwYBrtA9DFA",
     "title": "Alaydriem",
-    "subscriberCount": 7270,
+    "subscriberCount": 7280,
     "videoCount": 266,
     "viewCount": 934000
   },
@@ -13,7 +13,7 @@
       "description": "Minecraft has almost a thousand blocks… and you get 36 slots and NINE hotbar items. 😤\n\nBedrock Hotbar Shuffle fixes that. One keybind. Your entire inventory. No menus, no swapping, no dragging items around like a lunatic.\n\nIf you build on Bedrock, this is the addon you've been quietly rage-quitting about for years.\n\n⚡ WHAT IT DOES\nBedrock Hotbar Shuffle adds a keybindable macro that shifts your active hotbar through all 3 extra rows of your inventory — instantly. Tools stay put. Food stays put. Your gradient blocks stay exactly where you sorted them. You just… shuffle to them.\n\nNo more one-at-a-time block swaps. No more moving your pickaxe out of the way to grab a slab. No more inventory that looks like a carnival after it left town. 🎪\n\n🛠️ SETUP (takes ~30 seconds)\n\nInstall the addon to your world from CurseForge\nOpen Settings → Keyboard & Mouse → scroll to Macros\nAdd /shuffle:down and /shuffle:up to any two slots\nBind them to an ALT + key combo (ALT + Q / ALT + E works great — or any key or mouse button you like)\n\nThat's it. Your whole inventory, one button away.\n\n📥 DOWNLOAD — 100% FREE\nCurseForge: https://www.curseforge.com/minecraft-bedrock/addons/hotbar-shuffle\n\n💬 TELL ME WHAT TO BUILD NEXT\nIs ALT + Q/E enough, or do you want more? A full inventory swap? Hotkeys jumping straight to a specific row? Drop it in the comments — I genuinely want to know what would make building easier for you on Bedrock.\n\n🔔 SUBSCRIBE if this solved a problem you've been dealing with forever. This is exactly the kind of tool I want to keep making.\n\nThanks for watching — see you in the next one! 🧱\n\n#Minecraft #MinecraftBedrock #MinecraftAddons #BedrockEdition #MinecraftBuilding #MCPE #MinecraftMods #BedrockAddons #MinecraftBuilds #QualityOfLife",
       "publishedAt": "2026-08-12T13:00:36Z",
       "duration": "PT2M30S",
-      "viewCount": 325,
+      "viewCount": 329,
       "thumbnail": "https://i.ytimg.com/vi/dvtRmzAUMw8/maxresdefault.jpg",
       "tags": [
         "Minecraft Bedrock",
@@ -36,7 +36,7 @@
       "description": "In this Minecraft Truly Bedrock Adventure, Alaydriem ventures to the far corners of the server, 41,000 blocks away just to find some spare sulfur and cinnabar blocks to ruin a server landmark.\n\nWatch our full livestreams here: https://youtube.com/live/2meCCoPMjdw?feature=share!\n\nVolumes wonky, sorry.\n\nVod Replays: https://www.youtube.com/playlist?list=PL_3ZZiHxRObQcmINvOaMlkIGk4jPFehzx\n\nAnd make sure you join my new discord to chat about episodes and farms over at https://discord.gg/xdMqEv3gGh!\n\nTruly Bedrock is a private invite only let's play Bedrock edition SMP server. Check out our website and join our Discord! \nTruly Bedrock Website: https://www.trulybedrock.com/\nTruly Bedrock Discord / http://discord.gg/Z7mAYQa  \n\n----",
       "publishedAt": "2026-06-23T12:00:27Z",
       "duration": "PT32M48S",
-      "viewCount": 391,
+      "viewCount": 392,
       "thumbnail": "https://i.ytimg.com/vi/oV49Og1O_ZQ/maxresdefault.jpg",
       "tags": [
         "alaydriem",
@@ -160,7 +160,7 @@
       "description": "Learn how to install and setup Bedrock Voice Chat (BVC) - a FREE proximity voice chat solution for Minecraft Bedrock Edition! This complete tutorial covers everything from server installation to connecting your first client.\n\n🎯 WHAT IS BEDROCK VOICE CHAT?\nBVC brings spatial proximity voice chat to Minecraft Bedrock, similar to the popular Simple Voice Chat mod for Java Edition. Talk to nearby players naturally - voices get louder as you get closer and fade as you move apart!\n\n⏱️ TIMESTAMPS\n0:00 - What is BVC and How Does it Work?\n2:25 - Read the Wiki on Github for further guidance\n2:46 - Setting up Bedrock Voice Chat Server\n6:48 - Create the assets and certificates directories\n7:02 - Configure Bedrock Voice Chat (config.hcl)\n8:37 - Starting BVC Server\n9:18 - Bedrock Dedicated Server + Addon Setup\n11:11 - permissions.json + variables.json\n12:06 - Starting BDS with the Addon Enabled\n12:43 - world_behavior_packs.json\n13:15 - BVC Client Apps (Windows)\n14:07 - Join Youtube Memberships & Patreons to unlock the iOS App when it is ready, I need your support to make this happen and to make it free\n15:03 - Log Into Your Minecraft Server FIRST before running the client\n15:29 - Opening and Logging Into BVC\n16:52 - Mobile, Console, Realms & Solo Worlds Note\n17:34 - Thanks for your patience while I continue to improve and refine BVC Server\n\n📚 DOCUMENTATION & WIKI\nFull setup guide and troubleshooting: https://github.com/Alaydriem/bedrock-voice-chat/wiki\n\n📥 DOWNLOAD & LINKS\nGet Bedrock Voice Chat: https://www.bedrockvoicechat.com\n\niOS and Android apps are available from stores in beta\n\n\n💰 SUPPORT DEVELOPMENT & GET EARLY ACCESS\n💎 Patreon: https://www.patreon.com/posts/i-made-proximity-147533371\n🎥 YouTube Membership: https://www.youtube.com/channel/UCXgqRZv7bHsKzwYBrtA9DFA/join\n\n🎮 PLATFORM SUPPORT\n✅ Windows (Available Now)\n✅ Android\n✅ iOS\n✅ Bedrock Dedicated Server\n✅ Fabric Java Servers for Cross Platform\n✅ PaperMC\n✅ Geyser + Floodgate\n⚠️ Note: Mobile clients and console plays can use BVC using the companion mobile app when connected to Bedrock Dedicated Server or a Java Fabric Server\n\n📺 MORE CONTENT\nIf you enjoyed this tutorial, please consider subscribing to @Alaydriem!\n\n🔴 Join me live on Twitch every Thursday and Friday at 7 PT / 9 CT / 10 ET PM:\nhttps://www.twitch.tv/Alaydriem\nWe explore farms, build amazing builds, and hang out in a relaxing, family-friendly chill stream!\n\n🎬 Want more content ? Check out my second channel: @Adreamily\n\n💬 Join the Discord community to discuss BVC, get help, and connect with other users:\nhttps://discord.com/invite/WJPShXnbga\n\n#MinecraftBedrock #ProximityVoiceChat #MinecraftTutorial #BedrockVoiceChat #MinecraftMods #MinecraftAddons\n\n---\n\nBedrock Voice Chat (BVC) is an free proximity voice chat solution for Minecraft Bedrock Edition. No subscriptions, no paid tiers for basic features - just great proximity voice chat for your Minecraft server!",
       "publishedAt": "2026-01-20T15:00:02Z",
       "duration": "PT18M44S",
-      "viewCount": 67900,
+      "viewCount": 68000,
       "thumbnail": "https://i.ytimg.com/vi/0ciAc_d81a0/maxresdefault.jpg",
       "tags": [
         "bedrock voice chat",
@@ -337,7 +337,7 @@
       "description": "#minecraft #minecraftshorts #minecraftbedrock",
       "publishedAt": "2025-11-14T14:01:15Z",
       "duration": "PT28S",
-      "viewCount": 5890,
+      "viewCount": 5900,
       "thumbnail": "https://i.ytimg.com/vi/gFPht2uoovw/maxresdefault.jpg",
       "tags": []
     },
@@ -594,7 +594,7 @@
       "description": "In this episode of Truly Bedrock on Minecraft Bedrock, Alaydriem builds a froglight farm using happy ghasts and things go... remarkably well?\n\nDon't forget to like, subscribe, and hit the bell so you never miss an adventure!\n\n---\n\nChapters:\n\n0:00 We're Making a Froglight Farm Today!\n1:33 Digging a BIG hole\n8:42 Ancient Debris Mining with a Wither?\n20:07 Finishing the Froglight Farm\n22:13 Frogs, and where to get them\n23:06 Transporting frogs is... easy now?\n25:56 IT WORKS!\n\n#Minecraft #survivalisland  #TrulyBedrock #MinecraftBedrock #gaming #happyghast \n\n⏰ Join me live on Twitch for even more fun! Streams every Monday & Thursday at 7:00 PT / 9:00 CT / 10:00 ET: https://www.twitch.tv/Alaydriem\n\n💬 Let's chat on Discord! Join my growing community to talk about builds, farms, and everything Truly Bedrock: https://discord.com/invite/WJPShXnbga",
       "publishedAt": "2025-09-26T19:30:20Z",
       "duration": "PT29M31S",
-      "viewCount": 763,
+      "viewCount": 764,
       "thumbnail": "https://i.ytimg.com/vi/wuMsANB1bvc/maxresdefault.jpg",
       "tags": [
         "happy ghast",
@@ -726,7 +726,7 @@
       "description": "In this episode of Truly Bedrock on Minecraft Bedrock, Alaydriem transforms the adorable new happy ghast into an XP generating menace, takes down the ender dragon with nothing but iron armor and a bow, gathers some horses for the mainland, and... makes a confession.\n\nDon't forget to like, subscribe, and hit the bell so you never miss an adventure!\n\n#Minecraft #survivalisland  #TrulyBedrock #MinecraftBedrock #gaming #happyghast \n\n⏰ Join me live on Twitch for even more fun! Streams every Monday & Thursday at 7:00 PT / 9:00 CT / 10:00 ET: https://www.twitch.tv/Alaydriem\n\n💬 Let's chat on Discord! Join my growing community to talk about builds, farms, and everything Truly Bedrock: https://discord.com/invite/WJPShXnbga",
       "publishedAt": "2025-07-04T07:30:34Z",
       "duration": "PT17M22S",
-      "viewCount": 844,
+      "viewCount": 845,
       "thumbnail": "https://i.ytimg.com/vi/l5uJbZmSCfM/maxresdefault.jpg",
       "tags": [
         "alaydriem smp",
@@ -1260,7 +1260,7 @@
       "description": "",
       "publishedAt": "2025-03-17T12:30:47Z",
       "duration": "PT20S",
-      "viewCount": 9490,
+      "viewCount": 9500,
       "thumbnail": "https://i.ytimg.com/vi/lDWMp8sYRys/maxresdefault.jpg",
       "tags": [
         "minecraft shorts",
@@ -2764,7 +2764,7 @@
       "description": "In this #minecraftbedrock video, @Alaydriem and @MerelyAdequate must escape from a room prepared by our arch nemesis, the fiendish french-man Jacques.\n\nWill we be able to escape? Or will be subject to his horrible paintings forever?!\n\n#Minecraft #EscapeQuest #PuzzleChallenge #Gaming #Adventure #Riddles #SolveIt #UltimateEscape #ChallengeAccepted #BrainTeasers #MinecraftEscape #PuzzleGame #SolveTheQuest #MinecraftChallenge #EscapeRoom #MinecraftAdventure #EscapeGame #MindChallenge #RiddleMeThis #EscapeTheMinecraft",
       "publishedAt": "2024-01-04T17:00:05Z",
       "duration": "PT26M54S",
-      "viewCount": 491,
+      "viewCount": 492,
       "thumbnail": "https://i.ytimg.com/vi/2yCu9kr8Sc0/maxresdefault.jpg",
       "tags": [
         "Alaydriem",
@@ -3172,7 +3172,7 @@
       "description": "",
       "publishedAt": "2023-11-15T17:00:15Z",
       "duration": "PT42S",
-      "viewCount": 3460,
+      "viewCount": 3470,
       "thumbnail": "https://i.ytimg.com/vi/M3Pq66CMNIc/maxresdefault.jpg",
       "tags": []
     },
@@ -3381,7 +3381,7 @@
       "description": "Checkout this awesome 4 x 3 hidden piston door for #Minecraft #bedrock! And make sure you checkout the full world tour at  https://youtu.be/TSUNRapayuU!",
       "publishedAt": "2023-10-18T16:00:15Z",
       "duration": "PT50S",
-      "viewCount": 3000,
+      "viewCount": 3010,
       "thumbnail": "https://i.ytimg.com/vi/OCl--7jAFz8/maxresdefault.jpg",
       "tags": [
         "minecraft",
