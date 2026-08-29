@@ -9,7 +9,7 @@ import SiteFooter from '../components/SiteFooter.astro';
 <Base
   title="Alaydriem · Minecraft Bedrock builds, farms and tools"
   description="Youtube Partner & Twitch Affiliate; Creating Amazing Minecraft builds, farms, tutorials, and tools for Minecraft Bedrock Edition"
-  image="https://www.alaydriem.com/assets/images/bg/header-bg-lg.jpg"
+  image="https://www.alaydriem.com/assets/images/bg/cathedral-lg.jpg"
   preloadHero
 >
   <a class="skip" href="#watch">Skip to content</a>
@@ -27,6 +27,7 @@ import SiteFooter from '../components/SiteFooter.astro';
 <script>
   import { initSegments } from '../scripts/segments.js';
   import { initLiveStatus } from '../scripts/live-status.js';
+  import { initBackgrounds } from '../scripts/backgrounds.js';
 
   /* The live client reads its URL from a meta tag and does nothing when that is
      empty, which is the shipped default. Exposing the initialiser lets the
@@ -37,4 +38,5 @@ import SiteFooter from '../components/SiteFooter.astro';
 
   initSegments();
   initLiveStatus();
+  initBackgrounds();
 </script>

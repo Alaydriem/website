@@ -65,7 +65,7 @@ const sections = arrangePlaylists(playlists, site.playlists).map((playlist) => (
           {playlist.description && <p class="plist__desc">{playlist.description}</p>}
 
           <div class="grid">
-            {playlist.preview.map((video) => <VideoCard video={video} size="wide" />)}
+            {playlist.preview.map((video) => <VideoCard video={video} />)}
           </div>
         </section>
       ))}

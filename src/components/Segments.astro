@@ -30,7 +30,7 @@ const tools = (await getCollection('tools')).sort((a, b) => a.data.weight - b.da
              style="--accent: var(--ac-watch)">
       <h2 class="panel__heading">Watch</h2>
       <div class="grid">
-        {videos.slice(0, 8).map((video) => <VideoCard video={video} size="wide" />)}
+        {videos.slice(0, 8).map((video) => <VideoCard video={video} />)}
       </div>
       <p class="panel__more">
         <a class="btn btn--ghost" href="/playlists/">

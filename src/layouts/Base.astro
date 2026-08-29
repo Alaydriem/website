@@ -1,5 +1,6 @@
 ---
 import site from '../lib/site.json';
+import { BREAKPOINTS, FIRST_BACKGROUND } from '../lib/backgrounds.js';
 import '../styles/main.scss';
 
 interface Props {
@@ -22,6 +23,29 @@ const {
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
+
+/*
+ * One preload per breakpoint, each one carrying the same media query the
+ * stylesheet uses to choose that file. A single preload cannot do this: the
+ * hero background is full-bleed, so a phone and a desktop want files three
+ * times apart in size, and preloading the large one everywhere would cost more
+ * than preloading nothing.
+ *
+ * The 0.02px is the usual guard against a fractional viewport width falling
+ * into the gap between max-width and the next min-width.
+ *
+ * AVIF only, and declared as such. A browser that cannot decode it skips the
+ * link and loads the JPEG through the stylesheet at normal priority, which is
+ * the right trade for a format that all current browsers support.
+ */
+const heroPreloads = [
+  { size: 'sm', media: `(max-width: ${BREAKPOINTS.sm - 0.02}px)` },
+  { size: 'md', media: `(min-width: ${BREAKPOINTS.sm}px) and (max-width: ${BREAKPOINTS.md - 0.02}px)` },
+  { size: 'lg', media: `(min-width: ${BREAKPOINTS.md}px)` },
+].map(({ size, media }) => ({
+  media,
+  href: `/assets/images/bg/${FIRST_BACKGROUND}-${size}.avif`,
+}));
 ---
 
 <!doctype html>
@@ -42,9 +66,16 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
         An empty value turns the feature off and the page makes no request. */}
     <meta name="live-status-url" content={site.liveStatusUrl} />
 
-    {preloadHero && (
-      <link rel="preload" as="image" href="/assets/images/bg/header-bg-lg.jpg" fetchpriority="high" />
-    )}
+    {preloadHero && heroPreloads.map(({ href, media }) => (
+      <link
+        rel="preload"
+        as="image"
+        type="image/avif"
+        href={href}
+        media={media}
+        fetchpriority="high"
+      />
+    ))}
 
     <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content="Alaydriem" />

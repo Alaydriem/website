@@ -1,6 +1,5 @@
 ---
 import Nav from './Nav.astro';
-import VideoCard from './VideoCard.astro';
 import site from '../lib/site.json';
 import youtube from '../../data/youtube.json';
 import { watchUrl } from '../lib/format.js';
@@ -23,7 +22,24 @@ const number = (n: number) => n.toLocaleString('en-US');
 ---
 
 <header class="hero" data-hero data-live="false">
-  <div class="hero__bg" style="--hero-image: url('/assets/images/bg/header-bg-lg.jpg')"></div>
+  {/*
+    Two photograph layers under one fixed scrim.
+
+    The first layer gets its image from the stylesheet rather than from an
+    inline style, because it is the only one that has to be right before any
+    script runs and it is the only one that has to agree with the preload in
+    Base.astro. The stylesheet can pick a size by media query; an inline style
+    would have to send every screen the same file. Everything after it is set
+    by the cycler, which knows the viewport by then.
+
+    The scrim is a sibling and not part of the layers, so a fade changes the
+    photograph without touching the ground the headline is read against.
+  */}
+  <div class="hero__bg" data-hero-bg>
+    <div class="hero__bg-layer hero__bg-layer--first is-active" data-bg-layer></div>
+    <div class="hero__bg-layer" data-bg-layer></div>
+    <div class="hero__bg-scrim"></div>
+  </div>
 
   <Nav />
 
@@ -82,6 +98,16 @@ const number = (n: number) => n.toLocaleString('en-US');
     </div>
   </div>
 
+  {/*
+    The hero used to carry a rail of the three newest uploads on the right. It
+    is gone, and nothing went with it: the Watch panel below lists the eight
+    newest, so the rail was a second copy of what the page already had, and it
+    was occupying the half of the photograph worth looking at.
+
+    With the right side free, the copy moves over to it once there is room. The
+    builds in these photographs sit centre and left, so this is what lets one be
+    seen rather than merely detected behind a wall of text.
+  */}
   <div class="wrap hero__inner" data-pinned-block>
     <div class="hero__copy">
       {/* The pinned block no longer mutates. Going live swaps this whole
@@ -113,12 +139,5 @@ const number = (n: number) => n.toLocaleString('en-US');
         <a class="btn btn--ghost" href="#watch">Browse everything</a>
       </div>
     </div>
-
-    {/* Three newest uploads. Not rendered below 1100px; they are already in the
-        Watch panel and a second copy would be noise. */}
-    <aside class="hero__rail" aria-label="Latest uploads">
-      <p class="hero__rail-title">Latest</p>
-      {videos.slice(0, 3).map((video) => <VideoCard video={video} size="compact" />)}
-    </aside>
   </div>
 </header>

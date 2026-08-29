@@ -11,6 +11,16 @@ import { buildYouTubeData } from './lib/youtube.js';
 
 const ROOT = resolve(import.meta.dirname, '..');
 
+// Load .env when there is one, for local runs. In CI there is no such file and
+// the key arrives as a workflow secret already on process.env, so a missing
+// file is the normal case rather than an error. Node's own loader, so no
+// dependency: available since 20.12.
+try {
+  process.loadEnvFile(resolve(ROOT, '.env'));
+} catch {
+  // No .env. Fall through to whatever the environment already provides.
+}
+
 const apiKey = requireEnv('YOUTUBE_API_KEY', process.env);
 
 const data = await buildYouTubeData(fetch, {

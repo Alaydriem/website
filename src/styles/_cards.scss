@@ -48,30 +48,6 @@
   font-size: var(--fs-micro);
 }
 
-/* The rail sits over the hero image, so it needs a flatter, tighter form. */
-.card--compact {
-  display: grid;
-  grid-template-columns: 118px minmax(0, 1fr);
-  align-items: center;
-  gap: 12px;
-  padding: 8px;
-  border-radius: var(--r-md);
-  background: rgb(24 15 43 / 0.72);
-}
-
-.card--compact .card__shot {
-  border-radius: var(--r-sm);
-  overflow: hidden;
-}
-
-.card--compact .card__body {
-  padding: 0 6px 0 0;
-}
-
-.card--compact .card__title {
-  font-size: var(--fs-micro);
-}
-
 /* ---- tool rows ----------------------------------------------------- */
 
 .tools {

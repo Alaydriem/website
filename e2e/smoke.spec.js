@@ -146,6 +146,101 @@ test.describe('the hero', () => {
     await expect(page.locator('[data-live-player]')).not.toHaveAttribute('src', /./);
   });
 
+  /*
+   * The background cycler. Three things matter and nothing else does: the page
+   * is complete before it runs, it fetches ahead rather than at the moment of
+   * the fade, and it does not run at all for someone who asked for less motion.
+   */
+  test('paints a background before any script runs, and fetches the next one ahead', async ({ page }) => {
+    await page.goto('/');
+
+    const layers = page.locator('[data-bg-layer]');
+    await expect(layers).toHaveCount(2);
+
+    // The first layer is painted by the stylesheet, so it is on screen whether
+    // or not the module ever loads.
+    await expect(layers.first()).toHaveClass(/is-active/);
+    const painted = await layers.first().evaluate((el) => getComputedStyle(el).backgroundImage);
+    expect(painted).toMatch(/cathedral-(sm|md|lg)\.(avif|jpg)/);
+
+    // The second carries the next photograph long before it is shown. That is
+    // the whole reason the fade costs nothing when it arrives.
+    await expect(layers.nth(1)).not.toHaveClass(/is-active/);
+    await expect
+      .poll(() => layers.nth(1).evaluate((el) => el.style.backgroundImage))
+      .toMatch(/assets\/images\/bg\/\w+-(sm|md|lg)/);
+
+    const queued = await layers.nth(1).evaluate((el) => el.style.backgroundImage);
+    expect(queued).not.toMatch(/cathedral/);
+  });
+
+  test('fades to the next background without moving anything', async ({ page }) => {
+    await page.goto('/');
+
+    const layers = page.locator('[data-bg-layer]');
+    const before = await page.locator('.hero__inner').boundingBox();
+
+    // The real eight second hold, not a shortened one: a cycle that fires early
+    // would be a worse bug than one that never fires.
+    await expect(layers.nth(1)).toHaveClass(/is-active/, { timeout: 15000 });
+    await expect(layers.first()).not.toHaveClass(/is-active/);
+
+    // Only opacity changes. The hero must never shift under someone reading it.
+    expect(await page.locator('.hero__inner').boundingBox()).toEqual(before);
+  });
+
+  test('never starts, and never fetches a second photograph, under reduced motion', async ({ page }) => {
+    await page.emulateMedia({ reducedMotion: 'reduce' });
+
+    const requested = [];
+    await page.route('**/assets/images/bg/**', (route) => {
+      requested.push(new URL(route.request().url()).pathname);
+      return route.continue();
+    });
+
+    await page.goto('/');
+    const layers = page.locator('[data-bg-layer]');
+
+    await expect(layers.first()).toHaveClass(/is-active/);
+    // Nothing queued means nothing downloaded: the idle layer stays empty.
+    expect(await layers.nth(1).evaluate((el) => el.style.backgroundImage)).toBe('');
+
+    // A negated assertion passes the moment it is true, so it proves nothing on
+    // its own here. Waiting past a full hold is what makes this a real check.
+    await page.waitForTimeout(10000);
+
+    await expect(layers.nth(1)).not.toHaveClass(/is-active/);
+    expect(await layers.nth(1).evaluate((el) => el.style.backgroundImage)).toBe('');
+    expect(requested.filter((path) => !path.includes('cathedral'))).toEqual([]);
+  });
+
+  test('moves the copy to the right, clear of the build, once there is room', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto('/');
+
+    await expect(page.locator('.hero__copy')).toHaveCSS('text-align', 'right');
+
+    // Pushed to the far edge of the content column rather than merely
+    // right-aligned inside a full-width block. Measured against the column's
+    // content box, not the viewport, so a change to page padding does not have
+    // to be mirrored here.
+    const copy = await page.locator('.hero__copy').boundingBox();
+    const column = await page.locator('.hero__inner').evaluate((el) => {
+      const box = el.getBoundingClientRect();
+      const style = getComputedStyle(el);
+      return {
+        left: box.left + parseFloat(style.paddingLeft),
+        right: box.right - parseFloat(style.paddingRight),
+      };
+    });
+
+    expect(Math.round(copy.x + copy.width)).toBe(Math.round(column.right));
+    expect(copy.x).toBeGreaterThan(column.left + 100);
+
+    // And the rail really is gone, rather than merely hidden.
+    await expect(page.locator('.hero__rail')).toHaveCount(0);
+  });
+
   test('shows the product band, and it is the only violet on the page', async ({ page }) => {
     await page.goto('/');
 
@@ -428,10 +523,13 @@ test.describe('the live upgrade', () => {
 test.describe('narrow viewports', () => {
   test.use({ viewport: { width: 390, height: 844 } });
 
-  test('the desktop rail is not shown and the page does not scroll sideways', async ({ page }) => {
+  test('the copy stays left aligned and the page does not scroll sideways', async ({ page }) => {
     await page.goto('/');
 
-    await expect(page.locator('.hero__rail')).toBeHidden();
+    // Narrow, the copy fills the hero. Right-aligning a paragraph that has no
+    // photograph to step aside for only makes it harder to read.
+    await expect(page.locator('.hero__copy'))
+      .toHaveCSS('text-align', 'start');
 
     const overflows = await page.evaluate(
       () => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1);
