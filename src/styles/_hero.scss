@@ -7,7 +7,18 @@
      here: nothing in the hero is meant to escape it. */
   overflow: hidden;
   overflow: clip;
-  min-height: min(86vh, 760px);
+  /* The height has to follow the width, and this is the only reason why.
+   *
+   * The photographs are 16:9 and the layers under this box are background-size:
+   * cover, so the box width sets the scale and everything that does not fit is
+   * cropped off the top and bottom. A fixed 760px meant a 2000px window saw two
+   * thirds of the photograph and a 2750px window saw half of it, blown up 37%
+   * larger — the same hero, but with the ground and the base of the build gone.
+   *
+   * 44vw keeps the frame near 2.3:1 at any width. 760px is still the floor, so
+   * nothing under ~1730px moves, and 86vh is still the ceiling it was before,
+   * so a short window is unaffected and the band stays above the fold. */
+  min-height: min(max(760px, 44vw), 86vh);
   display: flex;
   flex-direction: column;
   /* Room for the band, which is pulled up over this edge. */
