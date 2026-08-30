@@ -1,0 +1,29 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "alaydriem-downloads",
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-01",
+
+  // The route sits on the site's own domain, ahead of GitHub Pages, so the
+  // download URLs printed in every farm video description keep working.
+  // www.alaydriem.com must stay proxied through Cloudflare (orange cloud) for
+  // this to match, which the live-status Worker already relies on.
+  //
+  // The trailing * covers both path shapes in the bucket: the flat
+  // /world-downloads/Raid-Farm.mcworld the early descriptions used, and the
+  // foldered /world-downloads/shroomlight-farm/ShroomLightFarm.mcstructure the
+  // later ones use.
+  "routes": [
+    { "pattern": "www.alaydriem.com/world-downloads/*", "zone_name": "alaydriem.com" }
+  ],
+
+  // No workers.dev subdomain. Left on, Wrangler also publishes this at
+  // alaydriem-downloads.<account>.workers.dev, which is a second public origin
+  // proxying the same bucket with no reason to exist.
+  "workers_dev": false,
+
+  "observability": { "enabled": true }
+
+  // No secrets and no bindings. The bucket objects are public; this Worker
+  // only repairs the URL and the response headers.
+}

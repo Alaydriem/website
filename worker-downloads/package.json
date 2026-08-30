@@ -1,0 +1,14 @@
+{
+  "name": "alaydriem-downloads-worker",
+  "private": true,
+  "type": "module",
+  "description": "World-download passthrough for www.alaydriem.com",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^4"
+  }
+}

@@ -63,3 +63,11 @@ jobs:
           # --dry-run needs no credentials and catches a broken wrangler.jsonc,
           # a bad Durable Object migration, or a script that does not compile.
           npx wrangler deploy --dry-run --outdir=.dryrun
+
+      - name: Downloads worker config
+        working-directory: worker-downloads
+        run: |
+          npm ci
+          # Its path and header rules are covered by the root unit tests above.
+          # This only proves the script compiles and the route parses.
+          npx wrangler deploy --dry-run --outdir=.dryrun
