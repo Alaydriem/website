@@ -36,7 +36,7 @@
       "description": "In this Minecraft Truly Bedrock Adventure, Alaydriem ventures to the far corners of the server, 41,000 blocks away just to find some spare sulfur and cinnabar blocks to ruin a server landmark.\n\nWatch our full livestreams here: https://youtube.com/live/2meCCoPMjdw?feature=share!\n\nVolumes wonky, sorry.\n\nVod Replays: https://www.youtube.com/playlist?list=PL_3ZZiHxRObQcmINvOaMlkIGk4jPFehzx\n\nAnd make sure you join my new discord to chat about episodes and farms over at https://discord.gg/xdMqEv3gGh!\n\nTruly Bedrock is a private invite only let's play Bedrock edition SMP server. Check out our website and join our Discord! \nTruly Bedrock Website: https://www.trulybedrock.com/\nTruly Bedrock Discord / http://discord.gg/Z7mAYQa  \n\n----",
       "publishedAt": "2026-06-23T12:00:27Z",
       "duration": "PT32M48S",
-      "viewCount": 397,
+      "viewCount": 398,
       "thumbnail": "https://i.ytimg.com/vi/oV49Og1O_ZQ/maxresdefault.jpg",
       "tags": [
         "alaydriem",
@@ -160,7 +160,7 @@
       "description": "Learn how to install and setup Bedrock Voice Chat (BVC) - a FREE proximity voice chat solution for Minecraft Bedrock Edition! This complete tutorial covers everything from server installation to connecting your first client.\n\n🎯 WHAT IS BEDROCK VOICE CHAT?\nBVC brings spatial proximity voice chat to Minecraft Bedrock, similar to the popular Simple Voice Chat mod for Java Edition. Talk to nearby players naturally - voices get louder as you get closer and fade as you move apart!\n\n⏱️ TIMESTAMPS\n0:00 - What is BVC and How Does it Work?\n2:25 - Read the Wiki on Github for further guidance\n2:46 - Setting up Bedrock Voice Chat Server\n6:48 - Create the assets and certificates directories\n7:02 - Configure Bedrock Voice Chat (config.hcl)\n8:37 - Starting BVC Server\n9:18 - Bedrock Dedicated Server + Addon Setup\n11:11 - permissions.json + variables.json\n12:06 - Starting BDS with the Addon Enabled\n12:43 - world_behavior_packs.json\n13:15 - BVC Client Apps (Windows)\n14:07 - Join Youtube Memberships & Patreons to unlock the iOS App when it is ready, I need your support to make this happen and to make it free\n15:03 - Log Into Your Minecraft Server FIRST before running the client\n15:29 - Opening and Logging Into BVC\n16:52 - Mobile, Console, Realms & Solo Worlds Note\n17:34 - Thanks for your patience while I continue to improve and refine BVC Server\n\n📚 DOCUMENTATION & WIKI\nFull setup guide and troubleshooting: https://github.com/Alaydriem/bedrock-voice-chat/wiki\n\n📥 DOWNLOAD & LINKS\nGet Bedrock Voice Chat: https://www.bedrockvoicechat.com\n\niOS and Android apps are available from stores in beta\n\n\n💰 SUPPORT DEVELOPMENT & GET EARLY ACCESS\n💎 Patreon: https://www.patreon.com/posts/i-made-proximity-147533371\n🎥 YouTube Membership: https://www.youtube.com/channel/UCXgqRZv7bHsKzwYBrtA9DFA/join\n\n🎮 PLATFORM SUPPORT\n✅ Windows (Available Now)\n✅ Android\n✅ iOS\n✅ Bedrock Dedicated Server\n✅ Fabric Java Servers for Cross Platform\n✅ PaperMC\n✅ Geyser + Floodgate\n⚠️ Note: Mobile clients and console plays can use BVC using the companion mobile app when connected to Bedrock Dedicated Server or a Java Fabric Server\n\n📺 MORE CONTENT\nIf you enjoyed this tutorial, please consider subscribing to @Alaydriem!\n\n🔴 Join me live on Twitch every Thursday and Friday at 7 PT / 9 CT / 10 ET PM:\nhttps://www.twitch.tv/Alaydriem\nWe explore farms, build amazing builds, and hang out in a relaxing, family-friendly chill stream!\n\n🎬 Want more content ? Check out my second channel: @Adreamily\n\n💬 Join the Discord community to discuss BVC, get help, and connect with other users:\nhttps://discord.com/invite/WJPShXnbga\n\n#MinecraftBedrock #ProximityVoiceChat #MinecraftTutorial #BedrockVoiceChat #MinecraftMods #MinecraftAddons\n\n---\n\nBedrock Voice Chat (BVC) is an free proximity voice chat solution for Minecraft Bedrock Edition. No subscriptions, no paid tiers for basic features - just great proximity voice chat for your Minecraft server!",
       "publishedAt": "2026-01-20T15:00:02Z",
       "duration": "PT18M44S",
-      "viewCount": 69000,
+      "viewCount": 69100,
       "thumbnail": "https://i.ytimg.com/vi/0ciAc_d81a0/maxresdefault.jpg",
       "tags": [
         "bedrock voice chat",
@@ -206,7 +206,7 @@
       "description": "Proximity voice chat is finally here for Minecraft Bedrock Edition and today I'm inviting you to try it out! What to learn more? Check out the full video!\n\nBedrock Voice Chat brings real-time spatial audio to Bedrock Dedicated Servers - free and available now for Windows, Android, and iOS.\n\nWhat is Bedrock Voice Chat?\n\nThe first true proximity voice chat solution for Minecraft Bedrock Edition. No more Discord workarounds. No more typing on controllers or phone screens. Experience voice chat the way Java Edition players have enjoyed for years - with positional audio, push-to-talk, and individual volume controls.\nKey Features:\n\n✅ Proximity Chat with 3D Positional Audio\n✅ Native apps for Windows 10, Android & iOS\n✅ Individual player volume controls\n✅ Client-side muting and deafening\n✅ Noise suppression & audio amplification\n✅ End-to-end encryption\n✅ Audio recording for content creators\n✅ Works on Bedrock Dedicated Servers\n✅ Cross-platform: Console, Mobile, Windows 10\n\nAnd a whole lot more!\n\nPerfect for Minecraft Bedrock servers and for players onconsole (Xbox, PlayStation, Nintendo Switch), mobile (Android, iOS), and Windows 10. Works with Bedrock Dedicated Server (BDS) and supports cross-platform gameplay.\n\n📥 DOWNLOAD & LINKS\nGet Bedrock Voice Chat:\n🔗 GitHub (Free & Source Available): https://github.com/Alaydriem/bedrock-voice-chat/releases\n\nSupport Development & Get Early Access, and help unlock more features!\n\n💎 Patreon: https://www.patreon.com/posts/i-made-proximity-147533371?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link\n🎥 YouTube Membership: https://www.youtube.com/channel/UCXgqRZv7bHsKzwYBrtA9DFA/join\n\nBeta Testing:\n\nIf you wish to join the Android or iOS open betas, head over to patreon and join the free tier today to get access to the Google Play Store listing when it becomes available! https://patreon.com/alaydriem\n\nCommunity & Support:\n💬 Discord: discord.com/invite/WJPShXnbga\n📖 Documentation: https://github.com/alaydriem/bedrock-voice-chat/wiki\n\n🎮 ABOUT THIS PROJECT\nBedrock Voice Chat is inspired by Simple Voice Chat for Java Edition, rebuilt from the ground up in Rust for maximum performance on Minecraft Bedrock Dedicated Servers. The project consists of three components:\n\nServer software (Rust) - High-performance voice routing\nBehavior Pack (BDS) - Position data relay\nNative Client Apps (Windows/Android/iOS) - Audio interface\n\nUnlike Discord or other third-party solutions, Bedrock Voice Chat integrates directly with your Minecraft server, providing true proximity-based communication that works for ALL Bedrock platforms - not just PC players.\n\n🔍 SEARCH TERMS\nMinecraft Bedrock voice chat, proximity voice chat Bedrock Edition, Bedrock Dedicated Server voice mod, voice communication for Bedrock, Minecraft console voice chat, Minecraft mobile voice chat, cross-platform Minecraft voice, Simple Voice Chat alternative Bedrock, Discord alternative for Minecraft Bedrock, positional audio Minecraft, spatial audio Bedrock, Minecraft voice mod 2025\n\n📢 SUPPORT THE PROJECT\nThis is an source-available, community-driven project. Early supporters on Patreon and YouTube Membership get:\n\nEarly access to Beta 2+ features\nPriority bug fixes and feature requests\nBehind-the-scenes development updates\nDirect contribution to iOS App Store release\n\nAndroid beta testers are critical to unlocking the Google Play Store listing - your testing literally makes the app available to millions of players.\n\n#MinecraftBedrock #ProximityVoiceChat #BedrockVoiceChat #MinecraftMods #BedrockEdition\n\n----\n\nIf you like this content, please consider subscribing to @Alaydriem  .\nJoin me live on Twitch every Thursday and Friday at  7 PT / 9 CT / 10 ET PM at https://www.twitch.tv/Alaydriem where we explore farms, build amazing builds, and hang out together in a relaxing and family friendly chill stream\n\n\nAnd make sure you join my new discord to chat about episodes and farms over at https://discord.com/invite/WJPShXnbga!\n\n---",
       "publishedAt": "2026-01-12T17:09:50Z",
       "duration": "PT35S",
-      "viewCount": 38100,
+      "viewCount": 38200,
       "thumbnail": "https://i.ytimg.com/vi/FIW00XnrBPY/maxresdefault.jpg",
       "tags": [
         "minecraft bedrock",
@@ -278,7 +278,7 @@
       "description": "Hello there beautiful pixels, and welcome back to another Minecraft Bedrock Farm Tutorial with your favorite cardigan wearing minecraft character, @Alaydriem!\n\nIn this Minecraft Bedrock tutorial, I show you how to build a an amazing froglight farm for Minecraft Bedrock 1.21+ that doesn't require a magma cube spawner! This farm is super effective if you need a LOT of froglights for your survival worlds!\n\n------\n\nMaterials List: 20w x 20d x 9h\n------------------------\n\n    Oak Fence: 48\n    Redstone Block: 34\n    Powered Rail: 34\n    Smooth Stone: 352\n    Smooth Stone Slab: 9\n    Powder Snow: 90\n    Rail: 313\n    Hopper: 5\n    Hopper Minecraft: 1\n    Sand: several shulkers, for the roof smelt the sand into glass. The amount of sand you need varys based upon the lava depth and the amount of area you're going to clear out.\n\nIf you need a simple item sorter, check out: https://www.youtube.com/watch?v=A6HfQDHDq5Y, or use your favorite.\n\nIf you like this content, please consider subscribing to @Alaydriem  .\nJoin me live on Twitch every Thursday and Friday at  6:30 PT / 8:30 CT / 9:30 ET PM at https://www.twitch.tv/Alaydriem where we explore farms, build amazing builds, and hang out together in a relaxing and family friendly chill stream\n\nWant to see more content? Twitch Replays? Checkout my second channel at @Adreamily  !\n\nAnd make sure you join my new discord to chat about episodes and farms over at https://discord.com/invite/WJPShXnbga!\n\n#Minecraft #WitchFarm, #CopperGolem #javatutorial #bedrocktutorial",
       "publishedAt": "2025-11-24T21:30:05Z",
       "duration": "PT17M30S",
-      "viewCount": 49600,
+      "viewCount": 49700,
       "thumbnail": "https://i.ytimg.com/vi/MuB5GzHjcvQ/maxresdefault.jpg",
       "tags": [
         "minecraft",
@@ -347,7 +347,7 @@
       "description": "#minecraft #minecraftshorts #minecraftbedrock",
       "publishedAt": "2025-11-12T14:00:04Z",
       "duration": "PT38S",
-      "viewCount": 3780,
+      "viewCount": 3790,
       "thumbnail": "https://i.ytimg.com/vi/1orIF7TYsgI/maxresdefault.jpg",
       "tags": []
     },
@@ -377,7 +377,7 @@
       "description": "#minecraft #minecraftshorts #minecraftbedrock",
       "publishedAt": "2025-11-05T14:01:17Z",
       "duration": "PT38S",
-      "viewCount": 1850,
+      "viewCount": 1860,
       "thumbnail": "https://i.ytimg.com/vi/hRI869zgVoI/maxresdefault.jpg",
       "tags": []
     },
@@ -501,7 +501,7 @@
       "description": "Hello there beautiful pixels, and welcome back to another Minecraft Bedrock Farm Tutorial with your favorite cardigan wearing minecraft character, @Alaydriem!\n\nIn this Minecraft Bedrock tutorial, I show you how to build a simpler copper golem item sorter that will replace every item sorter you've ever made before. This item sorter is super simple, requires ZERO redstone, and can be built in minutes!\n\n------\n\nIf you like this content, please consider subscribing to @Alaydriem  .\nJoin me live on Twitch every Thursday and Friday at  6:30 PT / 8:30 CT / 9:30 ET PM at https://www.twitch.tv/Alaydriem where we explore farms, build amazing builds, and hang out together in a relaxing and family friendly chill stream\n\nWant to see more content? Twitch Replays? Checkout my second channel at @Adreamily  !\n\nAnd make sure you join my new discord to chat about episodes and farms over at https://discord.com/invite/WJPShXnbga!\n\n#Minecraft #WitchFarm, #CopperGolem #javatutorial #bedrocktutorial",
       "publishedAt": "2025-10-16T18:00:49Z",
       "duration": "PT6M31S",
-      "viewCount": 6850,
+      "viewCount": 6860,
       "thumbnail": "https://i.ytimg.com/vi/oOWbhJbBTIM/maxresdefault.jpg",
       "tags": [
         "minecraft",
@@ -1260,7 +1260,7 @@
       "description": "",
       "publishedAt": "2025-03-17T12:30:47Z",
       "duration": "PT20S",
-      "viewCount": 9860,
+      "viewCount": 9870,
       "thumbnail": "https://i.ytimg.com/vi/lDWMp8sYRys/maxresdefault.jpg",
       "tags": [
         "minecraft shorts",
@@ -1497,7 +1497,7 @@
       "description": "Hello there beautiful pixels, and welcome back to another Minecraft Bedrock Farm Tutorial with your favorite cardigan wearing minecraft character, @Alaydriem!\n\nIn this Minecraft Bedrock Tutorial I'll show you had to build this INCREDIBLY powerful shroomlight farm for Minecraft Bedrock 1.21.\n\nThis farm produces 1300+ shroomslights per hour, and 1600+ warped stem blocks per hour. On top of this, you'll also get back a portion of the bonemeal input from your farm from the warped wart blocks generated. You'll generated nearly a whole shulkerbox of shroomlights from this farm every hour!\n\nFor this farm you'll need a steady supply of redstone and gunpowder to make TNT, which you can get from my Witch Farm: https://www.youtube.com/watch?v=A0bUww1m904\n\nThis farm will consume 13 stacks of TNT per hour, so make sure you have plenty stocked up!\n\nAnd a steady stream of bonemeal which can be provided by other my Mini Bonemeal Farm https://www.youtube.com/watch?v=QbSoXjBRcGs or this super powerful bonemeal farm here: https://www.youtube.com/watch?v=7yeqDcfxQOs\n\nYou'll also want to generate a bunch of warped fungus using this farm here: https://www.youtube.com/watch?v=MCDHsegMSU8\n\nMake sure you drop by @oldrusty8157 channel and give him a subscription and a like for discovering the mechanics of using world height to optimize the outputs. My farm variant is built upon his at his, and distributed here with his referral.\n\n------------------------\nWant to make this farm _fully_ AFKable and avoid the issue with Crimson Fungus blocks growing? make sure you checkout the companion video that explains the necessary steps to update the farm : https://youtu.be/SEDvsUAa9OI\n\nMaterials List: 22w x 26d x 23h\n------------------------\n\n    Obsidian: 285\n    Water: 62\n    Button: 1\n    Target Block: 25\n    Barrel: 2\n    Smooth Quartz Slab: 10\n    Observer: 4\n    Lever: 3\n    Warped Wart Block: 322\n    Chest: 60\n    Hopper: 73\n    Redstone Torch: 14\n    Comparator: 14\n    Composter: 1\n    Warped Stem: 33\n    Scaffolding: 1\n    Warped Nylium: 2\n    Trapdoor (any): 19\n    Dispenser: 4\n    Sign (any): 6\n    Piston: 58\n    Redstone Block: 2\n    Shroomlight: 22\n    Repeater: 47\n    Glass: 308\n    Waxed Copper Bulb: 2\n    Blue Ice: 54\n    Redstone Lamp: 2\n    Sticky Piston: 54\n    Smooth Quartz: 390\n    Purple Wool: 45\n    Redstone Wire: 212\n     Water: Infinite source\n     TNT: 9 stocks/hours\n     Bonemeal: Infinite source\n\n------\n\nIf you like this content, please consider subscribing to @Alaydriem .\nJoin @MerelyAdequate and I live on Twitch every Monday at  6:30 PT / 8:30 CT / 9:30 ET PM at https://www.twitch.tv/Alaydriem!\nWant to see more content? Twitch Replays? Checkout my second channel at @Alaevren !\nAnd make sure you join my new discord to chat about episodes and farms over at https://discord.com/invite/WJPShXnbga!\n\n#Minecraft #ShroomlightFarm #NetherFarm #NyliumFarm #WoodFarm #bedrocktutorial\n\n------------------------\n00:00 Introduction\n01:52 Tutorial Start",
       "publishedAt": "2024-10-28T14:00:06Z",
       "duration": "PT33M53S",
-      "viewCount": 9680,
+      "viewCount": 9690,
       "thumbnail": "https://i.ytimg.com/vi/6q81bl0-AtY/maxresdefault.jpg",
       "tags": [
         "Minecraft",
@@ -3424,7 +3424,7 @@
       "description": "In this #Minecraft #Bedrock #Tutorial, Alaydriem teaches you how to create a fully AFK Lava farm! This farm is great for smelter arrays, or larger projects such as lava casting or creating more obsidian!\n\nMaterials List: 15w x 6d x 6h\n------------------------\n\n    Comparator: 1\n    Lava: 26\n    Chest: 4\n    Repeater: 1\n    Block (any): 114\n    Hopper: 2\n    Dropper: 2\n    Redstone Wire: 13\n    Pointed Dripstone: 26\n    Cauldron: 24\n    Redstone Torch: 3\n    Piston: 1\n    Trapdoor: 1",
       "publishedAt": "2023-10-16T16:00:41Z",
       "duration": "PT6M25S",
-      "viewCount": 3870,
+      "viewCount": 3880,
       "thumbnail": "https://i.ytimg.com/vi/vj4IOg9tN8w/maxresdefault.jpg",
       "tags": [
         "afk lava farm",
@@ -3456,7 +3456,7 @@
       "description": "Checkout these 3 great tips for creating beautiful custom trees in Minecraft Bedrock Edition #shorts #minecraftshorts",
       "publishedAt": "2023-10-13T16:00:09Z",
       "duration": "PT1M",
-      "viewCount": 237,
+      "viewCount": 238,
       "thumbnail": "https://i.ytimg.com/vi/8WrF-vd7yQw/maxresdefault.jpg",
       "tags": [
         "minecraft",
@@ -3609,7 +3609,7 @@
       "description": "In this Minecraft Bedrock (1.20) tutorial, Alaydriem shows how to build an shulker shell farm!\n\nThis farm will produce ~340 shells per hour just by AFKing!\n\nMaterials List: 5w x 13d x 10h\n------------------------\n\n    Hopper: 3\n    Water: source\n    Glass: 24\n    Scaffolding: 5 (+ whatever you need for ladders)\n    Chest: 2\n    Button: 86\n    Slab: 68",
       "publishedAt": "2023-10-03T16:00:30Z",
       "duration": "PT8M39S",
-      "viewCount": 819,
+      "viewCount": 820,
       "thumbnail": "https://i.ytimg.com/vi/RGWGwNutSu4/maxresdefault.jpg",
       "tags": [
         "1.20",
@@ -3639,7 +3639,7 @@
       "description": "This is THE BEST Bone meal farm for #Minecraft #Bedrock edition. It can make between 9100 and 11,000 pieces of bonemeal in PROFIT per hour!\n\nWanna see the full tutorial? Checkout 👉 https://youtu.be/7yeqDcfxQOs",
       "publishedAt": "2023-10-02T16:00:45Z",
       "duration": "PT18S",
-      "viewCount": 64400,
+      "viewCount": 64500,
       "thumbnail": "https://i.ytimg.com/vi/y2JUpCMrS-c/maxresdefault.jpg",
       "tags": [
         "Alaydriem",
@@ -3747,7 +3747,7 @@
       "description": "Checkout this beautiful custom tree I made on the Lore and Legend Server!\n\nWanna see more? Checkout 👉 https://youtu.be/sO1pjujgKco",
       "publishedAt": "2023-09-22T16:00:33Z",
       "duration": "PT13S",
-      "viewCount": 326,
+      "viewCount": 327,
       "thumbnail": "https://i.ytimg.com/vi/WeLXYKxkCBs/maxresdefault.jpg",
       "tags": [
         "Minecraft",
@@ -3761,7 +3761,7 @@
       "description": "Piglin farming in Minecraft Bedrock is super broken. Did you know that if you place down a observer clock with a sticky piston and a gold block Piglins will trade with you are zero-tick speeds?",
       "publishedAt": "2023-09-20T16:00:46Z",
       "duration": "PT32S",
-      "viewCount": 12200,
+      "viewCount": 12300,
       "thumbnail": "https://i.ytimg.com/vi/sn3_UrqC9Ro/maxresdefault.jpg",
       "tags": [
         "Minecraft",
@@ -5258,7 +5258,7 @@
       "description": "In this Minecraft Bedrock 1.18+ tutorial, Alaydriem shows how to build a efficient Honey Bottle / Honeycomb farm!\n\nWorld Download: https://www.alaydriem.com/world-downloads/Honey-Bottle-Honeycomb-Farm.mcworld\nSHA256: 85994ba16ec9305df55aec728f0075b92f878df9e604f919bcbdb8c3b38d0826\n\n00:00 Introduction\n00:19 Farm Mechanics\n02:37 Single Slice Tutorial\n03:17 Tutorial\n15:15 Outro",
       "publishedAt": "2022-05-17T19:30:33Z",
       "duration": "PT15M51S",
-      "viewCount": 734,
+      "viewCount": 735,
       "thumbnail": "https://i.ytimg.com/vi/M3YbEHa_VvU/maxresdefault.jpg",
       "tags": [
         "Minecraft",
