@@ -8,12 +8,40 @@
   },
   "videos": [
     {
+      "id": "hcYM4fxUcuM",
+      "title": "It's Trash Day!",
+      "description": "Hello there beautiful pixels and welcome to TRASH DAY\nWant to see more content? Twitch Replays? Checkout my second channel at  @Alaevren  !\n\nAnd make sure you join my new discord to chat about episodes and farms over at https://discord.com/invite/WJPShXnbga!\n\nTruly Bedrock is a private invite only let's play Bedrock edition SMP server. Check out our website and join our Discord! \nTruly Bedrock Website: https://www.trulybedrock.com/\nTruly Bedrock Discord / http://discord.gg/Z7mAYQa  \n\n----",
+      "publishedAt": "2026-09-05T01:36:18Z",
+      "duration": "P0D",
+      "viewCount": 31,
+      "thumbnail": "https://i.ytimg.com/vi/hcYM4fxUcuM/hqdefault_live.jpg",
+      "tags": [
+        "alaydriem",
+        "minecraft",
+        "minecraft bedrock",
+        "livestream",
+        "livestream replay",
+        "bedrock farms",
+        "bedrock tutorials",
+        "family friendly",
+        "relaxing stream",
+        "calm stream",
+        "truly bedrock season 7",
+        "bedrock voice chat",
+        "minecraft prox chat",
+        "minecraft proximity voice chat",
+        "bedrock prox chat",
+        "bedrock proximity chat",
+        "peak"
+      ]
+    },
+    {
       "id": "dvtRmzAUMw8",
       "title": "New Minecraft Bedrock Addon Lets Solves Inventory Management!",
       "description": "Minecraft has almost a thousand blocks… and you get 36 slots and NINE hotbar items. 😤\n\nBedrock Hotbar Shuffle fixes that. One keybind. Your entire inventory. No menus, no swapping, no dragging items around like a lunatic.\n\nIf you build on Bedrock, this is the addon you've been quietly rage-quitting about for years.\n\n⚡ WHAT IT DOES\nBedrock Hotbar Shuffle adds a keybindable macro that shifts your active hotbar through all 3 extra rows of your inventory — instantly. Tools stay put. Food stays put. Your gradient blocks stay exactly where you sorted them. You just… shuffle to them.\n\nNo more one-at-a-time block swaps. No more moving your pickaxe out of the way to grab a slab. No more inventory that looks like a carnival after it left town. 🎪\n\n🛠️ SETUP (takes ~30 seconds)\n\nInstall the addon to your world from CurseForge\nOpen Settings → Keyboard & Mouse → scroll to Macros\nAdd /shuffle:down and /shuffle:up to any two slots\nBind them to an ALT + key combo (ALT + Q / ALT + E works great — or any key or mouse button you like)\n\nThat's it. Your whole inventory, one button away.\n\n📥 DOWNLOAD — 100% FREE\nCurseForge: https://www.curseforge.com/minecraft-bedrock/addons/hotbar-shuffle\n\n💬 TELL ME WHAT TO BUILD NEXT\nIs ALT + Q/E enough, or do you want more? A full inventory swap? Hotkeys jumping straight to a specific row? Drop it in the comments — I genuinely want to know what would make building easier for you on Bedrock.\n\n🔔 SUBSCRIBE if this solved a problem you've been dealing with forever. This is exactly the kind of tool I want to keep making.\n\nThanks for watching — see you in the next one! 🧱\n\n#Minecraft #MinecraftBedrock #MinecraftAddons #BedrockEdition #MinecraftBuilding #MCPE #MinecraftMods #BedrockAddons #MinecraftBuilds #QualityOfLife",
       "publishedAt": "2026-08-12T13:00:36Z",
       "duration": "PT2M30S",
-      "viewCount": 408,
+      "viewCount": 413,
       "thumbnail": "https://i.ytimg.com/vi/dvtRmzAUMw8/maxresdefault.jpg",
       "tags": [
         "Minecraft Bedrock",
@@ -222,7 +250,7 @@
       "description": "Proximity voice chat is finally here for Minecraft Bedrock Edition and today I'm inviting you to try it out!\n\nBedrock Voice Chat brings real-time spatial audio to Bedrock Dedicated Servers - free and available now for Windows, Android, and iOS.\n\nWhat is Bedrock Voice Chat?\n\nThe first true proximity voice chat solution for Minecraft Bedrock Edition. No more Discord workarounds. No more typing on controllers or phone screens. Experience voice chat the way Java Edition players have enjoyed for years - with positional audio, push-to-talk, and individual volume controls.\nKey Features:\n\n✅ Proximity Chat with 3D Positional Audio\n✅ Native apps for Windows 10, Android & iOS\n✅ Individual player volume controls\n✅ Client-side muting and deafening\n✅ Noise suppression & audio amplification\n✅ End-to-end encryption\n✅ Audio recording for content creators\n✅ Works on Bedrock Dedicated Servers\n✅ Cross-platform: Console, Mobile, Windows 10\n\nAnd a whole lot more!\n\nPerfect for Minecraft Bedrock servers and for players on console (Xbox, PlayStation, Nintendo Switch), mobile (Android, iOS), and Windows 10. Works with Bedrock Dedicated Server (BDS) and supports cross-platform gameplay.\n\n📥 DOWNLOAD & LINKS\nGet Bedrock Voice Chat: https://www.bedrockvoicechat.com\n\nSupport Development & Get Early Access, and help unlock more features!\n\n💎 Patreon: https://www.patreon.com/posts/i-made-proximity-147533371?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link\n🎥 YouTube Membership: https://www.youtube.com/channel/UCXgqRZv7bHsKzwYBrtA9DFA/join\n\nBeta Testing:\n\nIf you wish to join the Android or iOS open beta, PLEASE join Discord and head to the #bedrock-voice-chat forum to access the Google Form link. We need at least 20 additional testers of the Android app and have the app installed for 14 days before we can roll out the Android app publicly.\n\nCommunity & Support:\n💬 Discord: https://discord.gg/MAHckcEATj\n📖 Documentation: https://github.com/alaydriem/bedrock-voice-chat/wiki\n\n🎮 ABOUT THIS PROJECT\nBedrock Voice Chat is inspired by Simple Voice Chat for Java Edition, rebuilt from the ground up in Rust for maximum performance on Minecraft Bedrock Dedicated Servers. The project consists of three components:\n\nServer software (Rust) - High-performance voice routing\nBehavior Pack (BDS) - Position data relay\nNative Client Apps (Windows/Android/iOS) - Audio interface\n\nUnlike Discord or other third-party solutions, Bedrock Voice Chat integrates directly with your Minecraft server, providing true proximity-based communication that works for ALL Bedrock platforms - not just PC players.\n\n🔍 SEARCH TERMS\nMinecraft Bedrock voice chat, proximity voice chat Bedrock Edition, Bedrock Dedicated Server voice mod, voice communication for Bedrock, Minecraft console voice chat, Minecraft mobile voice chat, cross-platform Minecraft voice, Simple Voice Chat alternative Bedrock, Discord alternative for Minecraft Bedrock, positional audio Minecraft, spatial audio Bedrock, Minecraft voice mod 2026\n\n📢 SUPPORT THE PROJECT\nThis is an source-available, community-driven project. Early supporters on Patreon and YouTube Membership get:\n\nEarly access to Beta 2+ features\nPriority bug fixes and feature requests\nBehind-the-scenes development updates\nDirect contribution to iOS App Store release\n\n#MinecraftBedrock #ProximityVoiceChat #BedrockVoiceChat #MinecraftMods #BedrockEdition\n\n----\n\nIf you like this content, please consider subscribing to @Alaydriem  .\nJoin me live on Twitch every Thursday and Friday at  7 PT / 9 CT / 10 ET PM at https://www.twitch.tv/Alaydriem where we explore farms, build amazing builds, and hang out together in a relaxing and family friendly chill stream\n\nWant to see more content? Twitch Replays? Checkout my second channel at @Adreamily  !\n\nAnd make sure you join my new discord to chat about episodes and farms over at https://discord.com/invite/WJPShXnbga!\n\n---\n\n00:00 I made proximity voice chat for Minecraft Bedrock\n00:34 And you can experience it today\n01:14 UI Showcase\n02:41 Demo\n03:38 How to get it\n04:40 How you can support development, iOS, and Android releases\n05:42 Are you ready to experience proximity voice chat for minecraft bedrock that's AMAZING?\n© 2025 Alaydriem",
       "publishedAt": "2026-01-12T15:01:04Z",
       "duration": "PT7M23S",
-      "viewCount": 212000,
+      "viewCount": 213000,
       "thumbnail": "https://i.ytimg.com/vi/VON56xnHfnQ/maxresdefault.jpg",
       "tags": [
         "bedrock voice chat",
@@ -278,7 +306,7 @@
       "description": "Hello there beautiful pixels, and welcome back to another Minecraft Bedrock Farm Tutorial with your favorite cardigan wearing minecraft character, @Alaydriem!\n\nIn this Minecraft Bedrock tutorial, I show you how to build a an amazing froglight farm for Minecraft Bedrock 1.21+ that doesn't require a magma cube spawner! This farm is super effective if you need a LOT of froglights for your survival worlds!\n\n------\n\nMaterials List: 20w x 20d x 9h\n------------------------\n\n    Oak Fence: 48\n    Redstone Block: 34\n    Powered Rail: 34\n    Smooth Stone: 352\n    Smooth Stone Slab: 9\n    Powder Snow: 90\n    Rail: 313\n    Hopper: 5\n    Hopper Minecraft: 1\n    Sand: several shulkers, for the roof smelt the sand into glass. The amount of sand you need varys based upon the lava depth and the amount of area you're going to clear out.\n\nIf you need a simple item sorter, check out: https://www.youtube.com/watch?v=A6HfQDHDq5Y, or use your favorite.\n\nIf you like this content, please consider subscribing to @Alaydriem  .\nJoin me live on Twitch every Thursday and Friday at  6:30 PT / 8:30 CT / 9:30 ET PM at https://www.twitch.tv/Alaydriem where we explore farms, build amazing builds, and hang out together in a relaxing and family friendly chill stream\n\nWant to see more content? Twitch Replays? Checkout my second channel at @Adreamily  !\n\nAnd make sure you join my new discord to chat about episodes and farms over at https://discord.com/invite/WJPShXnbga!\n\n#Minecraft #WitchFarm, #CopperGolem #javatutorial #bedrocktutorial",
       "publishedAt": "2025-11-24T21:30:05Z",
       "duration": "PT17M30S",
-      "viewCount": 50600,
+      "viewCount": 50700,
       "thumbnail": "https://i.ytimg.com/vi/MuB5GzHjcvQ/maxresdefault.jpg",
       "tags": [
         "minecraft",
@@ -337,7 +365,7 @@
       "description": "#minecraft #minecraftshorts #minecraftbedrock",
       "publishedAt": "2025-11-14T14:01:15Z",
       "duration": "PT28S",
-      "viewCount": 5900,
+      "viewCount": 5910,
       "thumbnail": "https://i.ytimg.com/vi/gFPht2uoovw/maxresdefault.jpg",
       "tags": []
     },
@@ -367,7 +395,7 @@
       "description": "#minecraft #minecraftshorts #minecraftbedrock",
       "publishedAt": "2025-11-07T14:01:16Z",
       "duration": "PT43S",
-      "viewCount": 1230,
+      "viewCount": 1240,
       "thumbnail": "https://i.ytimg.com/vi/egN9slINP4k/maxresdefault.jpg",
       "tags": []
     },
@@ -501,7 +529,7 @@
       "description": "Hello there beautiful pixels, and welcome back to another Minecraft Bedrock Farm Tutorial with your favorite cardigan wearing minecraft character, @Alaydriem!\n\nIn this Minecraft Bedrock tutorial, I show you how to build a simpler copper golem item sorter that will replace every item sorter you've ever made before. This item sorter is super simple, requires ZERO redstone, and can be built in minutes!\n\n------\n\nIf you like this content, please consider subscribing to @Alaydriem  .\nJoin me live on Twitch every Thursday and Friday at  6:30 PT / 8:30 CT / 9:30 ET PM at https://www.twitch.tv/Alaydriem where we explore farms, build amazing builds, and hang out together in a relaxing and family friendly chill stream\n\nWant to see more content? Twitch Replays? Checkout my second channel at @Adreamily  !\n\nAnd make sure you join my new discord to chat about episodes and farms over at https://discord.com/invite/WJPShXnbga!\n\n#Minecraft #WitchFarm, #CopperGolem #javatutorial #bedrocktutorial",
       "publishedAt": "2025-10-16T18:00:49Z",
       "duration": "PT6M31S",
-      "viewCount": 7090,
+      "viewCount": 7110,
       "thumbnail": "https://i.ytimg.com/vi/oOWbhJbBTIM/maxresdefault.jpg",
       "tags": [
         "minecraft",
@@ -2704,7 +2732,7 @@
       "description": "In this Minecraft Bedrock 1.20+ tutorial, Alaydriem shows how to build an incredibly SIMPLE and EASY to build MOSS FARM that produces over 550+ pieces of bonemeal in profit every single hour.\n\nThis is a great early game starter farm to generate to help you kickstart other farms such as your tree farms! \n\nThis Minecraft Bedrock Tutorial works on MCPE / Xbox / Switch /  PC / PS, etc...\n\nBe sure to subscribe for more tutorials!\n\nAlso checkout my MEGA MOSS FARM: https://www.youtube.com/watch?v=7yeqDcfxQOs that produces nearly 11,000 pieces of bonemeal in profit every single hour!\n\nMaterials List: 16w x 14d x 8h\n------------------------\n\n    Lava Bucket: 2\n    Sticky Piston: 1\n    Repeater: 4\n    Hopper: 27\n    Redstone Wire: 77\n    Water: 3 Buckets\n    Redstone Torch: 3\n    Block (any): 226\n    Obsidian: 12\n    Comparator: 3\n    Composter: 1\n    Dispenser: 3\n    Lever: 1\n    Barrel: 1\n    Observer: 3\n    Moss Block: 1\n    Slab (any): 63\n    Piston: 15\n    Redstone Block: 1\n\n-----------\n\n00:00 Introduction\n01:26 The Mega Moss Farm for Late Game\n02:41 Farm Size\n03:01 Main Clock\n05:18 Platforms\n06:11 Collection System\n07:27 Stone Generator\n12:44 Bootstrapping\n13:15 Running the Farm & Last Notes\n14:25 Outro\n\n------------\n\nSummon a Jelly cat in your world and share below",
       "publishedAt": "2024-01-09T21:00:24Z",
       "duration": "PT14M48S",
-      "viewCount": 4890,
+      "viewCount": 4900,
       "thumbnail": "https://i.ytimg.com/vi/QbSoXjBRcGs/maxresdefault.jpg",
       "tags": [
         "Alaydriem",
@@ -3258,7 +3286,7 @@
       "description": "In this #Minecraft #Bedrock #Tutorial, Alaydriem teaches you how to create a mud and clay farm for your Minecraft Bedrock 1.20 world! This farm will generate 108 pieces of mud every 90 seconds, is super easy to build, requires very little resources, and is ultra reliable.\n\nMaterials List: 17w x 18d x 6h\n------------------------\n\n    Piston: 10\n    Glass: 1\n    Redstone Torch: 4\n    Observer: 2\n    ressure Plate: 1\n    Hopper: 4\n    Water: 3\n    Dispenser: 2\n    Redstone : 30\n    Sticky Piston: 1\n    Comparator: 2\n    Repeater: 3\n    Cyan Wool: 33\n    Target: 2\n    Trapdoor: 4\n    Dropper: 2",
       "publishedAt": "2023-10-31T16:00:36Z",
       "duration": "PT6M47S",
-      "viewCount": 4470,
+      "viewCount": 4480,
       "thumbnail": "https://i.ytimg.com/vi/h79sWHR9WBI/maxresdefault.jpg",
       "tags": [
         "alaydriem",
@@ -4660,7 +4688,7 @@
       "description": "In this Minecraft Bedrock Farm Tutorial, Alaydriem shows how to build a device that can quickly convert concrete powder into concrete blocks. This redstone contraption has a built in cube-maker, and once installed is super easy to AFK at to generate tons of concrete blocks. \n\nWith this machine you could generate up to 2,700 concrete blocks and hour!\n\nMake sure you like and subscribe to be notified when I release a new farm and redstone tutorial!\n\nBe sure to check out my Bedrock Let's Play Series \"Welcome to Bedrock!\" as well https://www.youtube.com/playlist?list=PL_3ZZiHxRObQIL-25FDr6NvCkeWMi1xJT!\n\nFor more news and info, follow me on Twitter https://www.twitter.com/alaydriem!\n\n----\n\nMaterials List:\n\nAny Stone Variant: 81\nRedstone Torch: 5\nRepeater: 9\nComparator: 3\nTarget Block: 2\nRedstone Dust: 99\nSlab: 1\nGlass: 24\nObsidian: 1\nObserver: 4\nLever: 1\nPiston: 93",
       "publishedAt": "2023-02-21T20:30:01Z",
       "duration": "PT9M9S",
-      "viewCount": 576,
+      "viewCount": 577,
       "thumbnail": "https://i.ytimg.com/vi/aySF5DwcFgk/sddefault.jpg",
       "tags": [
         "Minecraft",
@@ -4880,7 +4908,7 @@
       "description": "In this episode, Alaydriem shows how to make a super simple and easy to build brewing station room that features inventory status indicators and and automatic waterbottle filler so you never need to make or brew waterbottles!\n\nCheckout my Bedrock Let's Play: https://www.youtube.com/watch?v=4lwDoXd_zPM&list=PL_3ZZiHxRObQIL-25FDr6NvCkeWMi1xJT\n\nBe sure to follow me on Twitter to get updates when I post a new video! https://www.twitter.com/alaydriem",
       "publishedAt": "2022-11-29T20:30:00Z",
       "duration": "PT12M55S",
-      "viewCount": 4030,
+      "viewCount": 4040,
       "thumbnail": "https://i.ytimg.com/vi/CUm7NiPfFDM/maxresdefault.jpg",
       "tags": [
         "1.19 bedrock potion brewing station",
@@ -5840,6 +5868,18 @@
       ]
     },
     {
+      "id": "PL_3ZZiHxRObT0RBzJoZFpUYl_tp3xCv4C",
+      "title": "Previous Livestreams",
+      "description": "Livestreams with Alaydriem",
+      "itemCount": 206,
+      "thumbnail": "https://i.ytimg.com/vi/hcYM4fxUcuM/hqdefault_live.jpg",
+      "videoIds": [
+        "hcYM4fxUcuM",
+        "BemhPpFdOcQ",
+        "RtfJFuXhyek"
+      ]
+    },
+    {
       "id": "PL_3ZZiHxRObSLDQdKgTmK78Tfrpxj48pW",
       "title": "Bedrock Legends",
       "description": "Hardcore Minecraft Bedrock with Friends\n\nOne Life\nOne World\nAnd one Horse Curse",
@@ -5859,17 +5899,6 @@
       "videoIds": [
         "dvtRmzAUMw8",
         "AHn7Nrq6_s4"
-      ]
-    },
-    {
-      "id": "PL_3ZZiHxRObT0RBzJoZFpUYl_tp3xCv4C",
-      "title": "Previous Livestreams",
-      "description": "Livestreams with Alaydriem",
-      "itemCount": 205,
-      "thumbnail": "https://i.ytimg.com/vi/_vf-obpVYY0/hqdefault_live.jpg",
-      "videoIds": [
-        "BemhPpFdOcQ",
-        "RtfJFuXhyek"
       ]
     },
     {
