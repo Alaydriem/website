@@ -23,7 +23,7 @@
       "description": "Learn how to install and setup Bedrock Voice Chat (BVC) starting with Beta 21 - a FREE proximity voice chat solution for Minecraft Bedrock Edition! This updated tutorial covers the full server setup: the BVC server in Docker with automatic TLS, the Bedrock Dedicated Server addon, and connecting your first client.\n\n🎯 WHAT IS BEDROCK VOICE CHAT?\nBVC brings spatial proximity voice chat to Minecraft Bedrock, similar to the popular Simple Voice Chat mod for Java Edition. Talk to nearby players naturally - voices get louder as you get closer and fade as you move apart! It's a system of three components: the Voice Chat server, the addon for your world (BDS, Realms/Eternos, Fabric or PaperMC), and the client app for desktop or mobile.\n\n⏱️ TIMESTAMPS\n0:00 - What is BVC and How Does it Work?\n0:26 - The Three Components of BVC Explained\n1:31 - What You'll Need\n3:15 - Configure Bedrock Voice Chat \n4:08 - Bootstrap Your First User to Grant Yourself Access\n4:29 - Would You Want a HOSTED Version of BVC? Let me know in the comments!\n4:45 - Bedrock Dedicated Server + Addon Setup \n9:09 - BVC Client Apps - Desktop, Android & iOS\n9:57 - Adding Friends, Audio Settings & Chatting In-World\n10:33 - Feedback on the Docs Always Welcome - Bedrock is Better Together\n\n📚 DOCUMENTATION & WIKI Full setup guide and troubleshooting: https://bedrockvoicechat.com/wiki Source code and latest releases: https://github.com/Alaydriem/bedrock-voice-chat\n\n📥 DOWNLOAD & LINKS Get Bedrock Voice Chat: https://www.bedrockvoicechat.com\nBVC Addon on CurseForge: https://www.curseforge.com/members/alaydriem/projects\n\n🛠️ TOOLS & SERVICES USED IN THIS VIDEO\nCloudFlare (domain registrar + DNS, powers the free automatic TLS certs): https://www.cloudflare.com\nDigitalOcean (affiliate link - a $4 droplet runs BVC for servers or Realms under 5 players, and it helps support the channel):https://m.do.co/c/15e066af535c\nEnable Beta APIs: https://w1zardz.github.io/bedrock-nbt-editor/\n- Upload your level.dat file\n- Enable `gametest`, save, and replace on your server\n\n💰 SUPPORT DEVELOPMENT & GET EARLY ACCESS \n💎 Patreon: https://www.patreon.com/posts/i-made-proximity-147533371\n🎥 YouTube Membership: https://www.youtube.com/channel/UCXgqRZv7bHsKzwYBrtA9DFA/join\n\n🎮 PLATFORM SUPPORT\n✅ Windows, Mac & Linux Desktop App\n✅ Android\n✅ iOS\n✅ Bedrock Dedicated Server\n✅ Bedrock Realms & Aternos\n\n✅ Fabric Java Servers for Cross Platform \n✅ PaperMC\n✅ Geyser + Floodgate\n\n✅ Anywhere you can run a Docker container\n\n⚠️ Note: Mobile clients and console players can use BVC using the companion mobile app when connected to Bedrock Dedicated Server or a Java Fabric Server\n\n📺 MORE CONTENT If you enjoyed this tutorial, please consider subscribing to @Alaydriem!\n\n🔴 Join me live on Twitch every Thursday and Friday at 7 PT / 9 CT / 10 ET PM: https://www.twitch.tv/Alaydriem We explore farms, build amazing builds, and hang out in a relaxing, family-friendly chill stream!\n\n🎬 Want more content? Check out my second channel: @Adreamily\n\n💬 Join the Discord community to discuss BVC, get help, and connect with other users: \n\nhttps://discord.gg/MAHckcEATj\n\n#MinecraftBedrock #ProximityVoiceChat #MinecraftTutorial #BedrockVoiceChat #MinecraftMods #MinecraftAddons\n\nBedrock Voice Chat (BVC) is a free proximity voice chat solution for Minecraft Bedrock Edition. No subscriptions, no paid tiers for basic features - just great proximity voice chat for your Minecraft server!",
       "publishedAt": "2026-09-17T12:30:04Z",
       "duration": "PT11M56S",
-      "viewCount": 1060,
+      "viewCount": 1100,
       "thumbnail": "https://i.ytimg.com/vi/GG5qEaBgEOk/maxresdefault.jpg",
       "tags": [
         "bedrock voice chat",
@@ -453,7 +453,7 @@
       "description": "Hello there beautiful pixels, and welcome back to another Minecraft Bedrock Farm Tutorial with your favorite cardigan wearing minecraft character, @Alaydriem!\n\nIn this Minecraft Bedrock tutorial, I show you how to build a an amazing froglight farm for Minecraft Bedrock 1.21+ that doesn't require a magma cube spawner! This farm is super effective if you need a LOT of froglights for your survival worlds!\n\n------\n\nMaterials List: 20w x 20d x 9h\n------------------------\n\n    Oak Fence: 48\n    Redstone Block: 34\n    Powered Rail: 34\n    Smooth Stone: 352\n    Smooth Stone Slab: 9\n    Powder Snow: 90\n    Rail: 313\n    Hopper: 5\n    Hopper Minecraft: 1\n    Sand: several shulkers, for the roof smelt the sand into glass. The amount of sand you need varys based upon the lava depth and the amount of area you're going to clear out.\n\nIf you need a simple item sorter, check out: https://www.youtube.com/watch?v=A6HfQDHDq5Y, or use your favorite.\n\nIf you like this content, please consider subscribing to @Alaydriem  .\nJoin me live on Twitch every Thursday and Friday at  6:30 PT / 8:30 CT / 9:30 ET PM at https://www.twitch.tv/Alaydriem where we explore farms, build amazing builds, and hang out together in a relaxing and family friendly chill stream\n\nWant to see more content? Twitch Replays? Checkout my second channel at @Adreamily  !\n\nAnd make sure you join my new discord to chat about episodes and farms over at https://discord.com/invite/WJPShXnbga!\n\n#Minecraft #WitchFarm, #CopperGolem #javatutorial #bedrocktutorial",
       "publishedAt": "2025-11-24T21:30:05Z",
       "duration": "PT17M30S",
-      "viewCount": 53300,
+      "viewCount": 53400,
       "thumbnail": "https://i.ytimg.com/vi/MuB5GzHjcvQ/maxresdefault.jpg",
       "tags": [
         "minecraft",
@@ -2861,7 +2861,7 @@
       "description": "In this Minecraft Bedrock 1.20+ tutorial, Alaydriem shows how to build an incredibly SIMPLE and EASY to build MOSS FARM that produces over 550+ pieces of bonemeal in profit every single hour.\n\nThis is a great early game starter farm to generate to help you kickstart other farms such as your tree farms! \n\nThis Minecraft Bedrock Tutorial works on MCPE / Xbox / Switch /  PC / PS, etc...\n\nBe sure to subscribe for more tutorials!\n\nAlso checkout my MEGA MOSS FARM: https://www.youtube.com/watch?v=7yeqDcfxQOs that produces nearly 11,000 pieces of bonemeal in profit every single hour!\n\nMaterials List: 16w x 14d x 8h\n------------------------\n\n    Lava Bucket: 2\n    Sticky Piston: 1\n    Repeater: 4\n    Hopper: 27\n    Redstone Wire: 77\n    Water: 3 Buckets\n    Redstone Torch: 3\n    Block (any): 226\n    Obsidian: 12\n    Comparator: 3\n    Composter: 1\n    Dispenser: 3\n    Lever: 1\n    Barrel: 1\n    Observer: 3\n    Moss Block: 1\n    Slab (any): 63\n    Piston: 15\n    Redstone Block: 1\n\n-----------\n\n00:00 Introduction\n01:26 The Mega Moss Farm for Late Game\n02:41 Farm Size\n03:01 Main Clock\n05:18 Platforms\n06:11 Collection System\n07:27 Stone Generator\n12:44 Bootstrapping\n13:15 Running the Farm & Last Notes\n14:25 Outro\n\n------------\n\nSummon a Jelly cat in your world and share below",
       "publishedAt": "2024-01-09T21:00:24Z",
       "duration": "PT14M48S",
-      "viewCount": 5060,
+      "viewCount": 5070,
       "thumbnail": "https://i.ytimg.com/vi/QbSoXjBRcGs/maxresdefault.jpg",
       "tags": [
         "Alaydriem",
@@ -3556,7 +3556,7 @@
       "description": "Here's how to make beautiful and interesting nether tunnels for your #Minecraft #bedrock World! #shorts #minecraftshorts",
       "publishedAt": "2023-10-16T16:00:49Z",
       "duration": "PT56S",
-      "viewCount": 953,
+      "viewCount": 954,
       "thumbnail": "https://i.ytimg.com/vi/uQ6bPhVvV50/maxresdefault.jpg",
       "tags": [
         "minecraft",
@@ -3866,7 +3866,7 @@
       "description": "Here's how to make a incredibly simple sconce in Minecraft Bedrock with floating candles and a lever!",
       "publishedAt": "2023-09-27T16:00:39Z",
       "duration": "PT24S",
-      "viewCount": 3600,
+      "viewCount": 3610,
       "thumbnail": "https://i.ytimg.com/vi/jy3GqVqhVrg/maxresdefault.jpg",
       "tags": [
         "Minecraft",
