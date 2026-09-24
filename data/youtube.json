@@ -3,17 +3,45 @@
     "id": "UCXgqRZv7bHsKzwYBrtA9DFA",
     "title": "Alaydriem",
     "subscriberCount": 7360,
-    "videoCount": 270,
+    "videoCount": 271,
     "viewCount": 981000
   },
   "videos": [
+    {
+      "id": "pMc18nOr3o4",
+      "title": "NEW SEASON OF TRULY BEDROCK!",
+      "description": "Welcome to Truly Bedrock Season 8! Let's get some villagers!\n\nWant to see more content? Twitch Replays? Checkout my second channel at  @Alaevren  !\n\nAnd make sure you join my new discord to chat about episodes and farms over at https://discord.com/invite/MAHckcEATj!\n\nTruly Bedrock is a private invite only let's play Bedrock edition SMP server. Check out our website and join our Discord! \nTruly Bedrock Website: https://www.trulybedrock.com/\nTruly Bedrock Discord / http://discord.gg/Z7mAYQa  \n\n----",
+      "publishedAt": "2026-09-24T14:00:33Z",
+      "duration": "PT3H10M44S",
+      "viewCount": 139,
+      "thumbnail": "https://i.ytimg.com/vi/pMc18nOr3o4/maxresdefault.jpg",
+      "tags": [
+        "alaydriem",
+        "minecraft",
+        "minecraft bedrock",
+        "livestream",
+        "livestream replay",
+        "bedrock farms",
+        "bedrock tutorials",
+        "family friendly",
+        "relaxing stream",
+        "calm stream",
+        "bedrock voice chat",
+        "minecraft prox chat",
+        "minecraft proximity voice chat",
+        "bedrock prox chat",
+        "bedrock proximity chat",
+        "truly bedrock",
+        "truly bedrcok season 8"
+      ]
+    },
     {
       "id": "N7DQeBAvGcg",
       "title": "Truly Bedrock Season 8 Launch Night",
       "description": "Welcome to Truly Bedrock Season 8 Launch Night!\n\nWant to see more content? Twitch Replays? Checkout my second channel at  @Alaevren  !\n\nAnd make sure you join my new discord to chat about episodes and farms over at https://discord.com/invite/MAHckcEATj!\n\nTruly Bedrock is a private invite only let's play Bedrock edition SMP server. Check out our website and join our Discord! \nTruly Bedrock Website: https://www.trulybedrock.com/\nTruly Bedrock Discord / http://discord.gg/Z7mAYQa  \n\n----",
       "publishedAt": "2026-09-21T14:30:36Z",
       "duration": "PT2H54M17S",
-      "viewCount": 187,
+      "viewCount": 195,
       "thumbnail": "https://i.ytimg.com/vi/N7DQeBAvGcg/maxresdefault.jpg",
       "tags": [
         "alaydriem",
@@ -41,7 +69,7 @@
       "description": "Bedrock Voice Chat just got a MAJOR update! A whole new redesign, in game audio controls, easier setup, custom jukeboxes, simple voice chat support, realms support, in-app player management, more creator controls, and more!\n\n🎯 WHAT IS BEDROCK VOICE CHAT?\nBVC brings spatial proximity voice chat to Minecraft Bedrock, similar to the popular Simple Voice Chat mod for Java Edition. Talk to nearby players naturally - voices get louder as you get closer and fade as you move apart! It's a system of three components: the Voice Chat server, the addon for your world (BDS, Realms/Eternos, Fabric or PaperMC), and the client app for desktop or mobile.\n\n⏱️ TIMESTAMPS\n0:00 The New Bedrock Voice Chat is Here!\n0:19 New UI\n0:36 In Game Audio Controls\n0:53 Custom Jukeboxes w/Redstone!\n1:24 Simple Voice Chat Support!\n1:52 Realms + Aternos Support! From your Phone!\n2:07 It works on EVERY CONSOLE\n2:26 More Desktop + Creator Controls!\n2:43 Works on Realms + Aternos!\n2:53 Bedrock is Better Together, Like and Subscribe\n📚 DOCUMENTATION & WIKI Full setup guide and troubleshooting: https://bedrockvoicechat.com/wiki Source code and latest releases: https://github.com/Alaydriem/bedrock-voice-chat\n\n📥 DOWNLOAD & LINKS Get Bedrock Voice Chat: https://www.bedrockvoicechat.com\nBVC Addon on CurseForge: https://www.curseforge.com/members/alaydriem/projects\n\niOS and Android apps are available from stores in beta\n\n💰 SUPPORT DEVELOPMENT & GET EARLY ACCESS\n💎 Patreon: https://www.patreon.com/posts/i-made-proximity-147533371\n🎥 YouTube Membership: https://www.youtube.com/channel/UCXgqRZv7bHsKzwYBrtA9DFA/join\n\n🎮 PLATFORM SUPPORT\n✅ Windows, Mac & Linux Desktop App\n✅ Android\n✅ iOS\n✅ Bedrock Dedicated Server\n✅ Bedrock Realms & Aternos\n\n✅ Fabric Java Servers for Cross Platform \n✅ PaperMC\n✅ Geyser + Floodgate\n\n✅ Anywhere you can run a Docker container\n\n⚠️ Note: Mobile clients and console players can use BVC using the companion mobile app when connected to Bedrock Dedicated Server or a Java Fabric Server\n\n📺 MORE CONTENT\nIf you enjoyed this tutorial, please consider subscribing to @Alaydriem!\n\n🔴 Join me live on Twitch every Thursday and Friday at 7 PT / 9 CT / 10 ET PM: https://www.twitch.tv/Alaydriem We explore farms, build amazing builds, and hang out in a relaxing, family-friendly chill stream!\n\n🎬 Want more content?\nCheck out my second channel: @Adreamily\n\n💬 Join the Discord community to discuss BVC, get help, and connect with other users: \nhttps://discord.gg/MAHckcEATj\n\n#MinecraftBedrock #ProximityVoiceChat #MinecraftTutorial #BedrockVoiceChat #MinecraftMods #MinecraftAddons\n\nBedrock Voice Chat (BVC) is a free proximity voice chat solution for Minecraft Bedrock Edition. No subscriptions, no paid tiers for basic features - just great proximity voice chat for your Minecraft server!",
       "publishedAt": "2026-09-17T12:30:28Z",
       "duration": "PT3M32S",
-      "viewCount": 1760,
+      "viewCount": 1800,
       "thumbnail": "https://i.ytimg.com/vi/mVxtNvXWdfY/maxresdefault.jpg",
       "tags": []
     },
@@ -51,7 +79,7 @@
       "description": "Learn how to install and setup Bedrock Voice Chat (BVC) starting with Beta 21 - a FREE proximity voice chat solution for Minecraft Bedrock Edition! This updated tutorial covers the full server setup: the BVC server in Docker with automatic TLS, the Bedrock Dedicated Server addon, and connecting your first client.\n\n🎯 WHAT IS BEDROCK VOICE CHAT?\nBVC brings spatial proximity voice chat to Minecraft Bedrock, similar to the popular Simple Voice Chat mod for Java Edition. Talk to nearby players naturally - voices get louder as you get closer and fade as you move apart! It's a system of three components: the Voice Chat server, the addon for your world (BDS, Realms/Eternos, Fabric or PaperMC), and the client app for desktop or mobile.\n\n⏱️ TIMESTAMPS\n0:00 - What is BVC and How Does it Work?\n0:26 - The Three Components of BVC Explained\n1:31 - What You'll Need\n3:15 - Configure Bedrock Voice Chat \n4:08 - Bootstrap Your First User to Grant Yourself Access\n4:29 - Would You Want a HOSTED Version of BVC? Let me know in the comments!\n4:45 - Bedrock Dedicated Server + Addon Setup \n9:09 - BVC Client Apps - Desktop, Android & iOS\n9:57 - Adding Friends, Audio Settings & Chatting In-World\n10:33 - Feedback on the Docs Always Welcome - Bedrock is Better Together\n\n📚 DOCUMENTATION & WIKI Full setup guide and troubleshooting: https://bedrockvoicechat.com/wiki Source code and latest releases: https://github.com/Alaydriem/bedrock-voice-chat\n\n📥 DOWNLOAD & LINKS Get Bedrock Voice Chat: https://www.bedrockvoicechat.com\nBVC Addon on CurseForge: https://www.curseforge.com/members/alaydriem/projects\n\n🛠️ TOOLS & SERVICES USED IN THIS VIDEO\nCloudFlare (domain registrar + DNS, powers the free automatic TLS certs): https://www.cloudflare.com\nDigitalOcean (affiliate link - a $4 droplet runs BVC for servers or Realms under 5 players, and it helps support the channel):https://m.do.co/c/15e066af535c\nEnable Beta APIs: https://w1zardz.github.io/bedrock-nbt-editor/\n- Upload your level.dat file\n- Enable `gametest`, save, and replace on your server\n\n💰 SUPPORT DEVELOPMENT & GET EARLY ACCESS \n💎 Patreon: https://www.patreon.com/posts/i-made-proximity-147533371\n🎥 YouTube Membership: https://www.youtube.com/channel/UCXgqRZv7bHsKzwYBrtA9DFA/join\n\n🎮 PLATFORM SUPPORT\n✅ Windows, Mac & Linux Desktop App\n✅ Android\n✅ iOS\n✅ Bedrock Dedicated Server\n✅ Bedrock Realms & Aternos\n\n✅ Fabric Java Servers for Cross Platform \n✅ PaperMC\n✅ Geyser + Floodgate\n\n✅ Anywhere you can run a Docker container\n\n⚠️ Note: Mobile clients and console players can use BVC using the companion mobile app when connected to Bedrock Dedicated Server or a Java Fabric Server\n\n📺 MORE CONTENT If you enjoyed this tutorial, please consider subscribing to @Alaydriem!\n\n🔴 Join me live on Twitch every Thursday and Friday at 7 PT / 9 CT / 10 ET PM: https://www.twitch.tv/Alaydriem We explore farms, build amazing builds, and hang out in a relaxing, family-friendly chill stream!\n\n🎬 Want more content? Check out my second channel: @Adreamily\n\n💬 Join the Discord community to discuss BVC, get help, and connect with other users: \n\nhttps://discord.gg/MAHckcEATj\n\n#MinecraftBedrock #ProximityVoiceChat #MinecraftTutorial #BedrockVoiceChat #MinecraftMods #MinecraftAddons\n\nBedrock Voice Chat (BVC) is a free proximity voice chat solution for Minecraft Bedrock Edition. No subscriptions, no paid tiers for basic features - just great proximity voice chat for your Minecraft server!",
       "publishedAt": "2026-09-17T12:30:04Z",
       "duration": "PT11M56S",
-      "viewCount": 1910,
+      "viewCount": 1940,
       "thumbnail": "https://i.ytimg.com/vi/GG5qEaBgEOk/maxresdefault.jpg",
       "tags": [
         "bedrock voice chat",
@@ -135,7 +163,7 @@
       "description": "Minecraft has almost a thousand blocks… and you get 36 slots and NINE hotbar items. 😤\n\nBedrock Hotbar Shuffle fixes that. One keybind. Your entire inventory. No menus, no swapping, no dragging items around like a lunatic.\n\nIf you build on Bedrock, this is the addon you've been quietly rage-quitting about for years.\n\n⚡ WHAT IT DOES\nBedrock Hotbar Shuffle adds a keybindable macro that shifts your active hotbar through all 3 extra rows of your inventory — instantly. Tools stay put. Food stays put. Your gradient blocks stay exactly where you sorted them. You just… shuffle to them.\n\nNo more one-at-a-time block swaps. No more moving your pickaxe out of the way to grab a slab. No more inventory that looks like a carnival after it left town. 🎪\n\n🛠️ SETUP (takes ~30 seconds)\n\nInstall the addon to your world from CurseForge\nOpen Settings → Keyboard & Mouse → scroll to Macros\nAdd /shuffle:down and /shuffle:up to any two slots\nBind them to an ALT + key combo (ALT + Q / ALT + E works great — or any key or mouse button you like)\n\nThat's it. Your whole inventory, one button away.\n\n📥 DOWNLOAD — 100% FREE\nCurseForge: https://www.curseforge.com/minecraft-bedrock/addons/hotbar-shuffle\n\n💬 TELL ME WHAT TO BUILD NEXT\nIs ALT + Q/E enough, or do you want more? A full inventory swap? Hotkeys jumping straight to a specific row? Drop it in the comments — I genuinely want to know what would make building easier for you on Bedrock.\n\n🔔 SUBSCRIBE if this solved a problem you've been dealing with forever. This is exactly the kind of tool I want to keep making.\n\nThanks for watching — see you in the next one! 🧱\n\n#Minecraft #MinecraftBedrock #MinecraftAddons #BedrockEdition #MinecraftBuilding #MCPE #MinecraftMods #BedrockAddons #MinecraftBuilds #QualityOfLife",
       "publishedAt": "2026-08-12T13:00:36Z",
       "duration": "PT2M30S",
-      "viewCount": 578,
+      "viewCount": 579,
       "thumbnail": "https://i.ytimg.com/vi/dvtRmzAUMw8/maxresdefault.jpg",
       "tags": [
         "Minecraft Bedrock",
@@ -158,7 +186,7 @@
       "description": "In this Minecraft Truly Bedrock Adventure, Alaydriem ventures to the far corners of the server, 41,000 blocks away just to find some spare sulfur and cinnabar blocks to ruin a server landmark.\n\nWatch our full livestreams here: https://youtube.com/live/2meCCoPMjdw?feature=share!\n\nVolumes wonky, sorry.\n\nVod Replays: https://www.youtube.com/playlist?list=PL_3ZZiHxRObQcmINvOaMlkIGk4jPFehzx\n\nAnd make sure you join my new discord to chat about episodes and farms over at https://discord.gg/xdMqEv3gGh!\n\nTruly Bedrock is a private invite only let's play Bedrock edition SMP server. Check out our website and join our Discord! \nTruly Bedrock Website: https://www.trulybedrock.com/\nTruly Bedrock Discord / http://discord.gg/Z7mAYQa  \n\n----",
       "publishedAt": "2026-06-23T12:00:27Z",
       "duration": "PT32M48S",
-      "viewCount": 427,
+      "viewCount": 428,
       "thumbnail": "https://i.ytimg.com/vi/oV49Og1O_ZQ/maxresdefault.jpg",
       "tags": [
         "alaydriem",
@@ -282,7 +310,7 @@
       "description": "NEW UPDATE! https://youtu.be/GG5qEaBgEOk\n\nLearn how to install and setup Bedrock Voice Chat (BVC) - a FREE proximity voice chat solution for Minecraft Bedrock Edition! This complete tutorial covers everything from server installation to connecting your first client.\n\n🎯 WHAT IS BEDROCK VOICE CHAT?\nBVC brings spatial proximity voice chat to Minecraft Bedrock, similar to the popular Simple Voice Chat mod for Java Edition. Talk to nearby players naturally - voices get louder as you get closer and fade as you move apart!\n\n⏱️ TIMESTAMPS\n0:00 - What is BVC and How Does it Work?\n2:25 - Read the Wiki on Github for further guidance\n2:46 - Setting up Bedrock Voice Chat Server\n6:48 - Create the assets and certificates directories\n7:02 - Configure Bedrock Voice Chat (config.hcl)\n8:37 - Starting BVC Server\n9:18 - Bedrock Dedicated Server + Addon Setup\n11:11 - permissions.json + variables.json\n12:06 - Starting BDS with the Addon Enabled\n12:43 - world_behavior_packs.json\n13:15 - BVC Client Apps (Windows)\n14:07 - Join Youtube Memberships & Patreons to unlock the iOS App when it is ready, I need your support to make this happen and to make it free\n15:03 - Log Into Your Minecraft Server FIRST before running the client\n15:29 - Opening and Logging Into BVC\n16:52 - Mobile, Console, Realms & Solo Worlds Note\n17:34 - Thanks for your patience while I continue to improve and refine BVC Server\n\n📚 DOCUMENTATION & WIKI\nFull setup guide and troubleshooting: https://github.com/Alaydriem/bedrock-voice-chat/wiki\n\n📥 DOWNLOAD & LINKS\nGet Bedrock Voice Chat: https://www.bedrockvoicechat.com\n\niOS and Android apps are available from stores in beta\n\n\n💰 SUPPORT DEVELOPMENT & GET EARLY ACCESS\n💎 Patreon: https://www.patreon.com/posts/i-made-proximity-147533371\n🎥 YouTube Membership: https://www.youtube.com/channel/UCXgqRZv7bHsKzwYBrtA9DFA/join\n\n🎮 PLATFORM SUPPORT\n✅ Windows (Available Now)\n✅ Android\n✅ iOS\n✅ Bedrock Dedicated Server\n✅ Fabric Java Servers for Cross Platform\n✅ PaperMC\n✅ Geyser + Floodgate\n⚠️ Note: Mobile clients and console plays can use BVC using the companion mobile app when connected to Bedrock Dedicated Server or a Java Fabric Server\n\n📺 MORE CONTENT\nIf you enjoyed this tutorial, please consider subscribing to @Alaydriem!\n\n🔴 Join me live on Twitch every Thursday and Friday at 7 PT / 9 CT / 10 ET PM:\nhttps://www.twitch.tv/Alaydriem\nWe explore farms, build amazing builds, and hang out in a relaxing, family-friendly chill stream!\n\n🎬 Want more content ? Check out my second channel: @Adreamily\n\n💬 Join the Discord community to discuss BVC, get help, and connect with other users:\nhttps://discord.com/invite/WJPShXnbga\n\n#MinecraftBedrock #ProximityVoiceChat #MinecraftTutorial #BedrockVoiceChat #MinecraftMods #MinecraftAddons\n\n---\n\nBedrock Voice Chat (BVC) is an free proximity voice chat solution for Minecraft Bedrock Edition. No subscriptions, no paid tiers for basic features - just great proximity voice chat for your Minecraft server!",
       "publishedAt": "2026-01-20T15:00:02Z",
       "duration": "PT18M44S",
-      "viewCount": 73100,
+      "viewCount": 73200,
       "thumbnail": "https://i.ytimg.com/vi/0ciAc_d81a0/maxresdefault.jpg",
       "tags": [
         "bedrock voice chat",
@@ -328,7 +356,7 @@
       "description": "Proximity voice chat is finally here for Minecraft Bedrock Edition and today I'm inviting you to try it out! What to learn more? Check out the full video!\n\nBedrock Voice Chat brings real-time spatial audio to Bedrock Dedicated Servers - free and available now for Windows, Android, and iOS.\n\nWhat is Bedrock Voice Chat?\n\nThe first true proximity voice chat solution for Minecraft Bedrock Edition. No more Discord workarounds. No more typing on controllers or phone screens. Experience voice chat the way Java Edition players have enjoyed for years - with positional audio, push-to-talk, and individual volume controls.\nKey Features:\n\n✅ Proximity Chat with 3D Positional Audio\n✅ Native apps for Windows 10, Android & iOS\n✅ Individual player volume controls\n✅ Client-side muting and deafening\n✅ Noise suppression & audio amplification\n✅ End-to-end encryption\n✅ Audio recording for content creators\n✅ Works on Bedrock Dedicated Servers\n✅ Cross-platform: Console, Mobile, Windows 10\n\nAnd a whole lot more!\n\nPerfect for Minecraft Bedrock servers and for players onconsole (Xbox, PlayStation, Nintendo Switch), mobile (Android, iOS), and Windows 10. Works with Bedrock Dedicated Server (BDS) and supports cross-platform gameplay.\n\n📥 DOWNLOAD & LINKS\nGet Bedrock Voice Chat:\n🔗 GitHub (Free & Source Available): https://github.com/Alaydriem/bedrock-voice-chat/releases\n\nSupport Development & Get Early Access, and help unlock more features!\n\n💎 Patreon: https://www.patreon.com/posts/i-made-proximity-147533371?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link\n🎥 YouTube Membership: https://www.youtube.com/channel/UCXgqRZv7bHsKzwYBrtA9DFA/join\n\nBeta Testing:\n\nIf you wish to join the Android or iOS open betas, head over to patreon and join the free tier today to get access to the Google Play Store listing when it becomes available! https://patreon.com/alaydriem\n\nCommunity & Support:\n💬 Discord: discord.com/invite/WJPShXnbga\n📖 Documentation: https://github.com/alaydriem/bedrock-voice-chat/wiki\n\n🎮 ABOUT THIS PROJECT\nBedrock Voice Chat is inspired by Simple Voice Chat for Java Edition, rebuilt from the ground up in Rust for maximum performance on Minecraft Bedrock Dedicated Servers. The project consists of three components:\n\nServer software (Rust) - High-performance voice routing\nBehavior Pack (BDS) - Position data relay\nNative Client Apps (Windows/Android/iOS) - Audio interface\n\nUnlike Discord or other third-party solutions, Bedrock Voice Chat integrates directly with your Minecraft server, providing true proximity-based communication that works for ALL Bedrock platforms - not just PC players.\n\n🔍 SEARCH TERMS\nMinecraft Bedrock voice chat, proximity voice chat Bedrock Edition, Bedrock Dedicated Server voice mod, voice communication for Bedrock, Minecraft console voice chat, Minecraft mobile voice chat, cross-platform Minecraft voice, Simple Voice Chat alternative Bedrock, Discord alternative for Minecraft Bedrock, positional audio Minecraft, spatial audio Bedrock, Minecraft voice mod 2025\n\n📢 SUPPORT THE PROJECT\nThis is an source-available, community-driven project. Early supporters on Patreon and YouTube Membership get:\n\nEarly access to Beta 2+ features\nPriority bug fixes and feature requests\nBehind-the-scenes development updates\nDirect contribution to iOS App Store release\n\nAndroid beta testers are critical to unlocking the Google Play Store listing - your testing literally makes the app available to millions of players.\n\n#MinecraftBedrock #ProximityVoiceChat #BedrockVoiceChat #MinecraftMods #BedrockEdition\n\n----\n\nIf you like this content, please consider subscribing to @Alaydriem  .\nJoin me live on Twitch every Thursday and Friday at  7 PT / 9 CT / 10 ET PM at https://www.twitch.tv/Alaydriem where we explore farms, build amazing builds, and hang out together in a relaxing and family friendly chill stream\n\n\nAnd make sure you join my new discord to chat about episodes and farms over at https://discord.com/invite/WJPShXnbga!\n\n---",
       "publishedAt": "2026-01-12T17:09:50Z",
       "duration": "PT35S",
-      "viewCount": 42500,
+      "viewCount": 42600,
       "thumbnail": "https://i.ytimg.com/vi/FIW00XnrBPY/maxresdefault.jpg",
       "tags": [
         "minecraft bedrock",
@@ -509,7 +537,7 @@
       "description": "Want to build MASSIVE BEAUTIFUL structures in Minecraft that make everyone stop and stare? This complete guide reveals the exact techniques I use to create epic natural builds that look impossible - even for beginners!\n\nIn this tutorial, you'll learn my proven system for building BIG in Minecraft without getting overwhelmed. Whether you're working in Survival or Creative mode, these strategies will transform how you approach large-scale projects.\n\nYOU'LL LEARN TO:\n- Planning massive builds without losing motivation halfway through\n- Scaling techniques that make structures look naturally huge\n- Material gathering strategies for big projects in Survival\n- Detailing tricks that make large builds feel alive and impressive\n- Common mistakes that make big builds look empty or boring\n- A bunch of tools to help you along the way\n\nThis works for both Minecraft Bedrock Edition and Java Edition, so no matter what platform you play on, you can start building bigger today.\n\n#MinecraftTutorial #MinecraftBuilding #HowToBuild #MinecraftGuide  #BuildingTips #MinecraftBedrock\n\nTIMESTAMPS:\n00:00 - How to Build Big\n02:16 - Finding the Right 3D Model\n02:58 - MeshMixer\n04:30 - Transforming Your 3D Model into Blocks05:13 - Visualizing with Amulet\n06:39 - Dry Fit and World Testing\n08:00 - Basic Texturing and Prettifying\n10:37 - Notes on More Detailed Texturing\n11:57 - Structura & Holoprint\n12:44 - Material Gathering\n14:28 - Building It in Survival\n17:21 - Second Pass Texturing & Landscaping\n\nTOOLS:\n- Meshmixer: https://apps.autodesk.com/FUSION/en/Detail/Index?id=4108920185261935100&appLang=en&os=Win64\n- Amulet Editor: https://www.amuletmc.com/\n- Online Voxelizer: https://drububu.com/miscellaneous/voxelizer/?out=obj\n- Thingiverse: https://www.thingiverse.com/\n- CGTrader: https://www.cgtrader.com/\n\nDrop a comment with what how to build guide you'd like to see tackled next!! And if this helped you, smash that like button so more Minecrafters can level up their building game.\n\nSubscribe for more Minecraft tutorials, building guides, and lets plays every week.Your favorite cardigan-wearing Minecrafter has tons more tips coming your way. 🧶\n\nWant to see more content? Twitch Replays? Checkout my second channel at @Alaevren !\n\nAnd make sure you join my new discord to chat about episodes and farms over at https://discord.com/invite/WJPShXnbga!\n\nTruly Bedrock is a private invite only let's play Bedrock edition SMP server. Check out our website and join our Discord! \nTruly Bedrock Website: https://www.trulybedrock.com/\nTruly Bedrock Discord / http://discord.gg/Z7mAYQa",
       "publishedAt": "2025-11-03T17:01:35Z",
       "duration": "PT21M12S",
-      "viewCount": 3090,
+      "viewCount": 3100,
       "thumbnail": "https://i.ytimg.com/vi/r6TGoXeafmQ/maxresdefault.jpg",
       "tags": [
         "how to build in minecraft",
@@ -550,7 +578,7 @@
       "description": "#minecraft #minecraftshorts #minecraftbedrock",
       "publishedAt": "2025-10-29T13:02:04Z",
       "duration": "PT22S",
-      "viewCount": 171,
+      "viewCount": 172,
       "thumbnail": "https://i.ytimg.com/vi/qeq9nRAZrbk/maxresdefault.jpg",
       "tags": []
     },
@@ -623,7 +651,7 @@
       "description": "Hello there beautiful pixels, and welcome back to another Minecraft Bedrock Farm Tutorial with your favorite cardigan wearing minecraft character, @Alaydriem!\n\nIn this Minecraft Bedrock tutorial, I show you how to build a simpler copper golem item sorter that will replace every item sorter you've ever made before. This item sorter is super simple, requires ZERO redstone, and can be built in minutes!\n\n------\n\nIf you like this content, please consider subscribing to @Alaydriem  .\nJoin me live on Twitch every Thursday and Friday at  6:30 PT / 8:30 CT / 9:30 ET PM at https://www.twitch.tv/Alaydriem where we explore farms, build amazing builds, and hang out together in a relaxing and family friendly chill stream\n\nWant to see more content? Twitch Replays? Checkout my second channel at @Adreamily  !\n\nAnd make sure you join my new discord to chat about episodes and farms over at https://discord.com/invite/WJPShXnbga!\n\n#Minecraft #WitchFarm, #CopperGolem #javatutorial #bedrocktutorial",
       "publishedAt": "2025-10-16T18:00:49Z",
       "duration": "PT6M31S",
-      "viewCount": 7930,
+      "viewCount": 7940,
       "thumbnail": "https://i.ytimg.com/vi/oOWbhJbBTIM/maxresdefault.jpg",
       "tags": [
         "minecraft",
@@ -2808,7 +2836,7 @@
       "description": "In this Minecraft Bedrock 1.20+ tutorial, Alaydriem shows how to build an incredibly SIMPLE and EASY to build MOSS FARM that produces over 550+ pieces of bonemeal in profit every single hour.\n\nThis is a great early game starter farm to generate to help you kickstart other farms such as your tree farms! \n\nThis Minecraft Bedrock Tutorial works on MCPE / Xbox / Switch /  PC / PS, etc...\n\nBe sure to subscribe for more tutorials!\n\nAlso checkout my MEGA MOSS FARM: https://www.youtube.com/watch?v=7yeqDcfxQOs that produces nearly 11,000 pieces of bonemeal in profit every single hour!\n\nMaterials List: 16w x 14d x 8h\n------------------------\n\n    Lava Bucket: 2\n    Sticky Piston: 1\n    Repeater: 4\n    Hopper: 27\n    Redstone Wire: 77\n    Water: 3 Buckets\n    Redstone Torch: 3\n    Block (any): 226\n    Obsidian: 12\n    Comparator: 3\n    Composter: 1\n    Dispenser: 3\n    Lever: 1\n    Barrel: 1\n    Observer: 3\n    Moss Block: 1\n    Slab (any): 63\n    Piston: 15\n    Redstone Block: 1\n\n-----------\n\n00:00 Introduction\n01:26 The Mega Moss Farm for Late Game\n02:41 Farm Size\n03:01 Main Clock\n05:18 Platforms\n06:11 Collection System\n07:27 Stone Generator\n12:44 Bootstrapping\n13:15 Running the Farm & Last Notes\n14:25 Outro\n\n------------\n\nSummon a Jelly cat in your world and share below",
       "publishedAt": "2024-01-09T21:00:24Z",
       "duration": "PT14M48S",
-      "viewCount": 5090,
+      "viewCount": 5100,
       "thumbnail": "https://i.ytimg.com/vi/QbSoXjBRcGs/maxresdefault.jpg",
       "tags": [
         "Alaydriem",
@@ -3276,7 +3304,7 @@
       "description": "",
       "publishedAt": "2023-11-15T17:00:15Z",
       "duration": "PT42S",
-      "viewCount": 3590,
+      "viewCount": 3600,
       "thumbnail": "https://i.ytimg.com/vi/M3Pq66CMNIc/maxresdefault.jpg",
       "tags": []
     },
@@ -4201,7 +4229,7 @@
       "description": "In this Minecraft Bedrock Farm Tutorial, Alaydriem shows how to build a squid and glow squid farm.\n\n-----\n\nMake sure you like and subscribe to be notified when I release a new farm and redstone tutorial!\n\nBe sure to check out my Bedrock Let's Play Series \"Welcome to Bedrock!\" as well https://www.youtube.com/playlist?list=PL_3ZZiHxRObQIL-25FDr6NvCkeWMi1xJT!\n\nFor more news and info, follow me on Twitter https://www.twitter.com/alaydriem!\n\n-----\n\nMaterials List:\n\nSlab (any): 72\nHopper: 4\nLever: 1\nObserver: 1\nTrapdoor: 6\nBlock (any): 684 \nStairs: 36\nChest: 4\nPiston: 4\nWater: (inf)\nKelp: (inf)\nShroomlight: 36\nRedstone Dust: 4\nRepeater: 4\nSouldsand: 216\nRedstone Torch: 1\nMud: 4",
       "publishedAt": "2023-07-24T19:30:03Z",
       "duration": "PT12M44S",
-      "viewCount": 13500,
+      "viewCount": 13600,
       "thumbnail": "https://i.ytimg.com/vi/XWc2mbiSrw4/maxresdefault.jpg",
       "tags": [
         "Alaydriem",
@@ -5304,7 +5332,7 @@
       "description": "In this Minecraft Bedrock 1.19 tutorial, Alaydriem shows how to build EASY 3x5 cooked chicken & feather farm for your Minecraft Bedrock worlds! This simple farm can supply you with an unlimited amount of food and feathers VERY EARLY in the game.\n\nWorld Download: https://www.alaydriem.com/world-downloads/Cooked-Chicken-and-Feather-Farm.mcworld\nSHA256: b837c7edef1502ec4c99e632fa7264ab81fd615b355d7f0ec7c57cd3c272eec7\n\n00:00 Introduction\n00:51 Farm Mechanics\n01:59 Materials List\n02:28 Tutorial\n06:15 Decorating Tips\n06:53 Outro\n\nFollow me on Twitter for updates and more! https://www.twitter.com/alaydriem",
       "publishedAt": "2022-06-14T19:30:04Z",
       "duration": "PT7M37S",
-      "viewCount": 450,
+      "viewCount": 451,
       "thumbnail": "https://i.ytimg.com/vi/uqXLMR3HMMk/maxresdefault.jpg",
       "tags": [
         "Minecraft",
@@ -5450,7 +5478,7 @@
       "description": "In this Minecraft Bedrock 1.18+ tutorial, Alaydriem shows how to build a stone & cobblestone generator to cover all your stone and cobblestone needs in your Bedrock survival world, server, or realm!\n\nWorld Download: https://www.alaydriem.com/world-downloads/Stone-Farm.mcworld\nSHA256: 12a84df25287719f03001ad7bb47fc1ca23ddd742f64f13d9518ae17b7ca0736\n\n00:00 Introduction\n00:26 Farm Mechanics\n01:18 Tutorial\n08:10 Outro",
       "publishedAt": "2022-04-05T20:30:04Z",
       "duration": "PT8M58S",
-      "viewCount": 177,
+      "viewCount": 178,
       "thumbnail": "https://i.ytimg.com/vi/_4RvKKtkVZ0/maxresdefault.jpg",
       "tags": [
         "Minecraft",
@@ -5923,6 +5951,19 @@
       ]
     },
     {
+      "id": "PL_3ZZiHxRObT0RBzJoZFpUYl_tp3xCv4C",
+      "title": "Previous Livestreams",
+      "description": "Livestreams with Alaydriem",
+      "itemCount": 214,
+      "thumbnail": "https://i.ytimg.com/vi/RP6UOIaM7zM/maxresdefault.jpg",
+      "videoIds": [
+        "pMc18nOr3o4",
+        "N7DQeBAvGcg",
+        "8hxpTy4NY-c",
+        "RtfJFuXhyek"
+      ]
+    },
+    {
       "id": "PL_3ZZiHxRObTWxMXKv9Bc5Ng_KcFoQLWA",
       "title": "Minecraft: Dungeons & Dragons",
       "description": "Join @Alaydriem, @AdequateCraft, and others on their adventure though Minecraft's Dungeons and Dragons world!",
@@ -5945,18 +5986,6 @@
         "JyixVFEe8Ok",
         "r6TGoXeafmQ",
         "l5knq8TBUpM"
-      ]
-    },
-    {
-      "id": "PL_3ZZiHxRObT0RBzJoZFpUYl_tp3xCv4C",
-      "title": "Previous Livestreams",
-      "description": "Livestreams with Alaydriem",
-      "itemCount": 214,
-      "thumbnail": "https://i.ytimg.com/vi/RP6UOIaM7zM/maxresdefault_live.jpg",
-      "videoIds": [
-        "N7DQeBAvGcg",
-        "8hxpTy4NY-c",
-        "RtfJFuXhyek"
       ]
     },
     {
