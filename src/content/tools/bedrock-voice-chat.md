@@ -8,6 +8,7 @@ platforms:
   - macOS
   - Linux
   - Android
+  - iOS
 accent: sp-violet
 weight: 1
 ---

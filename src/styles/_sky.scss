@@ -1,0 +1,55 @@
+/* The starfield behind the homepage, ported from the Stream Kit overlays.
+ *
+ * Fixed to the viewport at z-index -1. The root background paints on the
+ * canvas, below every negative layer, so the sky sits above the page ground
+ * and below everything else. The hero, band and footer are opaque and cover
+ * it; .segs is see-through on the homepage so the stars show behind the
+ * videos.
+ *
+ * The ground is the overlay's radial pool: lighter up and to the right,
+ * falling to the page ground. */
+.sky {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(ellipse 80% 90% at 70% 40%, var(--void-2) 0%, var(--void) 70%);
+}
+
+.sky__svg {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+
+/* The overlay draws these in --brand-lift at 26%. Violet belongs to the
+   product on this site, so the lines take --line-2, the violet of the page
+   ground, which reads the same at this weight without claiming the accent. */
+.sky__lines line {
+  stroke: var(--line-2);
+  stroke-width: 1.5;
+  opacity: 0.7;
+}
+
+/* Lets the sky through the one section meant to show it. */
+.sky ~ main .segs {
+  background: transparent;
+}
+
+/* The overlay's bottom edge: the logo spectrum as a hairline, here closing
+   the starfield above the footer. */
+.spectrum-rule {
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--sp-violet),
+    var(--sp-blue),
+    var(--sp-cyan),
+    var(--sp-aqua),
+    var(--sp-green),
+    var(--sp-lime),
+    var(--sp-yellow),
+    var(--sp-orange),
+    var(--sp-red)
+  );
+}

@@ -73,6 +73,11 @@
   margin-top: 30px;
 }
 
+/* Rows inside one panel sit closer than whole playlists on their own page. */
+.panel .plist + .plist {
+  margin-top: clamp(40px, 5vw, 64px);
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;

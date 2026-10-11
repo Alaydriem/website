@@ -37,6 +37,13 @@ jobs:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: npm run fetch:youtube
 
+      # Allowed to fail on its own. The schedule is a nicety and the YouTube
+      # refresh is not, so a Twitch outage must not stop new videos shipping.
+      # A failure writes nothing, so the last good data/schedule.json stays.
+      - name: Fetch Twitch schedule
+        continue-on-error: true
+        run: npm run fetch:schedule
+
       # data/youtube.json carries no fetch timestamp, and view counts are
       # stored at display precision, so a quiet channel produces a
       # byte-identical file and no commit. An active one commits and deploys,
@@ -53,7 +60,7 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data/
-          git commit -m 'chore: refresh youtube data'
+          git commit -m 'chore: refresh content'
           git push
           echo 'changed=true' >> "$GITHUB_OUTPUT"
 

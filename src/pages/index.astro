@@ -4,6 +4,7 @@ import Hero from '../components/Hero.astro';
 import Band from '../components/Band.astro';
 import Segments from '../components/Segments.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import Starfield from '../components/Starfield.astro';
 ---
 
 <Base
@@ -14,6 +15,7 @@ import SiteFooter from '../components/SiteFooter.astro';
 >
   <a class="skip" href="#watch">Skip to content</a>
 
+  <Starfield />
   <Hero />
   <Band />
 
@@ -21,6 +23,7 @@ import SiteFooter from '../components/SiteFooter.astro';
     <Segments />
   </main>
 
+  <div class="spectrum-rule" aria-hidden="true"></div>
   <SiteFooter />
 </Base>
 
@@ -28,6 +31,7 @@ import SiteFooter from '../components/SiteFooter.astro';
   import { initSegments } from '../scripts/segments.js';
   import { initLiveStatus } from '../scripts/live-status.js';
   import { initBackgrounds } from '../scripts/backgrounds.js';
+  import { initSchedule } from '../scripts/schedule.js';
 
   /* The live client reads its URL from a meta tag and does nothing when that is
      empty, which is the shipped default. Exposing the initialiser lets the
@@ -39,4 +43,5 @@ import SiteFooter from '../components/SiteFooter.astro';
   initSegments();
   initLiveStatus();
   initBackgrounds();
+  initSchedule();
 </script>

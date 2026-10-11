@@ -3,8 +3,16 @@ import VideoCard from './VideoCard.astro';
 import site from '../lib/site.json';
 import youtube from '../../data/youtube.json';
 import { getCollection } from 'astro:content';
+import { arrangePlaylists } from '../lib/playlists.js';
+import { buildHomeRows } from '../lib/home.js';
 
 const { channel, videos, playlists } = youtube;
+// Arranged the same way as the playlists page, so each slug, and so each link,
+// agrees with it.
+const rows = buildHomeRows(
+  { videos, playlists: arrangePlaylists(playlists, site.playlists) },
+  site.home,
+);
 const tools = (await getCollection('tools')).sort((a, b) => a.data.weight - b.data.weight);
 ---
 
@@ -29,9 +37,21 @@ const tools = (await getCollection('tools')).sort((a, b) => a.data.weight - b.da
              id="panel-watch" aria-labelledby="tab-watch"
              style="--accent: var(--ac-watch)">
       <h2 class="panel__heading">Watch</h2>
-      <div class="grid">
-        {videos.slice(0, 8).map((video) => <VideoCard video={video} />)}
-      </div>
+      {rows.map((row) => (
+        <section class="plist">
+          <div class="plist__head">
+            <h3 class="plist__title">
+              {row.href ? <a href={row.href}>{row.title}</a> : row.title}
+            </h3>
+            {row.href && (
+              <a class="btn btn--ghost" href={row.href}>{`See all ${row.total}`}</a>
+            )}
+          </div>
+          <div class="grid">
+            {row.videos.map((video) => <VideoCard video={video} />)}
+          </div>
+        </section>
+      ))}
       <p class="panel__more">
         <a class="btn btn--ghost" href="/playlists/">
           Browse {playlists.length} playlists

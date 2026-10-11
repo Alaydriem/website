@@ -1,0 +1,45 @@
+{
+  "timezone": "America/Chicago",
+  "slots": [
+    {
+      "day": "SU",
+      "start": "21:00",
+      "minutes": 180,
+      "title": "Minecraft Truly Bedrock",
+      "from": "2026-10-11",
+      "except": []
+    },
+    {
+      "day": "MO",
+      "start": "21:00",
+      "minutes": 180,
+      "title": "Alaydriem :: Minecraft, Minecraft Truly Bedrock",
+      "from": "2024-08-05",
+      "except": []
+    },
+    {
+      "day": "TU",
+      "start": "21:00",
+      "minutes": 240,
+      "title": "Minecraft Truly Bedrock",
+      "from": "2026-10-13",
+      "except": []
+    },
+    {
+      "day": "TH",
+      "start": "21:00",
+      "minutes": 180,
+      "title": "Minecraft Truly Bedrock",
+      "from": "2026-10-15",
+      "except": []
+    },
+    {
+      "day": "FR",
+      "start": "21:00",
+      "minutes": 180,
+      "title": "Alaydriem & Adequate's Friday Hangout!",
+      "from": "2024-06-14",
+      "except": []
+    }
+  ]
+}

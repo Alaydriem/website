@@ -1,0 +1,47 @@
+---
+import { generateStarfield } from '../lib/starfield.js';
+
+/* The frame the sky is drawn in. The SVG covers the viewport with
+   preserveAspectRatio "slice", so on a different shape it crops rather than
+   stretching the blocks. */
+const WIDTH = 1600;
+const HEIGHT = 1000;
+const SEED = 2160;
+
+const { stars, lines } = generateStarfield({ seed: SEED, width: WIDTH, height: HEIGHT });
+---
+
+{/* Fixed and behind everything, so it stays still while the page scrolls past
+    it. Every section with an opaque ground — the hero, the band, the footer —
+    covers it; only the Watch and Tools section is see-through. Decoration
+    only, so it is hidden from assistive technology. */}
+<div class="sky" aria-hidden="true">
+  <svg class="sky__svg" viewBox={`0 0 ${WIDTH} ${HEIGHT}`} preserveAspectRatio="xMidYMid slice"
+       xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <defs>
+      <filter id="sky-glow" x="-200%" y="-200%" width="500%" height="500%">
+        <feGaussianBlur stdDeviation="4" result="blur" />
+        <feMerge>
+          <feMergeNode in="blur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    </defs>
+
+    <g class="sky__lines">
+      {lines.map((l) => <line x1={l.x1} y1={l.y1} x2={l.x2} y2={l.y2} />)}
+    </g>
+
+    {stars.map((s) => (
+      <rect
+        x={s.x}
+        y={s.y}
+        width={s.size}
+        height={s.size}
+        rx={Math.max(1, Math.round(s.size / 5))}
+        style={`fill: var(${s.colour}); opacity: ${s.opacity}`}
+        filter={s.glow ? 'url(#sky-glow)' : undefined}
+      />
+    ))}
+  </svg>
+</div>

@@ -23,7 +23,7 @@ export function slugify(title) {
  * @param {string} entry
  * @param {{ id: string, title: string }} playlist
  */
-function matches(entry, playlist) {
+export function matches(entry, playlist) {
   return entry === playlist.id || entry === playlist.title;
 }
 

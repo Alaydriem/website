@@ -17,12 +17,25 @@
     "hidden": []
   },
 
+  "//home": "The video rows on the homepage's Watch panel, in order. `latest` is the newest uploads minus every video in the `exclude` playlists. Each entry in `playlists` is one more row, in that playlist's own order, minus its `exclude` playlists. Playlists are named by title or id, as above. A row that names no playlist, or has nothing left to show, is left out rather than failing the build.",
+  "home": {
+    "perRow": 4,
+    "latest": { "title": "Latest videos", "exclude": ["Previous Livestreams", "Shorts"] },
+    "playlists": [
+      { "playlist": "The Best Survival Builds", "exclude": ["Shorts"] },
+      { "playlist": "Bedrock Voice Chat", "exclude": ["Shorts"] }
+    ]
+  },
+
   "links": {
     "youtube": "https://www.youtube.com/@Alaydriem",
     "twitch": "https://www.twitch.tv/alaydriem",
 
     "//youtubeLive": "Stable URL that resolves to the current live stream, or to the channel when there is none. Used as the secondary call to action while streaming, since both platforms run at once.",
     "youtubeLive": "https://www.youtube.com/@Alaydriem/live",
+
+    "//twitchSchedule": "The Twitch stream schedule as a calendar feed. The hero's Add to calendar link, and the source scripts/fetch-schedule.mjs reads into data/schedule.json.",
+    "twitchSchedule": "webcal://api.twitch.tv/helix/schedule/icalendar?broadcaster_id=774362069",
 
     "bluesky": "https://bsky.app/profile/alaydriem.com",
     "github": "https://www.github.com/Alaydriem",

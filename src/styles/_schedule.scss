@@ -1,0 +1,75 @@
+/* The next-stream line under the hero's actions.
+ *
+ * Three lines, each held to exactly one: the upgrade from the weekly summary
+ * to the reader's own next stream changes the text, and if a line could wrap,
+ * a longer string would push the hero's centred copy up. Overflow is cut with
+ * an ellipsis instead; a long stream title is the only thing likely to reach
+ * it.
+ *
+ * Quiet on purpose, like the pinned badge: the crimson dot is a ring, not a
+ * filled light, so it never reads as "live". The live state has its own
+ * takeover and this line is hidden inside it. */
+.hero__next {
+  --accent: var(--ac-watch);
+  margin-top: 26px;
+  font-size: var(--fs-small);
+  line-height: 1.5;
+}
+
+.hero__next > p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hero__next-head {
+  color: var(--tx);
+  font-weight: 600;
+}
+
+.hero__next-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-right: 8px;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  vertical-align: 0.05em;
+}
+
+/* Filled while a slot is running, which is the one time "now" is true. */
+.hero__next[data-now='true'] .hero__next-dot {
+  background: var(--accent);
+}
+
+.hero__next-label {
+  margin-right: 10px;
+  color: var(--accent-readable);
+  font-size: var(--fs-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.hero__next-what {
+  color: var(--dim);
+}
+
+.hero__next-links {
+  margin-top: 4px;
+}
+
+.hero__next-links a {
+  color: var(--tx);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 3px;
+}
+
+.hero__next-links a + a {
+  margin-left: 18px;
+}
+
+.hero__next-links a:hover {
+  color: var(--accent-readable);
+}

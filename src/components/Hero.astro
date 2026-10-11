@@ -2,9 +2,17 @@
 import Nav from './Nav.astro';
 import site from '../lib/site.json';
 import youtube from '../../data/youtube.json';
+import schedule from '../../data/schedule.json';
 import { watchUrl } from '../lib/format.js';
+import { describeWeek } from '../scripts/lib/schedule.js';
 
 const { channel, videos } = youtube;
+
+// The week in the streamer's own zone, which is what shows without script.
+// The schedule script swaps the same three fields for the next stream in the
+// reader's zone. Null, and so no line at all, when nothing is scheduled.
+const week = describeWeek(schedule);
+const googleCalendar = `https://calendar.google.com/calendar/r?cid=${encodeURIComponent(site.links.twitchSchedule)}`;
 
 // Spec section 12 makes this the only hard failure in the build. A homepage
 // whose primary action points at a video that is not in the data would publish
@@ -138,6 +146,26 @@ const number = (n: number) => n.toLocaleString('en-US');
         </a>
         <a class="btn btn--ghost" href="#watch">Browse everything</a>
       </div>
+
+      {/* Inside the pinned block, so going live hides it with everything else:
+          there is no next stream to announce while one is running.
+
+          Three lines, each held to one line by the stylesheet, so the upgrade
+          to the reader's own zone changes text and never height. */}
+      {week && (
+        <div class="hero__next" data-schedule>
+          <p class="hero__next-head">
+            <span class="hero__next-dot" aria-hidden="true"></span>
+            <span class="hero__next-label" data-schedule-label>{week.label}</span>
+            <span data-schedule-when>{week.when}</span>
+          </p>
+          <p class="hero__next-what" data-schedule-what>{week.what}</p>
+          <p class="hero__next-links">
+            <a href={site.links.twitchSchedule}>Add to calendar</a>
+            <a href={googleCalendar} rel="noopener">Google Calendar</a>
+          </p>
+        </div>
+      )}
     </div>
   </div>
 </header>

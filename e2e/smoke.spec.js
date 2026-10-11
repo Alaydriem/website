@@ -379,9 +379,45 @@ test.describe('the segmented control', () => {
     await expect(page.locator('[data-tab=watch]')).toBeFocused();
   });
 
-  test('shows the newest videos in the Watch panel', async ({ page }) => {
+  test('shows the configured rows in the Watch panel', async ({ page }) => {
     await page.goto('/');
-    await expect(page.locator('[data-panel=watch] .card')).toHaveCount(8);
+
+    const rows = page.locator('[data-panel=watch] .plist');
+    await expect(rows.locator('.plist__title')).toHaveText([
+      'Latest videos',
+      'The Best Survival Builds',
+      'Bedrock Voice Chat',
+    ]);
+
+    const counts = await rows.evaluateAll(
+      (sections) => sections.map((s) => s.querySelectorAll('.card').length));
+    expect(counts.every((n) => n > 0 && n <= 4)).toBe(true);
+  });
+
+  test('keeps livestreams and shorts out of the rows that exclude them', async ({ page }) => {
+    const { playlists } = JSON.parse(readFileSync('data/youtube.json', 'utf8'));
+    const idsOf = (title) => playlists.find((p) => p.title === title)?.videoIds ?? [];
+    const livestreams = new Set(idsOf('Previous Livestreams'));
+    const shorts = new Set(idsOf('Shorts'));
+
+    await page.goto('/');
+
+    const rowIds = await page.locator('[data-panel=watch] .plist').evaluateAll(
+      (sections) => sections.map((s) => [...s.querySelectorAll('a.card')]
+        .map((a) => new URL(a.href).searchParams.get('v'))));
+
+    // Rows are Latest, Best Survival Builds, Bedrock Voice Chat (see above).
+    const [latest, , bvc] = rowIds;
+    expect(latest.some((id) => livestreams.has(id) || shorts.has(id))).toBe(false);
+    expect(bvc.some((id) => shorts.has(id))).toBe(false);
+  });
+
+  test('paints the starfield behind the Watch panel', async ({ page }) => {
+    await page.goto('/');
+
+    await expect(page.locator('.sky')).toHaveAttribute('aria-hidden', 'true');
+    expect(await page.locator('.sky rect').count()).toBeGreaterThan(0);
+    await expect(page.locator('.segs')).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
   });
 });
 
@@ -466,6 +502,8 @@ test.describe('the live upgrade', () => {
     // The pinned hero is gone, not merely recoloured.
     await expect(page.locator('[data-pinned-block]')).toBeHidden();
     await expect(page.locator('[data-live-block]')).toBeVisible();
+    // And the next-stream line with it: there is no next one during this one.
+    await expect(page.locator('[data-schedule]')).toBeHidden();
 
     await expect(page.locator('[data-live-title]')).toHaveText('Cathedral roof, night four');
     await expect(page.locator('[data-live-cta]'))
@@ -549,6 +587,58 @@ test.describe('without JavaScript', () => {
 
     // Each panel keeps its own heading when there is no tab to name it.
     await expect(page.locator('.panel__heading')).toHaveCount(2);
+  });
+
+  test('the stream schedule shows the week in the streamer’s zone', async ({ page }) => {
+    await page.goto('/');
+
+    const line = page.locator('[data-schedule]');
+    await expect(line.locator('[data-schedule-label]')).toHaveText('Streams');
+    await expect(line.locator('[data-schedule-when]')).toHaveText(/\d{1,2}:\d{2} [AP]M CT$/);
+    await expect(line.locator('[data-schedule-what]')).toHaveText(/^(Sun|Mon|Tue|Wed|Thu|Fri|Sat)/);
+  });
+});
+
+test.describe('the stream schedule', () => {
+  // A fixed clock and zone, so "Tonight" is a fact rather than a coincidence.
+  // Sunday 2pm in Chicago; the data is real, so only the form is asserted.
+  test.use({ timezoneId: 'America/New_York' });
+
+  test.beforeEach(async ({ page }) => {
+    await page.clock.install({ time: new Date('2026-10-11T19:00:00Z') });
+  });
+
+  test('upgrades to the next stream in the reader’s zone', async ({ page }) => {
+    await page.goto('/');
+
+    const line = page.locator('[data-schedule]');
+    await expect(line.locator('[data-schedule-label]')).toHaveText(/^(Next stream|On the schedule now)$/);
+    await expect(line.locator('[data-schedule-when]'))
+      .toHaveText(/^(Tonight|Today|Tomorrow|\w+day|\w{3}, \w{3} \d+) · \d{1,2}:\d{2} [AP]M E[SD]T$/);
+    await expect(line.locator('[data-schedule-what]')).not.toBeEmpty();
+  });
+
+  test('offers the calendar feed, and Google Calendar for where webcal does nothing', async ({ page }) => {
+    await page.goto('/');
+
+    const links = page.locator('.hero__next-links a');
+    await expect(links.first()).toHaveAttribute('href', /^webcal:\/\/api\.twitch\.tv\/helix\/schedule\/icalendar\?broadcaster_id=\d+$/);
+    await expect(links.nth(1)).toHaveAttribute('href', /^https:\/\/calendar\.google\.com\/calendar\/r\?cid=webcal%3A%2F%2F/);
+  });
+
+  test('the upgrade changes text, not height', async ({ page, browser }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto('/');
+    await expect(page.locator('[data-schedule-label]')).not.toHaveText('Streams');
+    const upgraded = await page.locator('[data-schedule]').boundingBox();
+
+    const plain = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
+    const before = await plain.newPage();
+    await before.goto(page.url());
+    const summary = await before.locator('[data-schedule]').boundingBox();
+    await plain.close();
+
+    expect(upgraded.height).toBe(summary.height);
   });
 });
 
